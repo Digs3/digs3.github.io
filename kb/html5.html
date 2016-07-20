@@ -1,0 +1,136 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Dilly</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Montserrat|Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/shCore.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text"><a href="/">Daniel Dilly</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="/" class="button">Home</a></li>
+          <li>
+            <a href="/kb" class="button">Knowledge</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="expanded row">
+      <div class="column medium-3 large-2">
+        <ul class="vertical menu kb-nav" id="kb-nav">
+          <p class="kb-nav-header"><a href="/kb/index.html">KB Home</a></p>
+          <li class="kb-nav-title">Toolkit</li>
+          <li><a href="software.html">Software</a></li>
+          <li><a href="sublimetext.html">Sublime Text</a></li>
+          <li><a href="workflows.html">Workflows</a></li>
+          <li><a href="nodejs.html">Node.js</a></li>
+          <li><a href="bower.html">Bower</a></li>
+          <li><a href="grunt.html">Grunt</a></li>
+          <li><a href="yeoman.html">Yeoman</a></li>
+          <li><a href="git.html">Git</a></li>
+          <li><a href="github.html">GitHub</a></li>
+        
+          <li class="kb-nav-title">Code</li>
+          <li><a href="html5.html">HTML5</a></li>
+          <li><a href="css.html">CSS</a></li>
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="jquery.html">jQuery</a></li>
+          <li><a href="ajax.html">Ajax (jQuery)</a></li>
+          <li><a href="#">PHP</a></li>
+          <li><a href="#">XML</a></li>
+          <li><a href="#">RegExp</a></li>
+          
+          <li class="kb-nav-title">Database</li>
+          <li><a href="#">SQL</a></li>
+        
+          <li class="kb-nav-title">Frameworks</li>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="angular.html">AngularJS</a></li>
+        
+          <li class="kb-nav-title">Design</li>
+          <li><a href="#">Typography</a></li>
+          <li><a href="#">Color</a></li>
+        </ul>
+      </div>
+      <div class="column medium-9 large-10 padtop">
+        	<h3>HTML5</h3>
+        	<h4>Resources</h4>
+        	<p><a href="https://www.w3.org/TR/html-markup/elements.html">HTML Element Reference</a></p>
+        	<h4>HTML5 &lt;!DOCTYPE&gt;</h4>
+        	<p>
+        		<code>&lt;!DOCTYPE html&gt;</code>
+        	</p>
+        	<h4>New Semantic Elements</h4>
+        	<ul>
+        		<li>&lt;article&gt;</li>
+        		<li>&lt;footer&gt;</li>
+        		<li>&lt;header&gt;</li>
+        		<li>&lt;nav&gt;</li>
+        		<li>&lt;section&gt;</li>
+        	</ul>
+        	<h4>Other Structural Tags</h4>
+        	<ul>
+        		<li>&lt;command&gt;</li>
+        		<li>&lt;details&gt;</li>
+        		<li>&lt;summary&gt;</li>
+        		<li>&lt;meter&gt;</li>
+        		<li>&lt;progress&gt;</li>
+        		<li>&lt;figure&gt;</li>
+        		<li>&lt;figcaption&gt;</li>
+        		<li>&lt;mark&gt;</li>
+        		<li>&lt;time&gt;</li>
+        		<li>&lt;wbr&gt;</li>
+        	</ul>
+        	<h4>Custom Data Attributres</h4>
+        	<p>Used to add metadata about any element within an HTML5 page.</p>
+        	<p>They all start with the <code>data-</code> pattern.</p>
+        	<p>They can be read using JavaScript via the <code>getAttribute()</code> method.</p>
+        	<h4>Forms</h4>
+        	<h5>Form Input Types</h5>
+        	<p><code>&lt;input type="<b>type</b>"&gt;</code></p>
+        	<p><b>Types:</b> <code>search</code>, <code>number</code>, <code>range</code>, <code>color</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime</code>, <code>datetime-local</code></p>
+        	<h5>Autofocus</h5>
+        	<p>Places the focus on a specific form element.</p>
+        	<p><code>&lt;input type="text" autofocus&gt;</code></p>
+        	<h5>Placeholder</h5>
+        	<p>Places placeholder text inside a form field.</p>
+        	<p><code>&lt;input type="text" placeholder="your name"&gt;</code></p>
+        	<h4>Audio</h4>
+        	<p><code>&lt;audio&gt;</code> : a standard way to embed an audio file on a web page</p>
+        	<p><code>
+        		&lt;audio controls&gt;<br>
+        		&lt;source src="song.ogg" type="audio/ogg" /&gt;<br>
+        		&lt;source src="song.mp3" type="audio/mpeg" /&gt;<br>
+        		Not Supported<br>
+        		&lt;/audio&gt;
+        	</code></p>
+        	<p>Multiple sources -> the browser will use the first recognized format.</p>
+      </div>
+    </div>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script type="text/javascript">
+     SyntaxHighlighter.defaults['gutter'] = false;
+     SyntaxHighlighter.defaults['toolbar'] = false;
+     SyntaxHighlighter.all()
+</script>
+  </body>
+</html>

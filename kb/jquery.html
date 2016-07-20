@@ -1,0 +1,186 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Dilly</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Montserrat|Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/shCore.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text"><a href="/">Daniel Dilly</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="/" class="button">Home</a></li>
+          <li>
+            <a href="/kb" class="button">Knowledge</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="expanded row">
+      <div class="column medium-3 large-2">
+        <ul class="vertical menu kb-nav" id="kb-nav">
+          <p class="kb-nav-header"><a href="/kb/index.html">KB Home</a></p>
+          <li class="kb-nav-title">Toolkit</li>
+          <li><a href="software.html">Software</a></li>
+          <li><a href="sublimetext.html">Sublime Text</a></li>
+          <li><a href="workflows.html">Workflows</a></li>
+          <li><a href="nodejs.html">Node.js</a></li>
+          <li><a href="bower.html">Bower</a></li>
+          <li><a href="grunt.html">Grunt</a></li>
+          <li><a href="yeoman.html">Yeoman</a></li>
+          <li><a href="git.html">Git</a></li>
+          <li><a href="github.html">GitHub</a></li>
+        
+          <li class="kb-nav-title">Code</li>
+          <li><a href="html5.html">HTML5</a></li>
+          <li><a href="css.html">CSS</a></li>
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="jquery.html">jQuery</a></li>
+          <li><a href="ajax.html">Ajax (jQuery)</a></li>
+          <li><a href="#">PHP</a></li>
+          <li><a href="#">XML</a></li>
+          <li><a href="#">RegExp</a></li>
+          
+          <li class="kb-nav-title">Database</li>
+          <li><a href="#">SQL</a></li>
+        
+          <li class="kb-nav-title">Frameworks</li>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="angular.html">AngularJS</a></li>
+        
+          <li class="kb-nav-title">Design</li>
+          <li><a href="#">Typography</a></li>
+          <li><a href="#">Color</a></li>
+        </ul>
+      </div>
+      <div class="column medium-9 large-10 padtop">
+        <h3>jQuery <small>(The Write Less, Do More, JavaScript Library)</small></h3>
+        <ul class="no-bullet">
+          <li><a href="https://jquery.com/">Official Website</a></li>
+          <li><a href="https://oscarotero.com/jquery/">Quick API Reference</a></li>
+        </ul>
+        <p>
+          <b>jQuery</b> is a JavaScript library designed to simplify the client-side scripting of HTML.
+          It simplifies document traversal and manipulation, event handling, animation, and Ajax interactions for rapid web development.
+          jQuery is the most popular JavaScript library in use today.
+        </p>
+        <p>jQuery is represented by the <code>$</code> symbol in your code.</p>
+        <p>The <code>$(document).ready()</code> function executes after the DOM is ready</p>
+        <pre class="brush: js">
+          $(document).ready(function() {
+        	// jquery code here
+          });
+        
+          $(function() {
+          	// shorthand version
+          })
+        </pre>
+        <p>To use jQuery, first use the jQuery function, <code>$</code>, to select an element using CSS selectors.</p>
+        <pre class="brush: js">
+        $('li');		// select all list items on the page
+        $('ul li');		// select list items that are in unordered lists
+        $('#header');	// select the element with an ID of 'header'
+        $('.person');	// select all elements with a class of 'person'
+        $('button[data-panel=panel1]')	// select buttons that have the data-panel attribute set to 'panel1'
+        </pre>
+        <h4>Methods</h4>
+        <h5>Adding/Removing</h5>
+        <pre class="brush:js">
+        $(li).remove();		// removes the set of matched elements
+        </pre>
+        <h5>Showing and Hiding</h5>
+        <p><code>delay()</code>, <code>hide()</code>, <code>show()</code>, <code>toggle()</code>, <code>slideUp()</code>, <code>slideDown()</code>, <code>slideToggle()</code>, <code>fadeIn()</code>, <code>fadeOut()</code>, <code>fadeToggle()</code></p>
+        <h5>Animating</h5>
+        <p><code>animate()</code></p>
+        <pre class="brush: js">
+        $('ul .slides').animate({'margin-left': -=720}, 1000);
+        </pre>
+        <h5>Getting and Setting Attributes</h5>
+        <pre class="brush: js">
+        $('#header').attr('class');				// get the value of an attribute for the first element 
+        $('code').attr('class', 'brush:js');	// set one or more attributes for the set of matched elements
+        </pre>
+        <h5>Modify HTML</h5>
+        <p><code>.html()</code></p>
+        <pre class="brush: js">
+        $("#header").html('New Header Title')
+        </pre>
+        <h5>Modify Style</h5>
+        <p><code>.css()</code>, <code>addClass()</code>, <code>removeClass()</code></p>
+        <pre class="brush: js">
+        $("#header").css({					// Modify css (does not overwrite previous rules)
+        	color: 'red',
+        	fontWeight: 'bold',
+        	'font-size': '24px'
+        })
+        
+        $("#header").addClass('title');		// Add a class to an element
+        $("#header").removeClass('title');	// Remove a class from an element
+        </pre>
+        <h4>Events</h4>
+        <p><code>on()</code>,<br><code>click()</code>, <code>focus()</code>, <code>blur()</code>, <code>change()</code></p>
+        <p>Use the <code>on()</code> method to bind the same handler to multiple events, otherwise you can use the shorthand versions.</p>
+        <pre class="brush:js">
+        $("#header").click(function() {
+        	console.log("You clicked the header!")l
+        });
+        
+        $("#header").on('mouseenter',function() {
+        	console.log("You moused over the header!")l
+        });
+        </pre>
+        <h4>DOM Traversal</h4>
+        <p><code>first()</code>, <code>last()</code>, <code>eq()</code>, <code>children()</code>, <code>siblings()</code>, <code>parent()</code>, <code>prev()</code>, <code>next()</code>, <code>closest()</code>, <code>find()</code>, <code>filter()</code>, <code>not()</code></p>
+        <pre class="brush: js">
+        $('li')						// returns all list items
+        $('li').first()				// returns the first list item
+        $('li').last()				// returns the last list item
+        $('li').eq(3)				// returns the 4th list item
+        $('ul:first').children() 	// returns all children
+        $('li:first').siblings() 	// returns all siblings
+        $('li:first').parent() 		// returns the parent
+        $('li').eq(4).prev() 		// returns the previous sibling
+        $('li').eq(4).next() 		// returns the next sibling
+        $('li').closest('.list')	// returns the first element with the class '.list' by traversing up
+        $('ul').find('li')			// returns all list item descendents
+        $('li').filter(':even')		// returns all the even list items (you can also use a filter function)
+        $("li").not(":even")		// returns all the odd list items
+        </pre>
+        <h4>Testing/Checking</h4>
+        <p><code>is()</code></p>
+        <pre class="brush:js">
+        $("ul").click(function(event) {
+          var target = $(event.target);
+          if (target.is("li")) {								// checks if the target is a list item
+            target.css("background-color", "red");
+          }
+        });
+        </pre>
+      </div>
+    </div>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script type="text/javascript">
+     SyntaxHighlighter.defaults['gutter'] = false;
+     SyntaxHighlighter.defaults['toolbar'] = false;
+     SyntaxHighlighter.all()
+</script>
+  </body>
+</html>

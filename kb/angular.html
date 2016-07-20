@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Dilly</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Montserrat|Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/shCore.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text"><a href="/">Daniel Dilly</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="/" class="button">Home</a></li>
+          <li>
+            <a href="/kb" class="button">Knowledge</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="expanded row">
+      <div class="column medium-3 large-2">
+        <ul class="vertical menu kb-nav" id="kb-nav">
+          <p class="kb-nav-header"><a href="/kb/index.html">KB Home</a></p>
+          <li class="kb-nav-title">Toolkit</li>
+          <li><a href="software.html">Software</a></li>
+          <li><a href="sublimetext.html">Sublime Text</a></li>
+          <li><a href="workflows.html">Workflows</a></li>
+          <li><a href="nodejs.html">Node.js</a></li>
+          <li><a href="bower.html">Bower</a></li>
+          <li><a href="grunt.html">Grunt</a></li>
+          <li><a href="yeoman.html">Yeoman</a></li>
+          <li><a href="git.html">Git</a></li>
+          <li><a href="github.html">GitHub</a></li>
+        
+          <li class="kb-nav-title">Code</li>
+          <li><a href="html5.html">HTML5</a></li>
+          <li><a href="css.html">CSS</a></li>
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="jquery.html">jQuery</a></li>
+          <li><a href="ajax.html">Ajax (jQuery)</a></li>
+          <li><a href="#">PHP</a></li>
+          <li><a href="#">XML</a></li>
+          <li><a href="#">RegExp</a></li>
+          
+          <li class="kb-nav-title">Database</li>
+          <li><a href="#">SQL</a></li>
+        
+          <li class="kb-nav-title">Frameworks</li>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="angular.html">AngularJS</a></li>
+        
+          <li class="kb-nav-title">Design</li>
+          <li><a href="#">Typography</a></li>
+          <li><a href="#">Color</a></li>
+        </ul>
+      </div>
+      <div class="column medium-9 large-10 padtop">
+        	<h3>AngularJS</h3>
+        	<p>
+        		<b>AngularJS</b> is the most popular and powerful web application framework today.  Backed by Google and hard to learn, AngularJS tries to make web apps more natural &amp; fluid.<br>
+        		It attempts to solve the problem of complexity behind coding the DOM is JS.
+        	</p>
+        	<p><b>Single Page Application (SPA)</b> - a Web page in which we have a shell page which we can load, on-the-fly, multiple views (mini Web pages)</p>
+        	<p>
+        	  Building SPA's by scratch includes: DOM Manipulation, Data Binding, Object Modeling, View Loading, Module Loading, History, Caching, Ajax, Routing, etc.<br>
+        	  This is built into Angular
+        	</p>
+        	<h4>Features</h4>
+        	<ul>
+        		<li>Data Binding and Dependency Injection</li>
+        		<li>Full Testing Environment</li>
+        		<li>Deep Linking for Dynamic Pages - encode state application in URL so it can be bookmarked</li>
+        		<li>Directives - used to create custom HTML tags that serve as custom elements, also used to decorate</li>
+        		<li>MVVM - models talk to viewmodel objecdts through the $scope object - viewmodel can be delivered &amp; rendered by views</li>
+        		<li>Routing of Views with built-in routing support</li>
+        		<li>jqLite for DOM manipulation (a mini-me of jquery)</li>
+        		<li>Templates, History, Factories</li>
+        	</ul>
+        	<h5>Data Binding Expression</h5>
+        	<p>
+        	  Example &#123;&#123; name &#125;&#125;<br>
+        	  This is a Data Binding Expression.  It will automatically update to the current value of the given property.<br>
+        	  Use the ng-model Directive to add new properties.
+        	</p>
+        	<h5>Directives - a way to teach HTML new tricks</h5>
+        	<p>Allows us to extend HTML using attributes, elements, or comments.</p>
+        	<p>
+        	  Example: &lt;html ng-app&gt;<br>
+        	  ng-app initializes the Angular app.
+        	</p>
+        	<p>
+        	  Example: &lt;input type="text" ng-model="name" /&gt;<br>
+        	  ng-model adds a property into the scope.  
+        	</p>
+        	<p>
+        	  Example: &lt;div class="container" data-ng-init="names=['Dave','Napur','Heedy','Shriva']"&gt;
+         	  &lt;ul&gt;&lt;li data-ng-repeat="name in names">&#123;&#123; name &#125;&#125;&lt;/li&gt;
+              &lt;/div&gt;  
+        	</p>
+        	<p>
+        	  ng-init allows you to initialize values??<br>
+        	  ng-repeat allows you to iterate through an array.<br>
+        	  ng-click allows you to specify custom behaviors when an element is clicked.<br>
+        	  ng-view complements $route service by including the rendered template of the current route into the main layout file<br>
+        	  ng-submit binds an Angular expression to the onsubmit event of the form. (example: &lt;form ng-submit="addTodo()"&gt;)
+        	</p>
+        	<p>"ng-" Directives are built-in Angular Directive.</p>
+        	<h5>Filters</h5>
+        	<p>Uses: uppercase, lowercase, limitTo, orderBy, filter, currency, date, number, json</p>
+        	<p>
+        	  Example:<br>
+        	  &lt;input type="text" ng-model="nameText" /&gt;<br>
+        	  &lt;ul&gt;&lt;li ng-repeat="cust in customers | filter:nameText | orderBy:'name'"&gt;<br>
+          	  &#123;&#123;  cust.name &#125;&#125; - &#123;&#123; cust.city &#124; lowercase &#125;&#125;<br></li></ul>
+        	</p>
+        	<p>This will allow you to type in a name and instantaneously see the results</p>
+        	<h4>Models, Views, Controllers, Scope</h4>
+        	<h4>Modules, Routes, Factories</h4>
+        	<h4>Modules</h4>
+        	<h4>Routes</h4>
+        	<h4>Factories, Services, Providers, Values</h4>
+      </div>
+    </div>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script type="text/javascript">
+     SyntaxHighlighter.defaults['gutter'] = false;
+     SyntaxHighlighter.defaults['toolbar'] = false;
+     SyntaxHighlighter.all()
+</script>
+  </body>
+</html>
