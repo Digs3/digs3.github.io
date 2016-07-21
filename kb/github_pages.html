@@ -74,79 +74,52 @@
         
       </div>
       <div class="column medium-9 large-10 padtop">
-        <h3>Ajax <small>(Asynchronous JavaScript and XML)</small></h3>
-        <ul class="no-bullet">
-          <li><a href="http://api.jquery.com/jquery.ajax/">jQuery.ajax() Documentation</a></li>
-        </ul>
-        <p>
-          <b>Ajax</b>
-        </p>
-        <h4>Core AJAX Method</h4>
-        <p><code>$.ajax()</code></p>
-        <p>Pass it a configuration object with the data necessary to complete a request.</p>
-        <pre class="brush: js">
-        // Retrieve the latest version of an HTML page.
-        $.ajax({
-          url: "test.html",
-          cache: false
-        })
-          .done(function(html) {
-            $('#results').append(html);
-          });
-        
-        $.ajax({
-            url: 'Demo.json',
-            dataType: 'json',
-            beforeSend: function() {
-                $loader.show();
-            }
-          }).done(successFunction)
-            .fail(errorFunction)
-            .always(alwaysFunction);
-        
-        // Save some data to the server and notify the user once it's complete.
-        $.ajax({
-          method: "POST",
-          url: "some.php",
-          data: {name: "John", location: "Boston"}
-        })
-          .done(function(msg) {
-            alert("Data Saved: " + msg);
-          });
-        </pre>
-        <h4>Convenience Methods</h4>
-        <p><code>$.get()</code>, <code>$.post()</code>, <code>$.getScript()</code>, <code>$.getJSON</code></p>
-        <h4>Load Method</h4>
-        <p><code>$(selector).load(url[, data][, complete])</code></p>
-        <p>Load data from the server and place the returned HTML into the matched element.</p>
-        <pre class="brush: js">
-        
-        $bio.load('Bio.html p:first-child', completeFunction);
-        
-        function completeFunction(responseText, textStatus, request) {
-          $bio.css('border', '1px solid #e8e8e8');
-          if(textStatus == 'error') {
-              $bio.text('An error occurred during your request: ' +  request.status + ' ' + request.statusText);
-          } 
-        } 
-        </pre>
-        <h4>jqXHR object</h4>
-        <p>The jQuery XMLHttpRequest (jqXHR) object returned by <code>$.ajax()</code> is a superset of the browser's native XMLHTTPRequest object</p>
-        <p>Contains <code>responseText</code> and <code>responseXML</code> properties, as well as a <code>getResponseHeader()</code> method.</p>
-        <h5>Promise Methods</h5>
-        <p><code>.done()</code>, <code>.fail()</code>, <code>.always()</code>, <code>.then()</code></p>
-        <pre class="brush: js">
-        var jqxhr = $.ajax( "example.php" )
-          .done(function() {
-            alert( "success" );
-          })
-          .fail(function() {
-            alert( "error" );
-          })
-          .always(function() {
-            alert( "complete" );
-          });
-        </pre>
+         	  <section>
+        		  <h3>GitHub Pages <small>(Websites for you and your projects)</small></h3>
+        		  <p><a href="https://pages.github.com/">Official Website</a> / 
+        		  <a href="https://www.thinkful.com/learn/a-guide-to-using-github-pages/">A Guide To Using Github Pages</a></p>
+        		  <p><b>GitHub Pages</b> is a free static site hosting service.  Use it to host your personal, organization, or project pages directly from a GitHub repository.</p>
+        		  <p>Using GitHub Pages will give you practice using <a href="/kb/git.html">Git</a> and <a href="/kb/github.html">GitHub</a>.</p>
+        		  <h4>Types of Pages</h4>
+        		  <p>There are two basic types of GitHub Pages</p>
+        		  <ul>
+        		  	<li><b>User Pages</b> - for hosting a personal website or an index of your projects.</li>
+        		  	<li><b>Project Pages</b> - for hosting a project, of which you have many.  You can create multiple project pages per account.</li>
+        		  </ul>
+        		  <p><b>User Pages</b> live in a special GitHub repository with the name <code>username.github.io</code>.  The <code>master</code> branch of the repository is used to build and publish the site.</p>
+        		  <p><b>Project Pages</b> are kept in the same repository as the project they are for, except that the website content is stored in a specially named <code>gh-pages</code> branch.  The output for this branch will be available under <code>username.github.io/project</code></p>
+        		  <h4>Getting Started</h4>
+        		  <p><a href="https://github.com/join">Create a GitHub account</a> if do not yet have one.</p>
+        		  <ol>
+        		  	<li>In GitHub, create a new repository.
+        		  		<ul>
+        		  			<li>If this is your User site, name this repository <em>username</em>.github.io, where <em>username</em> is your username on GitHub.</li>
+        		  			<li>If this is a Project site, name this repository whatever you like (e.g., <i>ProjectName</i>).</li>
+        		  			<li>Make the repository Public</li>
+        		  			<li>Check "Initialize this repository with a README"</li>
+        		  		</ul>
+        		  	</li>
+        		  	<li>At the command line, create a directory for the site (<code>mkdir</code>) and navigate to it (<code>cd</code>)<br>
+        <pre>
+        $ mkdir /path/to/source-code
+        $ cd /path/to/source-code</pre></li>
+        		  	<li>Download (<code>clone</code>) your newly created GitHub repository and go inside it <br>
+        <pre>
+        $ git clone https://github.com/username/repositoryName.git
+        $ cd repositoryName</pre></li>
+        			<li>If this is a Project site, create a new branch called <code>gh-pages</code> and check it out
+        <pre>
+        $ git checkout -b gh-pages</pre></li>
+        			<li>Copy your already created site files into this directory or start a new site from scratch.</li>
+        			<li>Add, commit, and push your new branch to GitHub.  <code>branchName</code> will be <code>master</code> for a User site and <code>gh-pages</code> for a Project site.
+        <pre>
+        $ git add .
+        $ git commit -a -m "Adding my existing site."
+        $ git push origin branchName</pre></li>
+        		  </ol>
+        		  <h4>gulp-gh-pages</h4>
+        		  <p><b>gulp-gh-pages</b> is a plugin for gulp that lets you easily deploy your sites to Github pages.</p>
+        	  </section>
       </div>
     </div>
 

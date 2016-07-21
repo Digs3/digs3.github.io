@@ -74,79 +74,11 @@
         
       </div>
       <div class="column medium-9 large-10 padtop">
-        <h3>Ajax <small>(Asynchronous JavaScript and XML)</small></h3>
-        <ul class="no-bullet">
-          <li><a href="http://api.jquery.com/jquery.ajax/">jQuery.ajax() Documentation</a></li>
-        </ul>
-        <p>
-          <b>Ajax</b>
-        </p>
-        <h4>Core AJAX Method</h4>
-        <p><code>$.ajax()</code></p>
-        <p>Pass it a configuration object with the data necessary to complete a request.</p>
-        <pre class="brush: js">
-        // Retrieve the latest version of an HTML page.
-        $.ajax({
-          url: "test.html",
-          cache: false
-        })
-          .done(function(html) {
-            $('#results').append(html);
-          });
-        
-        $.ajax({
-            url: 'Demo.json',
-            dataType: 'json',
-            beforeSend: function() {
-                $loader.show();
-            }
-          }).done(successFunction)
-            .fail(errorFunction)
-            .always(alwaysFunction);
-        
-        // Save some data to the server and notify the user once it's complete.
-        $.ajax({
-          method: "POST",
-          url: "some.php",
-          data: {name: "John", location: "Boston"}
-        })
-          .done(function(msg) {
-            alert("Data Saved: " + msg);
-          });
-        </pre>
-        <h4>Convenience Methods</h4>
-        <p><code>$.get()</code>, <code>$.post()</code>, <code>$.getScript()</code>, <code>$.getJSON</code></p>
-        <h4>Load Method</h4>
-        <p><code>$(selector).load(url[, data][, complete])</code></p>
-        <p>Load data from the server and place the returned HTML into the matched element.</p>
-        <pre class="brush: js">
-        
-        $bio.load('Bio.html p:first-child', completeFunction);
-        
-        function completeFunction(responseText, textStatus, request) {
-          $bio.css('border', '1px solid #e8e8e8');
-          if(textStatus == 'error') {
-              $bio.text('An error occurred during your request: ' +  request.status + ' ' + request.statusText);
-          } 
-        } 
-        </pre>
-        <h4>jqXHR object</h4>
-        <p>The jQuery XMLHttpRequest (jqXHR) object returned by <code>$.ajax()</code> is a superset of the browser's native XMLHTTPRequest object</p>
-        <p>Contains <code>responseText</code> and <code>responseXML</code> properties, as well as a <code>getResponseHeader()</code> method.</p>
-        <h5>Promise Methods</h5>
-        <p><code>.done()</code>, <code>.fail()</code>, <code>.always()</code>, <code>.then()</code></p>
-        <pre class="brush: js">
-        var jqxhr = $.ajax( "example.php" )
-          .done(function() {
-            alert( "success" );
-          })
-          .fail(function() {
-            alert( "error" );
-          })
-          .always(function() {
-            alert( "complete" );
-          });
-        </pre>
+         	  <section>
+        		  <h3>Gulp <small>(The Streaming Build System)</small></h3>
+        		  <p><a href="http://gruntjs.com/">Official Website</a></p>
+        		  <p><b>Gulp</b> is a <em>build system</em>.</p>
+        	  </section>
       </div>
     </div>
 
