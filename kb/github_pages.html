@@ -101,25 +101,38 @@
         		  		</ul>
         		  	</li>
         		  	<li>At the command line, create a directory for the site (<code>mkdir</code>) and navigate to it (<code>cd</code>)<br>
-        <pre>
+        <pre class="brush: bash">
         $ mkdir /path/to/source-code
         $ cd /path/to/source-code</pre></li>
         		  	<li>Download (<code>clone</code>) your newly created GitHub repository and go inside it <br>
-        <pre>
+        <pre class="brush: bash">
         $ git clone https://github.com/username/repositoryName.git
         $ cd repositoryName</pre></li>
         			<li>If this is a Project site, create a new branch called <code>gh-pages</code> and check it out
-        <pre>
+        <pre class="brush: bash">
         $ git checkout -b gh-pages</pre></li>
         			<li>Copy your already created site files into this directory or start a new site from scratch.</li>
         			<li>Add, commit, and push your new branch to GitHub.  <code>branchName</code> will be <code>master</code> for a User site and <code>gh-pages</code> for a Project site.
-        <pre>
+        <pre class="brush: bash">
         $ git add .
         $ git commit -a -m "Adding my existing site."
         $ git push origin branchName</pre></li>
         		  </ol>
         		  <h4>gulp-gh-pages</h4>
         		  <p><b>gulp-gh-pages</b> is a plugin for gulp that lets you easily deploy your sites to Github pages.</p>
+        		  <p>Install <code>gulp-gh-pages</code> with <code>npm install --save-dev gulp-gh-pages</code>.</p>
+        		  <p>Define a deploy task in your <code>gulpfile.js</code> to push your contents to Github pages</p>
+        <pre class="brush: js">
+        var ghPages = require('gulp-gh-pages');
+        
+        var options = { 
+            remoteUrl: "https://github.com/Digs3/digs3.github.io.git",
+            branch: "gh-pages"};
+        gulp.task('deploy', function () {
+          return gulp.src("./dist/**/*")
+            .pipe(ghPages(options))
+        });</pre>
+        <p>Run your deploy task with <code>gulp deploy</code> in console.</p>
         	  </section>
       </div>
     </div>
