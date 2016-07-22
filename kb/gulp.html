@@ -11,6 +11,7 @@
     <script type="text/javascript" src="/assets/js/shCore.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
   </head>
@@ -76,8 +77,93 @@
       <div class="column medium-9 large-10 padtop">
          	  <section>
         		  <h3>Gulp <small>(The Streaming Build System)</small></h3>
-        		  <p><a href="http://gruntjs.com/">Official Website</a></p>
-        		  <p><b>Gulp</b> is a <em>build system</em>.</p>
+        		  <p><a href="http://gulpjs.com/">Official Website</a> / <a href="https://css-tricks.com/gulp-for-beginners/">Gulp for Beginners</a></p>
+        		  <p><b>Gulp</b> is a <em>build system</em> that can automate and enhance your workflow by compiling sass files, uglifying and compressing js files, providing a local server, and much more.</p>
+        		  <p>Gulp uses <em>streams</em>.</p>
+        		  <h4>Getting Started</h4>
+        		  <p>Gulp runs on <a href="nodejs.html">Node.js</a> so install it first.</p>
+        		  <ol>
+        		  	<li>Install Gulp with <code>npm install --global gulp-cli</code></li>
+        		  	<li>Initialize your project directory with <code>npm init</code> <small>(creates package.json)</small></li>
+        		  	<li>Install gulp in your project devDependencies with <code>npm install --save-dev gulp</code> <small>(creates <code>node_modules</code> folder)</small></li>
+        			<li>Create a <code>gulpfile.js</code> at the root of your project</li>
+        			<li>Run <code>gulp</code>.</li>
+        		  </ol>
+        		  <h4>Defining Tasks &amp; Configuring Plugins</h4>
+        		  <p>With Gulp set up, we can now configure it to perform specific tasks by editing <code>gulpfile.js</code>.</p>
+        		  <h5>Defining a Task</h5>
+        		  <ol>
+        		  	<li>First we must <code>require</code> Gulp in the gulpfile.
+        <pre class="brush: js">
+        var gulp = require('gulp');</pre></li>
+        			<li>Now we can define a task.
+        <pre class="brush: js">
+        gulp.task('hello', function() {
+          console.log('Hello World');
+        });</pre></li>
+        			<li>We can now run this task with <code>gulp hello</code> in the command line.</li>
+        		  </ol>
+        		  <h5>Using a plugin</h5>
+        		  <ol>
+        		  	<li>To use a gulp plugin it must first be installed.
+        <pre class="brush: bash">
+        npm install gulp-sass --save-dev</pre></li>
+        			<li>Then it must be required in the gulpfile.
+        <pre class="brush: js">
+        var sass = require('gulp-sass');
+        </pre></li>
+        			<li>Finally, configure a task to use it.
+        <pre class="brush: js">
+        gulp.task('sass', function(){
+          // Get the files to use for the task
+          return gulp.src('app/scss/**/*.scss') 
+            // Convert Sass to CSS using gulp-sass on the files
+            .pipe(sass()) 
+            // Place converted files in destination
+            .pipe(gulp.dest('app/css'))
+        });</pre></li>
+        		  </ol>
+        		  <h4>Running tasks automatically</h4>
+        		  <p>Gulp provides the <code>watch()</code> method to automatically run tasks on file changes.  For example, gulp can run the <code>sass</code> task when it detects changes in any <code>.scss</code> file.</p>
+        		  <p>To use <code>watch()</code>, simply supply it with a <b>glob</b> (a matching file pattern) and a list of tasks to run when any files in your file pattern changes.</p>
+        <pre class="brush: js">
+        gulp.task('watch', function(){
+          gulp.watch('app/scss/**/*.scss', ['sass']); 
+        })</pre>
+        		  <h5>What are globs?</h5>
+        		  <p><b>Globs</b> are matching file patterns for files.  The most common glob patterns are:</p>
+        		  <ul>
+        		  	<li><code>*.scss</code> will match any file ending in <code>.scss</code> in the root folder.</li>
+        		  	<li><code>**/*.scss</code> will match any file ending in <code>.scss</code> in the root folder and any child directories.</li>
+        		  	<li><code>!not-me.scss</code> will exclude <code>not-me.scss</code> from the match</li>
+        		  	<li><code>*.+(scss|sass)</code> will match any file ending with <code>.scss</code> or <code>.sass</code> in the root folder.</li>
+        		  </ul>
+        		  <h4>Dependent sub-tasks</h4>
+        		  <p>This code will start both <code>sass</code> and <code>browserSync</code> concurrently and when complete will run <code>watch</code></p>
+        <pre class="brush: js">
+        gulp.task('watch', ['browserSync', 'sass'], function (){
+          gulp.watch('app/scss/**/*.scss', ['sass']); 
+        });
+        </pre>
+        		  <h4>The default task</h4>
+        		  <p>You can name a task <code>default</code> and it will run when you just run <code>gulp</code> without a task name at the command prompt.</p>
+        		  <h4>gulp.series, gulp.parallel</h4>
+        		  <h4>watch().on()</h4>
+        		  <h4>Gulp Plugins</h4>
+        		  <ul>
+        		  	<li><code>gulp-sass</code> : Sass Compiler</li>
+        		  	<li><code>browser-sync</code> : Live CSS Reload &amp; Browser Syncing</li>
+        		  	<li><code>gulp-autoprefixer</code> : Parse CSS and add vendor prefixes to rules</li>
+        		  	<li><code>gulp-uncss</code> : Remove unused CSS selectors</li>
+        		  	<li><code>gulp-babel</code> : JS Transpiler (Compiles ES2015 JS to ES5) </li>
+        		  	<li><code>gulp-concat</code> : Concatenates files</li>
+        		  	<li><code>gulp-uglify</code> : JS Minifier</li>
+        		  	<li><code>gulp-cssnano</code> : CSS Minifier</li>
+        		  	<li><code>gulp-imagemin</code> : Image Minifier</li>
+        		  	<li><code>gulp-if</code> : Conditionally run a task</li>
+        		  </ul>
+        		  <h4>Cleaning up generated files</h4>
+        		  <p>Use <code>del</code> or <code>rimraf</code> for cleaning.  <code>del</code> adds support for multiple files, globbing, and protects you from deleting your working directory.</p>
         	  </section>
       </div>
     </div>
