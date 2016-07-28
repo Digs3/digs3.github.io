@@ -1,0 +1,236 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Dilly</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <script type="text/javascript" src="/assets/js/shCore.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
+    <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/b9883684cd.js"></script>
+  </head>
+  <body>
+
+    <header class="top-bar">
+    	<div class="top-bar-title">
+    		<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+    		<h1><a href="/">Daniel Dilly</a></h1>
+    	</div>
+    	<div id="responsive-menu">
+    	  <div class="top-bar-left">
+      
+    	  </div>
+    	  <div class="top-bar-right">
+    	 	 		<ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+            <li><a href="/kb">Knowledge Base</a></li>
+          </ul>    
+    	  </div>
+      </div>
+    </header>
+    <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
+      <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+        
+        <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div id="kb-sidebar">
+          <h1><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h1>
+          <nav id="kb-menu">
+            <ul class="vertical menu">
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html">Software</a></li>
+              <li><a href="sublimetext.html">Sublime Text</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html">Node.js</a></li>
+              <li><a href="bower.html">Bower</a></li>
+              <li><a href="grunt.html">Grunt</a></li>
+              <li><a href="gulp.html">Gulp</a></li>
+              <li><a href="yeoman.html">Yeoman</a></li>
+              <li><a href="git.html">Git</a></li>
+              <li><a href="github.html">GitHub</a></li>
+              <li><a href="github_pages.html">GitHub Pages</a></li>
+        
+              <li class="menu-text">Code</li>
+              <li><a href="html5.html">HTML5</a>
+                <ul class="nested vertical menu">
+                  <li><a href="html5_forms.html">Forms</a></li>
+                </ul>
+              </li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="jquery.html">jQuery</a></li>
+              <li><a href="ajax.html">Ajax (jQuery)</a></li>
+              <li><a href="handlebars.html">Handlebars.js</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">XML</a></li>
+              <li><a href="#">RegExp</a></li>
+              
+              <li class="menu-text">Database</li>
+              <li><a href="#">SQL</a></li>
+        
+              <li class="menu-text">Frameworks</li>
+              <li><a href="foundation.html">Foundation</a></li>
+              <li><a href="bootstrap.html">Bootstrap</a></li>
+              <li><a href="angular.html">AngularJS</a></li>
+        
+              <li class="menu-text">Design</li>
+              <li><a href="#">Typography</a></li>
+              <li><a href="#">Color</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="column medium-9 large-10" id="right" data-equalizer-watch>
+        <article class="kb-article" id="kb-html5-forms">
+        	<header>
+        		<div class="inner">
+        		  <h1>HTML5 Forms</h1>
+        	  </div>
+        	</header>
+        <div>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form">How to structure HTML forms</a></p>
+        	<h3>The &lt;form&gt; element</h3>
+        	<p>The <code>&lt;form&gt;</code> element represents a document section that contains form input fields to submit information to a web server</p>
+        	<h4>&lt;form&gt; attributes</h4>
+        	<ul>
+        		<li><code>action</code></li>
+        		<li><code>method</code></li>
+        	</ul>
+        	<h3>The &lt;fieldset&gt; and &lt;legend&gt; elements</h3>
+        	<p>The <code>&lt;fieldset&gt;</code> element is used to create groups of controls that share the same purpose.  The <code>&lt;legend&gt;</code> element is used to label a <code>&lt;fieldset&gt;</code></p>
+        	<p>Some screen readers will pronounce the legend's content before the label of each control.</p>
+        	<div class="row">
+        		<div class="column medium-8">
+        			<p>Code</p>
+        		  <pre class="brush: xml">
+        	&lt;form&gt;
+        	&lt;fieldset&gt;
+        	&lt;legend&gt;Personalia:&lt;/legend&gt;
+        	Name: &lt;input type="text"&gt;
+        	Email: &lt;input type="text"&gt;
+        	&lt;/fieldset&gt;
+        	&lt;/form&gt;</pre>
+        	  </div>
+        		<div class="column medium-4">
+        		  <p>Output</p>
+        			<form>
+        			 <fieldset>
+        			  <legend>Personalia:</legend>
+        			  Name: <input type="text">
+        			  Email: <input type="text">
+        			 </fieldset>
+        			</form>
+        		</div>
+        	</div>
+        	<h4>&lt;fieldset&gt; attributes</h4>
+        	<ul>
+        		<li><code>disabled</code></li>
+        	</ul>
+        	<h3>The &lt;label&gt; element</h3>
+        	<p>The <code>&lt;label&gt;</code> element represents a caption for an input field.  It can be associated with a control either by placing the control element inside the <code>&lt;label&gt;</code> element, or by using the <code>for</code> attribute.</p>
+        	<div class="row">
+        		<div class="column medium-8">
+        			<p>Code</p>
+        			<pre class="brush: xml">
+        	&lt;label&gt;
+        	&lt;span&gt;Label&lt;/span&gt;
+        	&lt;input type="text"&gt;
+        	&lt;/label&gt;</pre>
+        			</div>
+        		<div class="column medium-4">
+        		  <p>Output</p>
+        			<label>
+        			  <span>Label</span>
+        			  <input type="text">
+        			</label>
+        		</div>
+        	</div>
+        	<h2>HTML Widgets</h2>
+        	<h3>The &lt;input&gt; element</h3>
+        	<p>The <code>&lt;input&gt;</code> element creates the data input controls used for web-based forms.  How an <code>&lt;input&gt;</code> works depends on its <code>type</code>.</p>
+        	<p><code>&lt;input type="type"&gt;</code></p>
+        	<p><b>Types:</b> <code>search</code>, <code>number</code>, <code>range</code>, <code>color</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime</code>, <code>datetime-local</code>, <code>button</code>, <code>checkbox</code>, <code>file</code>, <code>hidden</code>, <code>image</code>, <code>password</code>, <code>radio</code>, <code>reset</code>, <code>submit</code>, <code>text</code></p>
+        	<p><b>Attributes</b></p>
+        	<ul>
+        	  <li><code>list</code> : the ID of a <code>&lt;datalist&gt;</code> element whose <code>&lt;option&gt;</code> elements will be used as hints and displayed as proposals</li>
+        	  <li><code>pattern</code> : a regular expression that the control's value is checked against (used with types: <code>text</code>, <code>tel</code>, <code>search</code>, <code>url</code>, and <code>email</code>.</li>
+        	</ul>
+        	<p>Other attributes: <code>form</code>, <code>formmethod</code>, <code>x-moz-errormessage</code></p>
+        	<h3>The &lt;textarea&gt; element</h3>
+        	<p>&lt;textarea&gt; is a multiline text field.</p>
+        	<h4>&lt;fieldset&gt; attributes</h4>
+        	<table>
+        		<thead>
+        			<tr>
+        				<th>Attribute</th>
+        				<th>Default</th>
+        				<th>Description</th>
+        			</tr>
+        		</thead>
+        	</table>
+        	<h3>The &lt;datalist&gt; element</h3>
+        	<div class="row">
+        		<div class="column medium-8">
+        			<p>Code</p>
+        		  <pre class="brush: xml">
+        	&lt;input list="browsers"&gt;
+        
+        	&lt;datalist id="browsers"&gt;
+        	&lt;option value="Internet Explorer"&gt;
+        	&lt;option value="Firefox"&gt;
+        	&lt;option value="Chrome"&gt;
+        	&lt;option value="Opera"&gt;
+        	&lt;option value="Safari"&gt;
+        	&lt;/datalist&gt;</pre>
+        	  </div>
+        		<div class="column medium-4">
+        		  <p>Output</p>
+        			<input list="browsers">
+        			<datalist id="browsers">
+        			  <option value="Internet Explorer">
+        			  <option value="Firefox">
+        			  <option value="Chrome">
+        			  <option value="Opera">
+        			  <option value="Safari">
+        			</datalist>
+        		</div>
+        	</div>
+        	<h3>Autofocus</h3>
+        	<p>Places the focus on a specific form element.</p>
+        	<p><code>&lt;input type="text" <b>autofocus</b>&gt;</code></p>
+        	<h3>Placeholder</h3>
+        	<p>Places placeholder text inside a form field.</p>
+        	<p><code>&lt;input type="text" <b>placeholder="your name"</b>&gt;</code></p>
+        	<h3>Tabindex</h3>
+        	<p>Set the tab order of the element</p>
+        	<p><code>&lt;input type="text" <b>tabindex="1"</b>&gt;</code></p>
+        	<h3>Required</h3>
+        	<p>Specifies an input field is required</p>
+        	<p><code>&lt;input type="text" <b>required</b>&gt;</code></p>
+        </div>
+        </article>
+      </div>
+    </div>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script type="text/javascript">
+     SyntaxHighlighter.defaults['gutter'] = false;
+     SyntaxHighlighter.defaults['toolbar'] = false;
+     SyntaxHighlighter.all()
+</script>
+  </body>
+</html>

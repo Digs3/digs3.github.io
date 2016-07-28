@@ -7,339 +7,388 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Dilly</title>
     <link rel="stylesheet" href="../assets/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Montserrat|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
     <script type="text/javascript" src="/assets/js/shCore.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/b9883684cd.js"></script>
   </head>
   <body>
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text"><a href="/">Daniel Dilly</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><a href="/" class="button">Home</a></li>
-          <li>
-            <a href="/kb" class="button">Knowledge</a>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="expanded row">
-      <div class="column medium-3 large-2">
-        <ul class="vertical menu kb-nav" id="kb-nav">
-          <p class="kb-nav-header"><a href="/kb/index.html">KB Home</a></p>
-          <li class="kb-nav-title">Toolkit</li>
-          <li><a href="software.html">Software</a></li>
-          <li><a href="sublimetext.html">Sublime Text</a></li>
-          <li><a href="workflows.html">Workflows</a></li>
-          <li><a href="nodejs.html">Node.js</a></li>
-          <li><a href="bower.html">Bower</a></li>
-          <li><a href="grunt.html">Grunt</a></li>
-          <li><a href="gulp.html">Gulp</a></li>
-          <li><a href="yeoman.html">Yeoman</a></li>
-          <li><a href="git.html">Git</a></li>
-          <li><a href="github.html">GitHub</a></li>
-          <li><a href="github_pages.html">GitHub Pages</a></li>
-        
-          <li class="kb-nav-title">Code</li>
-          <li><a href="html5.html">HTML5</a></li>
-          <li><a href="css.html">CSS</a></li>
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="javascript.html">JavaScript</a></li>
-          <li><a href="jquery.html">jQuery</a></li>
-          <li><a href="ajax.html">Ajax (jQuery)</a></li>
-          <li><a href="#">PHP</a></li>
-          <li><a href="#">XML</a></li>
-          <li><a href="#">RegExp</a></li>
-          
-          <li class="kb-nav-title">Database</li>
-          <li><a href="#">SQL</a></li>
-        
-          <li class="kb-nav-title">Frameworks</li>
-          <li><a href="foundation.html">Foundation</a></li>
-          <li><a href="bootstrap.html">Bootstrap</a></li>
-          <li><a href="angular.html">AngularJS</a></li>
-        
-          <li class="kb-nav-title">Design</li>
-          <li><a href="#">Typography</a></li>
-          <li><a href="#">Color</a></li>
-        </ul>
-        
+    <header class="top-bar">
+    	<div class="top-bar-title">
+    		<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+    		<h1><a href="/">Daniel Dilly</a></h1>
+    	</div>
+    	<div id="responsive-menu">
+    	  <div class="top-bar-left">
+      
+    	  </div>
+    	  <div class="top-bar-right">
+    	 	 		<ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+            <li><a href="/kb">Knowledge Base</a></li>
+          </ul>    
+    	  </div>
       </div>
-      <div class="column medium-9 large-10 padtop">
-        <h3>JavaScript</h3>
-        <p><a href="https://www.javascript.com/">Learn JavaScript</a>
-        <h4>Data Types</h4>
-        <div class="row">
-        	<div class="column medium-4">
-        	<ul style="list-style-position: inside;">
-        	  <li>
-        		<pre>Number</pre>
-        	  </li>
-        	  <li>
-        		<pre>String</pre>
-        	  </li>
-        	  <li>
-        		<pre>Boolean</pre>
-        	  </li>
-        	  <li>
-        		<pre>Symbol</pre>
-        	  </li>
-        	</ul>
-        	</div>
-        	<div class="column medium-4">
-        	  <ul style="list-style-position: inside;">
-        		<li>
-        		<pre>Object</pre>
-        		  <ul style="list-style-position: inside; list-style-type: circle;">
-        			<li>
-        				<pre>Function</pre>
-        			</li>
-        			<li>
-        				<pre>Array</pre>
-        			</li>
-        			<li>
-        				<pre>Date</pre>
-        			</li>
-        			<li>
-        				<pre>RegExp</pre>
-        			</li>
-        		  </ul>
-        		</li>	  	
-        	  </ul>
-        	</div>
-        	<div class="column medium-4">
-        	  <ul style="list-style-position: inside;">
-        	  	<li>
-        		  <pre>null</pre>
-        		</li>
-        		<li>
-        		  <pre>undefined</pre>
-        		</li>
-        	  </ul>
-        	</div>
+    </header>
+    <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
+      <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+        
+        <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
         </div>
-        </ul>
-        <h5>Number</h5>
-        <p><code>Math</code> is a built-in object that performs mathematical tasks on numbers</p>
-        <p><code>parseInt(<i>string</i>, <i>radix</i>)</code> is a built-in function that parses a string and returns an integer. Radix is the numeral system to use.</p>
-        <p><code>parseFloat(<i>string</i>)</code> parses a string and returns a floating point number.</p>
-        <p><code>NaN</code> is a global property whose value is Not-A-Number.</p>
-        <p><code>isNaN(<i>testValue</i>)</code> determines whether a value is NaN or not.</p>
-        <h5>Strings</h5>
-        <p>Find the length of a string with the <code>length</code> property.</p>
-        <p><code><i>str</i>.charAt(<i>index</i>)</code> returns the specified character from a string.</p>
-        <p><code><i>str</i>.replace(<i>regexp</i>|<i>substr</i>, <i>newSubStr</i>|<i>function</i>)</code> returns a new string with some or all matches of a pattern replaced by a replacement.</p>
-        <p>
-        	<pre class="brush: js">
-        var newstr = str.replace('apples', 'oranges');</pre>
-        </p>
-        <p><code><i>str</i>.toUpperCase();</code> </p>
-        <h4>Operators</h4>
-        <h5>Equality Comparisons</h5>
-        <p>The <code>==</code> operator performs type coercion and will result in <code>1 == true</code> and <code>123 == "123"</code> being <code>true</code></p>
-        <p>The <code>===</code> operator will avoid type coercion<br>There are also the <code>!=</code> and <code>!==</code> operators.</p>
-        <h5>Ternary Operator</h5>
-        <p><code>var allowed = (age > 18) ? "yes" : "no";</code></p>
-        <h4>Control Structures</h4>
-        <h5>If and Else</h5>
-        <pre class="brush: js">
-        var name = "kittens";
-        if (name == "puppies") {
-          name += "!";
-        } else if (name == "kittens") {
-          name += "!!";
-        } else {
-          name = "!" + name;
-        }
-        name == "kittens!!"</pre>
-        </p>
-        <h5>While and Do While</h5>
-        <pre class="brush: js">
-        while (true) {
-          // an infinite loop!
-        }
+        <div id="kb-sidebar">
+          <h1><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h1>
+          <nav id="kb-menu">
+            <ul class="vertical menu">
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html">Software</a></li>
+              <li><a href="sublimetext.html">Sublime Text</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html">Node.js</a></li>
+              <li><a href="bower.html">Bower</a></li>
+              <li><a href="grunt.html">Grunt</a></li>
+              <li><a href="gulp.html">Gulp</a></li>
+              <li><a href="yeoman.html">Yeoman</a></li>
+              <li><a href="git.html">Git</a></li>
+              <li><a href="github.html">GitHub</a></li>
+              <li><a href="github_pages.html">GitHub Pages</a></li>
         
-        var input;
-        do {
-          input = get_input();
-        } while (inputIsNotValid(input))</pre>
-        </p>
-        <h5>For</h5>
-        <pre class="brush: js">
-        for (var i = 0; i < 5; i++) {
-          // Will execute 5 times
-        }</pre>
-        </p>
-        <h5>Switch</h5>
-        <pre class="brush: js">
-        switch(a) {
-          case 1: // fallthrough
-          case 2:
-            eatIt();
-            break;
-          default:
-            doNothing(); }</pre>
-        </p>
-        <h4>Objects</h4>
-        <p><b>Objects</b> can be thought of as simple collections of name-value pairs.</p>
-        <p>All objects have a <b>prototype</b> property that is itself an object.  Objects <b>inherit</b> their properties and methods from their prototype.  Attach properties and methods to an objects prototype to make them available to instances of that object (function).<br>
-        <small>Think of using the prototype property to create a class.</small></p>
-        <p>
-          Create an empty object with
-        </p>
-        <pre class="brush: js">
-        var obj = new Object(); // or
-        var obj = {}; // object literal syntax; preferred
-        </pre>
-        <p>
-          Create and initialize an object with <b>object literal</b> syntax<br>
-          <small>Simple, but every property needs to be specified as there is no class.<br>Good for one time objects, singleton objects, or objects that act as hashes.</small></p>
-        <pre class="brush: js">
-        var guy = {
-          name: "John",
-          "awesome": true,
-          aboutMe: function() {
-            return this.awesome ? "I'm awesome!" : "I'm lame :("; } 
-        };</pre>
-        <p>Create an object prototype (Person) and instance of that prototype (You).</p>
-        <pre class="brush: js">
-        function Person(name, age) {
-          this.name = name;
-          this.age = age;
-        }
-        var You = new Person("You", 24); 
-        </pre>
-        <p>Create an object using ES6 classes.</p>
-        <p>Once created, object properties can be accessed in one of two ways</p>
-        <pre class="brush: js">
-        obj.name = "Simon";
-        var name = obj.name;
+              <li class="menu-text">Code</li>
+              <li><a href="html5.html">HTML5</a>
+                <ul class="nested vertical menu">
+                  <li><a href="html5_forms.html">Forms</a></li>
+                </ul>
+              </li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="jquery.html">jQuery</a></li>
+              <li><a href="ajax.html">Ajax (jQuery)</a></li>
+              <li><a href="handlebars.html">Handlebars.js</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">XML</a></li>
+              <li><a href="#">RegExp</a></li>
+              
+              <li class="menu-text">Database</li>
+              <li><a href="#">SQL</a></li>
         
-        obj["name"] = "Simon";
-        var name = obj["name"];
-        </pre>
-        <p>Check if property exists on an object with the <code>in</code> operator</p>
-        <p>
-          <pre class="brush: js">
-        if ("schoolName" in school) { 
-          console.log("School Name: " + school.schoolName); }</pre>
-        </p>
-        <p>Use the <code>hasOwnProperty()</code> method to determine if an object has a specific property as one of its own.</p>
-        <p><pre class="brush:js">console.log(school.hasOwnProperty("schoolName"));  // true​</pre></p>
-        <h5>Object Design Patterns</h5>
-        <h6>Singleton Pattern</h6>
-        <p>Use this pattern when you only want one object to be created of a specific type</p>
-        <p><u>Simple Example</u></p>
-        <pre class="brush: js">
-        function Hero(name) {
-        	// If Object has already been created
-        	if(typeof Hero.instance === 'object') { 
-        		return Hero.instance; }
-        	this.name = name;
-        	Hero.instance = this;
-        	return this; }
-        </pre>
-        <h6>Factory Pattern</h6>
-        <p>Used to generate different objects on request.</p>
-        <pre class="brush: js">
-        function Sword(desc) {
-        	this.weaponType = "Sword";
-        	this.metal = desc.metal || "Steel";
-        	this.style = desc.style || "Longsword";
-        	this.hasMagic = desc.hasMagic || false;
-        }
-        function Bow(desc) {
-        	this.weaponType = "Bow";
-        	this.metal = desc.metal || "Wood";
-        	this.style = desc.style || "Longbow";
-        	this.hasMagic = desc.hasMagic || false;
-        }
-        function WeaponFactory() {};
-        WeaponFactory.prototype.makeWeapon = function(desc) {
-        	var weaponClass = null;
+              <li class="menu-text">Frameworks</li>
+              <li><a href="foundation.html">Foundation</a></li>
+              <li><a href="bootstrap.html">Bootstrap</a></li>
+              <li><a href="angular.html">AngularJS</a></li>
         
-        	if (desc.WeaponType === "Sword") {
-        		weaponClass = Sword; 
-        	} else if (desc.WeaponType === "Bow") {
-        		weaponClass = Bow;
-        	} else
-        		return false; 
-        	}
-        	return new weaponClass(desc);
-        }
+              <li class="menu-text">Design</li>
+              <li><a href="#">Typography</a></li>
+              <li><a href="#">Color</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="column medium-9 large-10" id="right" data-equalizer-watch>
+        <article class="kb-article" id="kb-javascript">
+        	<header>
+        		<div class="inner">
+        		  <h1>JavaScript</h1>
+        	  </div>
+        	</header>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        			<p><a href="https://www.javascript.com/">Learn JavaScript</a>
+        				<h2 id="datatypes" data-magellan-target="datatypes">Data Types</h2>
+        				<div class="row">
+        					<div class="column medium-4">
+        					<ul style="list-style-position: inside;">
+        					  <li>
+        						<pre>Number</pre>
+        					  </li>
+        					  <li>
+        						<pre>String</pre>
+        					  </li>
+        					  <li>
+        						<pre>Boolean</pre>
+        					  </li>
+        					  <li>
+        						<pre>Symbol</pre>
+        					  </li>
+        					</ul>
+        					</div>
+        					<div class="column medium-4">
+        					  <ul style="list-style-position: inside;">
+        						<li>
+        						<pre>Object</pre>
+        						  <ul style="list-style-position: inside; list-style-type: circle;">
+        							<li>
+        								<pre>Function</pre>
+        							</li>
+        							<li>
+        								<pre>Array</pre>
+        							</li>
+        							<li>
+        								<pre>Date</pre>
+        							</li>
+        							<li>
+        								<pre>RegExp</pre>
+        							</li>
+        						  </ul>
+        						</li>	  	
+        					  </ul>
+        					</div>
+        					<div class="column medium-4">
+        					  <ul style="list-style-position: inside;">
+        					  	<li>
+        						  <pre>null</pre>
+        						</li>
+        						<li>
+        						  <pre>undefined</pre>
+        						</li>
+        					  </ul>
+        					</div>
+        				</div>
+        				</ul>
+        				<h3>Number</h3>
+        				<p><code>Math</code> is a built-in object that performs mathematical tasks on numbers</p>
+        				<p><code>parseInt(<i>string</i>, <i>radix</i>)</code> is a built-in function that parses a string and returns an integer. Radix is the numeral system to use.</p>
+        				<p><code>parseFloat(<i>string</i>)</code> parses a string and returns a floating point number.</p>
+        				<p><code>NaN</code> is a global property whose value is Not-A-Number.</p>
+        				<p><code>isNaN(<i>testValue</i>)</code> determines whether a value is NaN or not.</p>
+        				<h3>Strings</h3>
+        				<p>Find the length of a string with the <code>length</code> property.</p>
+        				<p><code><i>str</i>.charAt(<i>index</i>)</code> returns the specified character from a string.</p>
+        				<p><code><i>str</i>.replace(<i>regexp</i>|<i>substr</i>, <i>newSubStr</i>|<i>function</i>)</code> returns a new string with some or all matches of a pattern replaced by a replacement.</p>
+        				<p>
+        					<pre class="brush: js">
+        				var newstr = str.replace('apples', 'oranges');</pre>
+        				</p>
+        				<p><code><i>str</i>.toUpperCase();</code> </p>
         
-        var myWeaponFact = new WeaponFactory();
-        var bladeFist = myWeaponFact.makeWeapon({
-        	weaponType: "Sword",
-        	metal: "Dark Iron",
-        	style: "Scythe",
-        	hasMagic: true
-        })
-        document.write(bladeFist.weaponType + " of type " + 
-          bladeFist.style + " crafted from " + bladeFist.metal + "<br>");
-        </pre>
-        <h6>Decorator Pattern</h6>
-        <h6>Observer Pattern</h6>
-        <p>Uses a single object that notifies many other objects (observers) when a state change occurs.</p>
-        <p>Allows us to alter an object at runtime.</p>
-        <h4>Arrays</h4>
-        <p><b>Arrays</b> are objects used to store multiple values.</p>
-        <p><code>length</code> returns one more than the highest index (not necessarily the # of items)0</p>
-        <pre class="brush: js">
-        // Create an array
-        var a = new Array();
-        a[0] = "dog";
-        a[1] = "cat";
-        a.length; // Returns 2
+        				<h2 id="operators" data-magellan-target="operators">Operators</h2>
+        				<h3>Equality Comparisons</h3>
+        				<p>The <code>==</code> operator performs type coercion and will result in <code>1 == true</code> and <code>123 == "123"</code> being <code>true</code></p>
+        				<p>The <code>===</code> operator will avoid type coercion<br>There are also the <code>!=</code> and <code>!==</code> operators.</p>
+        				<h3>Ternary Operator</h3>
+        				<p><code>var allowed = (age > 18) ? "yes" : "no";</code></p>
         
-        // Create an array with an array literal
-        var b = ["dog", "cat", "hen"];
         
-        // Loop through array
-        for (var i = 0; i < a.length; i++) {
-          // Do something with a[i]
-        }
+        			<h2 id="structures" data-magellan-target="structures">Control Structures</h2>
+        				<h3>If and Else</h3>
+        				<pre class="brush: js">
+        				var name = "kittens";
+        				if (name == "puppies") {
+        				  name += "!";
+        				} else if (name == "kittens") {
+        				  name += "!!";
+        				} else {
+        				  name = "!" + name;
+        				}
+        				name == "kittens!!"</pre>
+        				</p>
+        				<h3>While and Do While</h3>
+        				<pre class="brush: js">
+        				while (true) {
+        				  // an infinite loop!
+        				}
         
-        // Loop through array with forEach()
-        b.forEach(function(currentValue, index, array) {
-          // Do something with currentValue or array[index]
-        });
+        				var input;
+        				do {
+        				  input = get_input();
+        				} while (inputIsNotValid(input))</pre>
+        				</p>
+        				<h3>For</h3>
+        				<pre class="brush: js">
+        				for (var i = 0; i < 5; i++) {
+        				  // Will execute 5 times
+        				}</pre>
+        				</p>
+        				<h3>Switch</h3>
+        				<pre class="brush: js">
+        				switch(a) {
+        				  case 1: // fallthrough
+        				  case 2:
+        				    eatIt();
+        				    break;
+        				  default:
+        				    doNothing(); }</pre>
+        				</p>
         
-        // Add item to array
-        b.push("hamster");
-        </pre>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Documentation on array methods</a></p>
-        <h4>Functions</h4>
-        <p>Functions have access to the <code>arguments</code> variable--an array-like object holding all values passed to the function.</p>
-        <h5>Most basic function</h5>
-        <pre class="brush: js">
-        function add(x, y) {
-          var total = x + y;
-          return total; }</pre>
-        <h5>Anonymous Function</h5>
-        <pre class="brush: js">
-        var avg = function() {
-          var sum = 0;
-          for (var i = 0, j = arguments.length; i < j; i++) {
-            sum += arguments[i];
-          }
-          return sum / arguments.length; };
-        </pre>
-        <h4>Useful Methods</h4>
-        <p><code>setInterval()</code></p>
-        <pre class="brush: js">
-        setInterval(function(){ alert() }, 3000);		// Set a 3 second timer function
-        clearInterval(myInterval);						// Stop a timer
-        </pre>
+        				<h2 id="objects" data-magellan-target="objects">Objects</h2>
+        				<p><b>Objects</b> can be thought of as simple collections of name-value pairs.</p>
+        				<p>All objects have a <b>prototype</b> property that is itself an object.  Objects <b>inherit</b> their properties and methods from their prototype.  Attach properties and methods to an objects prototype to make them available to instances of that object (function).<br>
+        				<small>Think of using the prototype property to create a class.</small></p>
+        				<p>
+        				  Create an empty object with
+        				</p>
+        				<pre class="brush: js">
+        				var obj = new Object(); // or
+        				var obj = {}; // object literal syntax; preferred
+        				</pre>
+        				<p>
+        				  Create and initialize an object with <b>object literal</b> syntax<br>
+        				  <small>Simple, but every property needs to be specified as there is no class.<br>Good for one time objects, singleton objects, or objects that act as hashes.</small></p>
+        				<pre class="brush: js">
+        				var guy = {
+        				  name: "John",
+        				  "awesome": true,
+        				  aboutMe: function() {
+        				    return this.awesome ? "I'm awesome!" : "I'm lame :("; } 
+        				};</pre>
+        				<p>Create an object prototype (Person) and instance of that prototype (You).</p>
+        				<pre class="brush: js">
+        				function Person(name, age) {
+        				  this.name = name;
+        				  this.age = age;
+        				}
+        				var You = new Person("You", 24); 
+        				</pre>
+        				<p>Create an object using ES6 classes.</p>
+        				<p>Once created, object properties can be accessed in one of two ways</p>
+        				<pre class="brush: js">
+        				obj.name = "Simon";
+        				var name = obj.name;
+        
+        				obj["name"] = "Simon";
+        				var name = obj["name"];
+        				</pre>
+        				<p>Check if property exists on an object with the <code>in</code> operator</p>
+        				<p>
+        				  <pre class="brush: js">
+        				if ("schoolName" in school) { 
+        				  console.log("School Name: " + school.schoolName); }</pre>
+        				</p>
+        				<p>Use the <code>hasOwnProperty()</code> method to determine if an object has a specific property as one of its own.</p>
+        				<p><pre class="brush:js">console.log(school.hasOwnProperty("schoolName"));  // true​</pre></p>
+        				<h3>Object Design Patterns</h3>
+        				<h4>Singleton Pattern</h4>
+        				<p>Use this pattern when you only want one object to be created of a specific type</p>
+        				<p><u>Simple Example</u></p>
+        				<pre class="brush: js">
+        				function Hero(name) {
+        					// If Object has already been created
+        					if(typeof Hero.instance === 'object') { 
+        						return Hero.instance; }
+        					this.name = name;
+        					Hero.instance = this;
+        					return this; }
+        				</pre>
+        				<h4>Factory Pattern</h4>
+        				<p>Used to generate different objects on request.</p>
+        				<pre class="brush: js">
+        				function Sword(desc) {
+        					this.weaponType = "Sword";
+        					this.metal = desc.metal || "Steel";
+        					this.style = desc.style || "Longsword";
+        					this.hasMagic = desc.hasMagic || false;
+        				}
+        				function Bow(desc) {
+        					this.weaponType = "Bow";
+        					this.metal = desc.metal || "Wood";
+        					this.style = desc.style || "Longbow";
+        					this.hasMagic = desc.hasMagic || false;
+        				}
+        				function WeaponFactory() {};
+        				WeaponFactory.prototype.makeWeapon = function(desc) {
+        					var weaponClass = null;
+        
+        					if (desc.WeaponType === "Sword") {
+        						weaponClass = Sword; 
+        					} else if (desc.WeaponType === "Bow") {
+        						weaponClass = Bow;
+        					} else
+        						return false; 
+        					}
+        					return new weaponClass(desc);
+        				}
+        
+        				var myWeaponFact = new WeaponFactory();
+        				var bladeFist = myWeaponFact.makeWeapon({
+        					weaponType: "Sword",
+        					metal: "Dark Iron",
+        					style: "Scythe",
+        					hasMagic: true
+        				})
+        				document.write(bladeFist.weaponType + " of type " + 
+        				  bladeFist.style + " crafted from " + bladeFist.metal + "<br>");
+        				</pre>
+        				<h4>Decorator Pattern</h4>
+        				<h4>Observer Pattern</h4>
+        				<p>Uses a single object that notifies many other objects (observers) when a state change occurs.</p>
+        				<p>Allows us to alter an object at runtime.</p>
+        
+        				<h2 id="arrays" data-magellan-target="arrays">Arrays</h2>
+        				<p><b>Arrays</b> are objects used to store multiple values.</p>
+        				<p><code>length</code> returns one more than the highest index (not necessarily the # of items)0</p>
+        				<pre class="brush: js">
+        				// Create an array
+        				var a = new Array();
+        				a[0] = "dog";
+        				a[1] = "cat";
+        				a.length; // Returns 2
+        
+        				// Create an array with an array literal
+        				var b = ["dog", "cat", "hen"];
+        
+        				// Loop through array
+        				for (var i = 0; i < a.length; i++) {
+        				  // Do something with a[i]
+        				}
+        
+        				// Loop through array with forEach()
+        				b.forEach(function(currentValue, index, array) {
+        				  // Do something with currentValue or array[index]
+        				});
+        
+        				// Add item to array
+        				b.push("hamster");
+        				</pre>
+        				<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Documentation on array methods</a></p>
+        
+        				<h2 id="functions" data-magellan-target="functions">Functions</h2>
+        				<p>Functions have access to the <code>arguments</code> variable--an array-like object holding all values passed to the function.</p>
+        				<h3>Most basic function</h3>
+        				<pre class="brush: js">
+        			function add(x, y) {
+        			  var total = x + y;
+        			  return total; }</pre>
+        				<h3>Anonymous Function</h3>
+        				<pre class="brush: js">
+        			var avg = function() {
+        			  var sum = 0;
+        			  for (var i = 0, j = arguments.length; i < j; i++) {
+        			    sum += arguments[i];
+        			  }
+        			  return sum / arguments.length; };</pre>
+        
+        				<h2 id="methods" data-magellan-target="methods">Useful Methods</h2>
+        				<p><code>setInterval()</code></p>
+        				<pre class="brush: js">
+        				setInterval(function(){ alert() }, 3000);		// Set a 3 second timer function
+        				clearInterval(myInterval);						// Stop a timer
+        				</pre>
+        		</div>
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#datatypes">Data Types</a></li>
+        		  		<li><a href="#operators">Operators</a></li>
+        		  		<li><a href="#structures">Control Structures</a></li>
+        		  		<li><a href="#objects">Objects</a></li>
+        		  		<li><a href="#arrays">Arrays</a></li>
+        		  		<li><a href="#functions">Functions</a></li>
+        		  		<li><a href="#methods">Useful Methods</a></li>
+        		  	</ul>
+        		  </nav>
+        		</div>
+        	</div>
+        </article>
       </div>
     </div>
 

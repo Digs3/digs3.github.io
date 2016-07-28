@@ -7,75 +7,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Dilly</title>
     <link rel="stylesheet" href="../assets/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Montserrat|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
     <script type="text/javascript" src="/assets/js/shCore.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/b9883684cd.js"></script>
   </head>
   <body>
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text"><a href="/">Daniel Dilly</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><a href="/" class="button">Home</a></li>
-          <li>
-            <a href="/kb" class="button">Knowledge</a>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="expanded row">
-      <div class="column medium-3 large-2">
-        <ul class="vertical menu kb-nav" id="kb-nav">
-          <p class="kb-nav-header"><a href="/kb/index.html">KB Home</a></p>
-          <li class="kb-nav-title">Toolkit</li>
-          <li><a href="software.html">Software</a></li>
-          <li><a href="sublimetext.html">Sublime Text</a></li>
-          <li><a href="workflows.html">Workflows</a></li>
-          <li><a href="nodejs.html">Node.js</a></li>
-          <li><a href="bower.html">Bower</a></li>
-          <li><a href="grunt.html">Grunt</a></li>
-          <li><a href="gulp.html">Gulp</a></li>
-          <li><a href="yeoman.html">Yeoman</a></li>
-          <li><a href="git.html">Git</a></li>
-          <li><a href="github.html">GitHub</a></li>
-          <li><a href="github_pages.html">GitHub Pages</a></li>
-        
-          <li class="kb-nav-title">Code</li>
-          <li><a href="html5.html">HTML5</a></li>
-          <li><a href="css.html">CSS</a></li>
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="javascript.html">JavaScript</a></li>
-          <li><a href="jquery.html">jQuery</a></li>
-          <li><a href="ajax.html">Ajax (jQuery)</a></li>
-          <li><a href="#">PHP</a></li>
-          <li><a href="#">XML</a></li>
-          <li><a href="#">RegExp</a></li>
-          
-          <li class="kb-nav-title">Database</li>
-          <li><a href="#">SQL</a></li>
-        
-          <li class="kb-nav-title">Frameworks</li>
-          <li><a href="foundation.html">Foundation</a></li>
-          <li><a href="bootstrap.html">Bootstrap</a></li>
-          <li><a href="angular.html">AngularJS</a></li>
-        
-          <li class="kb-nav-title">Design</li>
-          <li><a href="#">Typography</a></li>
-          <li><a href="#">Color</a></li>
-        </ul>
-        
+    <header class="top-bar">
+    	<div class="top-bar-title">
+    		<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+    		<h1><a href="/">Daniel Dilly</a></h1>
+    	</div>
+    	<div id="responsive-menu">
+    	  <div class="top-bar-left">
+      
+    	  </div>
+    	  <div class="top-bar-right">
+    	 	 		<ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+            <li><a href="/kb">Knowledge Base</a></li>
+          </ul>    
+    	  </div>
       </div>
-      <div class="column medium-9 large-10 padtop">
-        <h3>jQuery <small>(The Write Less, Do More, JavaScript Library)</small></h3>
+    </header>
+    <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
+      <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+        
+        <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div id="kb-sidebar">
+          <h1><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h1>
+          <nav id="kb-menu">
+            <ul class="vertical menu">
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html">Software</a></li>
+              <li><a href="sublimetext.html">Sublime Text</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html">Node.js</a></li>
+              <li><a href="bower.html">Bower</a></li>
+              <li><a href="grunt.html">Grunt</a></li>
+              <li><a href="gulp.html">Gulp</a></li>
+              <li><a href="yeoman.html">Yeoman</a></li>
+              <li><a href="git.html">Git</a></li>
+              <li><a href="github.html">GitHub</a></li>
+              <li><a href="github_pages.html">GitHub Pages</a></li>
+        
+              <li class="menu-text">Code</li>
+              <li><a href="html5.html">HTML5</a>
+                <ul class="nested vertical menu">
+                  <li><a href="html5_forms.html">Forms</a></li>
+                </ul>
+              </li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="jquery.html">jQuery</a></li>
+              <li><a href="ajax.html">Ajax (jQuery)</a></li>
+              <li><a href="handlebars.html">Handlebars.js</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">XML</a></li>
+              <li><a href="#">RegExp</a></li>
+              
+              <li class="menu-text">Database</li>
+              <li><a href="#">SQL</a></li>
+        
+              <li class="menu-text">Frameworks</li>
+              <li><a href="foundation.html">Foundation</a></li>
+              <li><a href="bootstrap.html">Bootstrap</a></li>
+              <li><a href="angular.html">AngularJS</a></li>
+        
+              <li class="menu-text">Design</li>
+              <li><a href="#">Typography</a></li>
+              <li><a href="#">Color</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="column medium-9 large-10" id="right" data-equalizer-watch>
+        <article class="kb-article" id="kb-jquery">
+          <header>
+            <div class="inner">
+              <h1>jQuery <small>(The Write Less, Do More, JavaScript Library)</small></h1>
+            </div>
+          </header>
+        <div>
         <ul class="no-bullet">
           <li><a href="https://jquery.com/">Official Website</a></li>
           <li><a href="https://oscarotero.com/jquery/">Quick API Reference</a></li>
@@ -104,29 +129,29 @@
         $('.person');	// select all elements with a class of 'person'
         $('button[data-panel=panel1]')	// select buttons that have the data-panel attribute set to 'panel1'
         </pre>
-        <h4>Methods</h4>
-        <h5>Adding/Removing</h5>
+        <h2>Methods</h2>
+        <h3>Adding/Removing</h3>
         <pre class="brush:js">
         $(li).remove();		// removes the set of matched elements
         </pre>
-        <h5>Showing and Hiding</h5>
+        <h3>Showing and Hiding</h3>
         <p><code>delay()</code>, <code>hide()</code>, <code>show()</code>, <code>toggle()</code>, <code>slideUp()</code>, <code>slideDown()</code>, <code>slideToggle()</code>, <code>fadeIn()</code>, <code>fadeOut()</code>, <code>fadeToggle()</code></p>
-        <h5>Animating</h5>
+        <h3>Animating</h3>
         <p><code>animate()</code></p>
         <pre class="brush: js">
         $('ul .slides').animate({'margin-left': -=720}, 1000);
         </pre>
-        <h5>Getting and Setting Attributes</h5>
+        <h3>Getting and Setting Attributes</h3>
         <pre class="brush: js">
         $('#header').attr('class');				// get the value of an attribute for the first element 
         $('code').attr('class', 'brush:js');	// set one or more attributes for the set of matched elements
         </pre>
-        <h5>Modify HTML</h5>
+        <h3>Modify HTML</h3>
         <p><code>.html()</code></p>
         <pre class="brush: js">
         $("#header").html('New Header Title')
         </pre>
-        <h5>Modify Style</h5>
+        <h3>Modify Style</h3>
         <p><code>.css()</code>, <code>addClass()</code>, <code>removeClass()</code></p>
         <pre class="brush: js">
         $("#header").css({					// Modify css (does not overwrite previous rules)
@@ -138,7 +163,7 @@
         $("#header").addClass('title');		// Add a class to an element
         $("#header").removeClass('title');	// Remove a class from an element
         </pre>
-        <h4>Events</h4>
+        <h2>Events</h2>
         <p><code>on()</code>,<br><code>click()</code>, <code>focus()</code>, <code>blur()</code>, <code>change()</code></p>
         <p>Use the <code>on()</code> method to bind the same handler to multiple events, otherwise you can use the shorthand versions.</p>
         <pre class="brush:js">
@@ -150,7 +175,7 @@
         	console.log("You moused over the header!")l
         });
         </pre>
-        <h4>DOM Traversal</h4>
+        <h2>DOM Traversal</h2>
         <p><code>first()</code>, <code>last()</code>, <code>eq()</code>, <code>children()</code>, <code>siblings()</code>, <code>parent()</code>, <code>prev()</code>, <code>next()</code>, <code>closest()</code>, <code>find()</code>, <code>filter()</code>, <code>not()</code></p>
         <pre class="brush: js">
         $('li')						// returns all list items
@@ -167,7 +192,7 @@
         $('li').filter(':even')		// returns all the even list items (you can also use a filter function)
         $("li").not(":even")		// returns all the odd list items
         </pre>
-        <h4>Testing/Checking</h4>
+        <h2>Testing/Checking</h2>
         <p><code>is()</code></p>
         <pre class="brush:js">
         $("ul").click(function(event) {
@@ -177,6 +202,8 @@
           }
         });
         </pre>
+        </div>
+        </article>
       </div>
     </div>
 

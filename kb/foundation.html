@@ -7,83 +7,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Dilly</title>
     <link rel="stylesheet" href="../assets/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Montserrat|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
     <script type="text/javascript" src="/assets/js/shCore.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/b9883684cd.js"></script>
   </head>
   <body>
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text"><a href="/">Daniel Dilly</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><a href="/" class="button">Home</a></li>
-          <li>
-            <a href="/kb" class="button">Knowledge</a>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="expanded row">
-      <div class="column medium-3 large-2">
-        <ul class="vertical menu kb-nav" id="kb-nav">
-          <p class="kb-nav-header"><a href="/kb/index.html">KB Home</a></p>
-          <li class="kb-nav-title">Toolkit</li>
-          <li><a href="software.html">Software</a></li>
-          <li><a href="sublimetext.html">Sublime Text</a></li>
-          <li><a href="workflows.html">Workflows</a></li>
-          <li><a href="nodejs.html">Node.js</a></li>
-          <li><a href="bower.html">Bower</a></li>
-          <li><a href="grunt.html">Grunt</a></li>
-          <li><a href="gulp.html">Gulp</a></li>
-          <li><a href="yeoman.html">Yeoman</a></li>
-          <li><a href="git.html">Git</a></li>
-          <li><a href="github.html">GitHub</a></li>
-          <li><a href="github_pages.html">GitHub Pages</a></li>
-        
-          <li class="kb-nav-title">Code</li>
-          <li><a href="html5.html">HTML5</a></li>
-          <li><a href="css.html">CSS</a></li>
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="javascript.html">JavaScript</a></li>
-          <li><a href="jquery.html">jQuery</a></li>
-          <li><a href="ajax.html">Ajax (jQuery)</a></li>
-          <li><a href="#">PHP</a></li>
-          <li><a href="#">XML</a></li>
-          <li><a href="#">RegExp</a></li>
-          
-          <li class="kb-nav-title">Database</li>
-          <li><a href="#">SQL</a></li>
-        
-          <li class="kb-nav-title">Frameworks</li>
-          <li><a href="foundation.html">Foundation</a></li>
-          <li><a href="bootstrap.html">Bootstrap</a></li>
-          <li><a href="angular.html">AngularJS</a></li>
-        
-          <li class="kb-nav-title">Design</li>
-          <li><a href="#">Typography</a></li>
-          <li><a href="#">Color</a></li>
-        </ul>
-        
+    <header class="top-bar">
+    	<div class="top-bar-title">
+    		<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+    		<h1><a href="/">Daniel Dilly</a></h1>
+    	</div>
+    	<div id="responsive-menu">
+    	  <div class="top-bar-left">
+      
+    	  </div>
+    	  <div class="top-bar-right">
+    	 	 		<ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+            <li><a href="/kb">Knowledge Base</a></li>
+          </ul>    
+    	  </div>
       </div>
-      <div class="column medium-9 large-10 padtop">
-        	<h3>Foundation</h3>
+    </header>
+    <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
+      <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+        
+        <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div id="kb-sidebar">
+          <h1><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h1>
+          <nav id="kb-menu">
+            <ul class="vertical menu">
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html">Software</a></li>
+              <li><a href="sublimetext.html">Sublime Text</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html">Node.js</a></li>
+              <li><a href="bower.html">Bower</a></li>
+              <li><a href="grunt.html">Grunt</a></li>
+              <li><a href="gulp.html">Gulp</a></li>
+              <li><a href="yeoman.html">Yeoman</a></li>
+              <li><a href="git.html">Git</a></li>
+              <li><a href="github.html">GitHub</a></li>
+              <li><a href="github_pages.html">GitHub Pages</a></li>
+        
+              <li class="menu-text">Code</li>
+              <li><a href="html5.html">HTML5</a>
+                <ul class="nested vertical menu">
+                  <li><a href="html5_forms.html">Forms</a></li>
+                </ul>
+              </li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="jquery.html">jQuery</a></li>
+              <li><a href="ajax.html">Ajax (jQuery)</a></li>
+              <li><a href="handlebars.html">Handlebars.js</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">XML</a></li>
+              <li><a href="#">RegExp</a></li>
+              
+              <li class="menu-text">Database</li>
+              <li><a href="#">SQL</a></li>
+        
+              <li class="menu-text">Frameworks</li>
+              <li><a href="foundation.html">Foundation</a></li>
+              <li><a href="bootstrap.html">Bootstrap</a></li>
+              <li><a href="angular.html">AngularJS</a></li>
+        
+              <li class="menu-text">Design</li>
+              <li><a href="#">Typography</a></li>
+              <li><a href="#">Color</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="column medium-9 large-10" id="right" data-equalizer-watch>
+        <article class="kb-article" id="kb-foundation">
+        	<header>
+        		<div class="inner">
+        		  <h1>Foundation</h1>
+        	  </div>
+        	</header>
+        
+        <div>
         	<p>Foundation (as of 5.3) is now called "Foundation for Sites"- use for more traditional marketing or content sites</p>
         	<p>Foundation for Apps makes use of AngularJS.</p>
         	<p><a href="http://foundation.zurb.com/forum/posts/21506-what-is-your-workflow">Foundation 5 Workflow</a></p>
-        	<h4>Files</h4>
+        	<h2>Files</h2>
         	<p><b>_settings.scss</b></p>
         	<p><b>app.scss</b></p>
-        	<h4>Helpful Functions</h4>
+        	<h2>Helpful Functions</h2>
         	<p><code>rem-calc()</code> can take one or more pixel values and convert them to proper <code>rem</code> values</p>
+        </div>
+        </article>
       </div>
     </div>
 

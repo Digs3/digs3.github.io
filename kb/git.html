@@ -7,269 +7,294 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Dilly</title>
     <link rel="stylesheet" href="../assets/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Montserrat|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
     <script type="text/javascript" src="/assets/js/shCore.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/b9883684cd.js"></script>
   </head>
   <body>
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text"><a href="/">Daniel Dilly</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><a href="/" class="button">Home</a></li>
-          <li>
-            <a href="/kb" class="button">Knowledge</a>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="expanded row">
-      <div class="column medium-3 large-2">
-        <ul class="vertical menu kb-nav" id="kb-nav">
-          <p class="kb-nav-header"><a href="/kb/index.html">KB Home</a></p>
-          <li class="kb-nav-title">Toolkit</li>
-          <li><a href="software.html">Software</a></li>
-          <li><a href="sublimetext.html">Sublime Text</a></li>
-          <li><a href="workflows.html">Workflows</a></li>
-          <li><a href="nodejs.html">Node.js</a></li>
-          <li><a href="bower.html">Bower</a></li>
-          <li><a href="grunt.html">Grunt</a></li>
-          <li><a href="gulp.html">Gulp</a></li>
-          <li><a href="yeoman.html">Yeoman</a></li>
-          <li><a href="git.html">Git</a></li>
-          <li><a href="github.html">GitHub</a></li>
-          <li><a href="github_pages.html">GitHub Pages</a></li>
-        
-          <li class="kb-nav-title">Code</li>
-          <li><a href="html5.html">HTML5</a></li>
-          <li><a href="css.html">CSS</a></li>
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="javascript.html">JavaScript</a></li>
-          <li><a href="jquery.html">jQuery</a></li>
-          <li><a href="ajax.html">Ajax (jQuery)</a></li>
-          <li><a href="#">PHP</a></li>
-          <li><a href="#">XML</a></li>
-          <li><a href="#">RegExp</a></li>
-          
-          <li class="kb-nav-title">Database</li>
-          <li><a href="#">SQL</a></li>
-        
-          <li class="kb-nav-title">Frameworks</li>
-          <li><a href="foundation.html">Foundation</a></li>
-          <li><a href="bootstrap.html">Bootstrap</a></li>
-          <li><a href="angular.html">AngularJS</a></li>
-        
-          <li class="kb-nav-title">Design</li>
-          <li><a href="#">Typography</a></li>
-          <li><a href="#">Color</a></li>
-        </ul>
-        
+    <header class="top-bar">
+    	<div class="top-bar-title">
+    		<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+    		<h1><a href="/">Daniel Dilly</a></h1>
+    	</div>
+    	<div id="responsive-menu">
+    	  <div class="top-bar-left">
+      
+    	  </div>
+    	  <div class="top-bar-right">
+    	 	 		<ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+            <li><a href="/kb">Knowledge Base</a></li>
+          </ul>    
+    	  </div>
       </div>
-      <div class="column medium-9 large-10 padtop">
-         	  <section>
-        		  <h3>Git <small>(Distributed Version Control System)</small></h3>
-        		  <p><a href="https://git-scm.com/">Official Website</a> / <a href="https://www.atlassian.com/git/tutorials">Tutorial</a></p>
-        		  <p>
-        		    Git stores data as snapshots.  When you commit you take a picture of the project file system.<br>
-        			Git stores files in its database as hash values.
-        		  </p>
-        		  <h4>3 Main States your files can reside in</h4>
-        		  <ul>
-        		  	<li>Committed - file is safely stored in db</li>
-        		  	<li>Modified - file is changed but not yet committed to db</li>
-        		  	<li>Staged - file is marked as modified and ready to go into next commit snapshot</li>
-        		  </ul>
-        		  <h4>3 Main Sections of a Git project</h4>
-        		  <ul>
-        		  	<li><b>Git directory</b> - where Git stores the metadata and object db for your project</li>
-        		  	<li><b>Working directory</b> - a single checkout of one version of the project pulled out of db in the Git dir and placed on disk for you to modify</li>
-        		  	<li><b>Staging area (index)</b> - a file, often in Git dir, that stores info about what will go into next commit</li>
-        		  </ul>
-        		  <h4>Git Workflow</h4>
-        		  <ol>
-        		  	<li>Modify files in working dir</li>
-        		  	<li>Stage files, adding snapshots of them to your staging area</li>
-        		  	<li>Commit, takes files in staging area and stores that snapshot permanently in Git dir</li>
-        		  </ol>
-        		  <h4>Git Setup</h4>
-        		  <p>
-        		    <kbd>git config --global user.name "Daniel Dilly"</kbd>: set username<br>
-        			<kbd>git config --global user.email daniel.dilly@gmail.com</kbd>: set email<br>
-        			<kbd>git config --list</kbd>: list config<br>
-        			<kbd>git help &lt;verb&gt;</kbd>: get help
-        		  </p>
-        		  <h4>Creating a Git Repository</h4>
-        		  <p><u>Import an existing project or directory into Git</u></p>
-        		  <p>
-        		  	<kbd>git init &lt;project name&gt;</kbd>: creates the project dir, .git subdir and master branch<br>
-        			<kbd>git add *.html</kbd>: tracks the file(s)<br>
-        			<kbd>git commit -m 'msg'</kbd>:	commit
-        		  </p>
-        		  <p><u>Clone an existing Git repository from another server</u></p>
-        		  <p><kbd>git clone &lt;url&gt; &lt;dir&gt;</kbd>: clones a url into the specified directory</p>
-        		  <p>
-        		  	Use <kbd>git status</kbd> to determine which files are in which state.<br>
-        			Use the <b>.gitignore</b> file to list file patterns to ignore
-        		  </p>
-        		  <p>
-        		  	<b>Remote repository</b> - version of your project hosted on the Internet or network somewhere<br>
-        			<b>origin</b> - the default name for a cloned remote repository
-        		  </p>
-        		  <p>
-        			<b>Branch</b> - a lightweight movable pointer to a commit<br>
-        			Default branch is named "master"<br>
-        			There is a special pointer named "HEAD" that points to the current branch
-        		  </p>
-        		  <p>
-        		    <b>Lightweight Tag</b> - like a branch that doesn't change (a pointer to a specific commit)<br>
-        			<b>Annotated Tag</b> - stored as full objects in Git db (recommended)
-        		  </p>
-        		  <h4>WORKFLOW</h4>
-        		  <p>
-        		    <kbd>git pull</kbd> : get everyones updates (up to date)<br>
-        			&lt;make changes to project&gt;<br>
-        			<kbd>git add -A</kbd> : add all changes<br>
-        			<kbd>git commit</kbd> : commit changes with message
-        		  </p>
-        		  <p>How to get out of full blown "git commit"?	<ESC> :wq</p>
-        		  <p>TIP: Don't edit the master, branch it and then merge with it</p>
-        		  <h4>Commands</h4>
-        		  <table>
-        			<tr>
-        				<td><kbd>git clone &lt;url&gt;</td>
-        				<td>Copies project from GitHub to desktop</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git status</kbd></td>
-        				<td>Determine which files are in which state (-s for short)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git diff</kbd></td>
-        				<td>Shows exactly what has changed</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git diff --staged</kbd></td>
-        				<td>Show what has changed and is staged</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git add &lt;filename&gt;</kbd></td>
-        				<td>Add file to be tracked and/or staged (--all for all files)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git commit -m "&lt;msg&gt;"</kbd></td>
-        				<td>Commit (-v to show changes)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git commit -a</kbd></td>
-        				<td>Commit all tracked files (skip the git add)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git commit --ammend</kbd></td>
-        				<td>Recommit replacing the previous commit</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git rm &lt;file&gt;</kbd></td>
-        				<td>Remove a file from staging area and working dir</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git rm --cached &lt;file&gt;</kbd></td>
-        				<td>Remove a file from staging area but keep in workin dir</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git mv &lt;from&gt; &lt;to&gt;</kbd></td>
-        				<td>Move/rename file</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git log</kbd></td>
-        				<td>Show commit history (--oneline --decorate --graph --all) (--pretty=oneline)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git remote</kbd></td>
-        				<td>See which remote servers are configured, lists the shortnames (-v shows url urls)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git remote add &lt;sname&gt; <url></kbd></td>
-        				<td>Adds a new remote Git repository as an easily referencable shortname</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git remote show &lt;remote&gt;</kbd></td>
-        				<td>Show more info about a remote</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git remote rename &lt;sname&gt;</kbd></td>
-        				<td>Rename remote (also changes remote branch names)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git remote rm &lt;sname&gt;</kbd></td>
-        				<td>Remove remote</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git fetch &lt;remote-name&gt;</kbd></td>
-        				<td>Get data from remote projects</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git push &lt;remote&gt; &lt;branch&gt;</kbd></td>
-        				<td>Push commits back to the server (e.g., git push origin master), doesn't transfer tags</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git push &lt;remote&gt; &lt;tag&gt;</kbd></td>
-        				<td>Push specified tag (use --tags instead of the tag name to push all tags)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git pull</kbd></td>
-        				<td>Automatically fetch and then merge a remote branch into current branch</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git branch</kbd></td>
-        				<td>List branches (* indicates HEAD ptr) (-v shows last commit on each branch)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git branch --merged</kbd></td>
-        				<td>Lists branches already merged (--no-merged lists branches that have not been)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git branch &lt;name&gt;</kbd></td>
-        				<td>Create a new branch (pointer) at the commit you're currently on (-d to delete)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git checkout &lt;name&gt;</kbd></td>
-        				<td>Switch branch, HEAD ptr, changes working dir (-b to automatically create &amp; switch)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git merge &lt;branch&gt;</kbd></td>
-        				<td>Merge specified branch into current branch</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git tag</kbd></td>
-        				<td>Lists the tags</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git tag -a v1.4 -m &lt;msg&gt;</kbd></td>
-        				<td>Create annotated tag</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git tag v1.4</kbd></td>
-        				<td>Create lightweight tag (don't supply the -a, -s, or -m option)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git tag -a v1.4 &lt;checksum&gt;</kbd></td>
-        				<td>Tag a commit that you've move passed.  Specify the commit checksum (or part of it)</td>
-        			</tr>
-        			<tr>
-        				<td><kbd>git show v1.4</kbd></td>
-        				<td>Show tag data along with the commit tagged</td>
-        			</tr>
-        		  </table>
-        	  </section>
+    </header>
+    <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
+      <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+        
+        <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div id="kb-sidebar">
+          <h1><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h1>
+          <nav id="kb-menu">
+            <ul class="vertical menu">
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html">Software</a></li>
+              <li><a href="sublimetext.html">Sublime Text</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html">Node.js</a></li>
+              <li><a href="bower.html">Bower</a></li>
+              <li><a href="grunt.html">Grunt</a></li>
+              <li><a href="gulp.html">Gulp</a></li>
+              <li><a href="yeoman.html">Yeoman</a></li>
+              <li><a href="git.html">Git</a></li>
+              <li><a href="github.html">GitHub</a></li>
+              <li><a href="github_pages.html">GitHub Pages</a></li>
+        
+              <li class="menu-text">Code</li>
+              <li><a href="html5.html">HTML5</a>
+                <ul class="nested vertical menu">
+                  <li><a href="html5_forms.html">Forms</a></li>
+                </ul>
+              </li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="jquery.html">jQuery</a></li>
+              <li><a href="ajax.html">Ajax (jQuery)</a></li>
+              <li><a href="handlebars.html">Handlebars.js</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">XML</a></li>
+              <li><a href="#">RegExp</a></li>
+              
+              <li class="menu-text">Database</li>
+              <li><a href="#">SQL</a></li>
+        
+              <li class="menu-text">Frameworks</li>
+              <li><a href="foundation.html">Foundation</a></li>
+              <li><a href="bootstrap.html">Bootstrap</a></li>
+              <li><a href="angular.html">AngularJS</a></li>
+        
+              <li class="menu-text">Design</li>
+              <li><a href="#">Typography</a></li>
+              <li><a href="#">Color</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="column medium-9 large-10" id="right" data-equalizer-watch>
+        <article class="kb-article" id="kb-git">
+        	<header>
+        		<div class="inner">
+        		  <h1>Git <small>(Distributed Version Control System)</small></h1>
+        	  </div>
+        	</header>
+        <div>
+          <p><a href="https://git-scm.com/">Official Website</a> / <a href="https://www.atlassian.com/git/tutorials">Tutorial</a></p>
+          <p>
+            Git stores data as snapshots.  When you commit you take a picture of the project file system.<br>
+        	Git stores files in its database as hash values.
+          </p>
+          <h2>3 Main States your files can reside in</h2>
+          <ul>
+          	<li>Committed - file is safely stored in db</li>
+          	<li>Modified - file is changed but not yet committed to db</li>
+          	<li>Staged - file is marked as modified and ready to go into next commit snapshot</li>
+          </ul>
+          <h2>3 Main Sections of a Git project</h2>
+          <ul>
+          	<li><b>Git directory</b> - where Git stores the metadata and object db for your project</li>
+          	<li><b>Working directory</b> - a single checkout of one version of the project pulled out of db in the Git dir and placed on disk for you to modify</li>
+          	<li><b>Staging area (index)</b> - a file, often in Git dir, that stores info about what will go into next commit</li>
+          </ul>
+          <h2>Git Workflow</h2>
+          <ol>
+          	<li>Modify files in working dir</li>
+          	<li>Stage files, adding snapshots of them to your staging area</li>
+          	<li>Commit, takes files in staging area and stores that snapshot permanently in Git dir</li>
+          </ol>
+          <h2>Git Setup</h2>
+          <p>
+            <kbd>git config --global user.name "Daniel Dilly"</kbd>: set username<br>
+        	<kbd>git config --global user.email daniel.dilly@gmail.com</kbd>: set email<br>
+        	<kbd>git config --list</kbd>: list config<br>
+        	<kbd>git help &lt;verb&gt;</kbd>: get help
+          </p>
+          <h2>Creating a Git Repository</h2>
+          <p><u>Import an existing project or directory into Git</u></p>
+          <p>
+          	<kbd>git init &lt;project name&gt;</kbd>: creates the project dir, .git subdir and master branch<br>
+        	<kbd>git add *.html</kbd>: tracks the file(s)<br>
+        	<kbd>git commit -m 'msg'</kbd>:	commit
+          </p>
+          <p><u>Clone an existing Git repository from another server</u></p>
+          <p><kbd>git clone &lt;url&gt; &lt;dir&gt;</kbd>: clones a url into the specified directory</p>
+          <p>
+          	Use <kbd>git status</kbd> to determine which files are in which state.<br>
+        	Use the <b>.gitignore</b> file to list file patterns to ignore
+          </p>
+          <p>
+          	<b>Remote repository</b> - version of your project hosted on the Internet or network somewhere<br>
+        	<b>origin</b> - the default name for a cloned remote repository
+          </p>
+          <p>
+        	<b>Branch</b> - a lightweight movable pointer to a commit<br>
+        	Default branch is named "master"<br>
+        	There is a special pointer named "HEAD" that points to the current branch
+          </p>
+          <p>
+            <b>Lightweight Tag</b> - like a branch that doesn't change (a pointer to a specific commit)<br>
+        	<b>Annotated Tag</b> - stored as full objects in Git db (recommended)
+          </p>
+          <h2>WORKFLOW</h2>
+          <p>
+            <kbd>git pull</kbd> : get everyones updates (up to date)<br>
+        	&lt;make changes to project&gt;<br>
+        	<kbd>git add -A</kbd> : add all changes<br>
+        	<kbd>git commit</kbd> : commit changes with message
+          </p>
+          <p>How to get out of full blown "git commit"?	<ESC> :wq</p>
+          <p>TIP: Don't edit the master, branch it and then merge with it</p>
+          <h2>Commands</h2>
+          <table>
+        	<tr>
+        		<td><kbd>git clone &lt;url&gt;</td>
+        		<td>Copies project from GitHub to desktop</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git status</kbd></td>
+        		<td>Determine which files are in which state (-s for short)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git diff</kbd></td>
+        		<td>Shows exactly what has changed</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git diff --staged</kbd></td>
+        		<td>Show what has changed and is staged</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git add &lt;filename&gt;</kbd></td>
+        		<td>Add file to be tracked and/or staged (--all for all files)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git commit -m "&lt;msg&gt;"</kbd></td>
+        		<td>Commit (-v to show changes)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git commit -a</kbd></td>
+        		<td>Commit all tracked files (skip the git add)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git commit --ammend</kbd></td>
+        		<td>Recommit replacing the previous commit</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git rm &lt;file&gt;</kbd></td>
+        		<td>Remove a file from staging area and working dir</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git rm --cached &lt;file&gt;</kbd></td>
+        		<td>Remove a file from staging area but keep in workin dir</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git mv &lt;from&gt; &lt;to&gt;</kbd></td>
+        		<td>Move/rename file</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git log</kbd></td>
+        		<td>Show commit history (--oneline --decorate --graph --all) (--pretty=oneline)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git remote</kbd></td>
+        		<td>See which remote servers are configured, lists the shortnames (-v shows url urls)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git remote add &lt;sname&gt;</kbd></td>
+        		<td>Adds a new remote Git repository as an easily referencable shortname</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git remote show &lt;remote&gt;</kbd></td>
+        		<td>Show more info about a remote</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git remote rename &lt;sname&gt;</kbd></td>
+        		<td>Rename remote (also changes remote branch names)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git remote rm &lt;sname&gt;</kbd></td>
+        		<td>Remove remote</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git fetch &lt;remote-name&gt;</kbd></td>
+        		<td>Get data from remote projects</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git push &lt;remote&gt; &lt;branch&gt;</kbd></td>
+        		<td>Push commits back to the server (e.g., git push origin master), doesn't transfer tags</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git push &lt;remote&gt; &lt;tag&gt;</kbd></td>
+        		<td>Push specified tag (use --tags instead of the tag name to push all tags)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git pull</kbd></td>
+        		<td>Automatically fetch and then merge a remote branch into current branch</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git branch</kbd></td>
+        		<td>List branches (* indicates HEAD ptr) (-v shows last commit on each branch)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git branch --merged</kbd></td>
+        		<td>Lists branches already merged (--no-merged lists branches that have not been)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git branch &lt;name&gt;</kbd></td>
+        		<td>Create a new branch (pointer) at the commit you're currently on (-d to delete)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git checkout &lt;name&gt;</kbd></td>
+        		<td>Switch branch, HEAD ptr, changes working dir (-b to automatically create &amp; switch)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git merge &lt;branch&gt;</kbd></td>
+        		<td>Merge specified branch into current branch</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git tag</kbd></td>
+        		<td>Lists the tags</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git tag -a v1.4 -m &lt;msg&gt;</kbd></td>
+        		<td>Create annotated tag</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git tag v1.4</kbd></td>
+        		<td>Create lightweight tag (don't supply the -a, -s, or -m option)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git tag -a v1.4 &lt;checksum&gt;</kbd></td>
+        		<td>Tag a commit that you've move passed.  Specify the commit checksum (or part of it)</td>
+        	</tr>
+        	<tr>
+        		<td><kbd>git show v1.4</kbd></td>
+        		<td>Show tag data along with the commit tagged</td>
+        	</tr>
+          </table>
+        </div>
+        </article>
       </div>
     </div>
 

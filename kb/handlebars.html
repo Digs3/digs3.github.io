@@ -94,77 +94,49 @@
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
-        <article class="kb-article" id="kb-angular">
+        <article class="kb-article" id="kb-handlebars">
         	<header>
         		<div class="inner">
-        		  <h1>AngularJS</h1>
+        		  <h1>Handlebars.js <small>(Minimal Templating on Steroids)</small></h1>
         	  </div>
         	</header>
-        	<div>
-        		<p>
-        			<b>AngularJS</b> is the most popular and powerful web application framework today.  Backed by Google and hard to learn, AngularJS tries to make web apps more natural &amp; fluid.<br>
-        			It attempts to solve the problem of complexity behind coding the DOM is JS.
-        		</p>
-        		<p><b>Single Page Application (SPA)</b> - a Web page in which we have a shell page which we can load, on-the-fly, multiple views (mini Web pages)</p>
-        		<p>
-        		  Building SPA's by scratch includes: DOM Manipulation, Data Binding, Object Modeling, View Loading, Module Loading, History, Caching, Ajax, Routing, etc.<br>
-        		  This is built into Angular
-        		</p>
-        		<h2>Features</h2>
-        		<ul>
-        			<li>Data Binding and Dependency Injection</li>
-        			<li>Full Testing Environment</li>
-        			<li>Deep Linking for Dynamic Pages - encode state application in URL so it can be bookmarked</li>
-        			<li>Directives - used to create custom HTML tags that serve as custom elements, also used to decorate</li>
-        			<li>MVVM - models talk to viewmodel objecdts through the $scope object - viewmodel can be delivered &amp; rendered by views</li>
-        			<li>Routing of Views with built-in routing support</li>
-        			<li>jqLite for DOM manipulation (a mini-me of jquery)</li>
-        			<li>Templates, History, Factories</li>
-        		</ul>
-        		<h3>Data Binding Expression</h3>
-        		<p>
-        		  Example &#123;&#123; name &#125;&#125;<br>
-        		  This is a Data Binding Expression.  It will automatically update to the current value of the given property.<br>
-        		  Use the ng-model Directive to add new properties.
-        		</p>
-        		<h3>Directives - a way to teach HTML new tricks</h3>
-        		<p>Allows us to extend HTML using attributes, elements, or comments.</p>
-        		<p>
-        		  Example: &lt;html ng-app&gt;<br>
-        		  ng-app initializes the Angular app.
-        		</p>
-        		<p>
-        		  Example: &lt;input type="text" ng-model="name" /&gt;<br>
-        		  ng-model adds a property into the scope.  
-        		</p>
-        		<p>
-        		  Example: &lt;div class="container" data-ng-init="names=['Dave','Napur','Heedy','Shriva']"&gt;
-        	 	  &lt;ul&gt;&lt;li data-ng-repeat="name in names">&#123;&#123; name &#125;&#125;&lt;/li&gt;
-        	      &lt;/div&gt;  
-        		</p>
-        		<p>
-        		  ng-init allows you to initialize values??<br>
-        		  ng-repeat allows you to iterate through an array.<br>
-        		  ng-click allows you to specify custom behaviors when an element is clicked.<br>
-        		  ng-view complements $route service by including the rendered template of the current route into the main layout file<br>
-        		  ng-submit binds an Angular expression to the onsubmit event of the form. (example: &lt;form ng-submit="addTodo()"&gt;)
-        		</p>
-        		<p>"ng-" Directives are built-in Angular Directive.</p>
-        		<h3>Filters</h3>
-        		<p>Uses: uppercase, lowercase, limitTo, orderBy, filter, currency, date, number, json</p>
-        		<p>
-        		  Example:<br>
-        		  &lt;input type="text" ng-model="nameText" /&gt;<br>
-        		  &lt;ul&gt;&lt;li ng-repeat="cust in customers | filter:nameText | orderBy:'name'"&gt;<br>
-        	  	  &#123;&#123;  cust.name &#125;&#125; - &#123;&#123; cust.city &#124; lowercase &#125;&#125;<br></li></ul>
-        		</p>
-        		<p>This will allow you to type in a name and instantaneously see the results</p>
-        		<h2>Models, Views, Controllers, Scope</h2>
-        		<h2>Modules, Routes, Factories</h2>
-        		<h2>Modules</h2>
-        		<h2>Routes</h2>
-        		<h2>Factories, Services, Providers, Values</h2>
-        	</div>
+        
+        <div>
+        	<p><a href="http://handlebarsjs.com/">Official Website</a> | <a href="http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/">Tutorial</a></p>
+        	<p>Handlebars.js is a templating engine for JavaScript.  Handlebars is a superset of the Mustache template engine.  It can be used to add templates to your HTML page that will be parsed and interpolated with the values from the data you passed to the Handlebars function.  This helps you separate the HTML from the dynamic content created by JavaScript.</p>
+        	<p>Handlebars is a compiler that takes any HTML and Handlebars expression and compiles them to a JavaScript function.  This function takes an object--your data--and returns a string with the object properties inserted into the HTML.</p>
+        	<h2>Installation</h2>
+        	<p>Handlebars can be installed with npm or with bower</p>
+        	<p><code>npm install --save handlebars</code></p>
+        	<p><code>bower install --save handlebars</code></p>
+        	<p>Insert handlebars.js into your site:</p>
+        	<pre class="brush:xml">
+        	&lt;script src="handlebars-v4.0.22.js"&gt;&lt;/script&gt;</pre>
+        	<h2>Simple Example</h2>
+        	<pre class="brush: js">
+        	// HTML + Handlebars expression
+        	var myInfo = "&lt;p&gt;My name is &#123;&#123;name&#125;&#125; and I live in &#123;&#123;city&#125;&#125;, &#123;&#123;state&#125;&#125;.&lt;/p&gt;";
+        
+        	// Compile expression into a JavaScript function
+        	var template = Handlebars.compile(myInfo);
+        
+        	// Fill the template with data
+        	var data = template(&#123;name: "Daniel", city: "Marietta", state: "OH"&#125;);
+        
+        	// Insert the returned html into the page
+        	$('derekData').html(data);</pre>
+        	<h2>Separate Template from JavaScript</h2>
+        	<p>Place your HTML + Handlebars expression inside a <code>script</code> tag with the type <code>text/x-handlebars-template</code> and give it an id.</p>
+        	<pre class="brush: xml">
+        	&lt;script id="entry-template" type="text/x-handlebars-template"&gt;
+        	  &lt;p&gt;My name is &#123;&#123;name&#125;&#125; and I live in &#123;&#123;city&#125;&#125;, &#123;&#123;state&#125;&#125;.&lt;/p&gt;
+        	&lt;/script&gt;
+        	</pre>
+        	<h2>HTML Escaping</h2>
+        	<p>Use the "triple-stash", <code>&#123;&#123;&#123;</code>, to include any HTML in your expressions.  Handlebars will not HTML-escape triple-stashed values.</p>
+        	<h2>Helpers</h2>
+        	<h3>#each helper</h3>
+        </div>
         </article>
       </div>
     </div>
