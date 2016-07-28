@@ -20,33 +20,21 @@
   </head>
   <body>
 
-    <header class="top-bar">
-    	<div class="top-bar-title">
-    		<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-          <button class="menu-icon" type="button" data-toggle></button>
-        </span>
-    		<h1><a href="/">Daniel Dilly</a></h1>
-    	</div>
-    	<div id="responsive-menu">
-    	  <div class="top-bar-left">
-      
-    	  </div>
-    	  <div class="top-bar-right">
-    	 	 		<ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
-            <li><a href="/kb">Knowledge Base</a></li>
-          </ul>    
-    	  </div>
-      </div>
-    </header>
+
     <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
       <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+          <header class="top-bar" id="kb-nav-top">
+          	<div class="top-bar-title">
+          		<h1><a href="/">Daniel Dilly</a></h1>
+          	</div>
+          </header>
         
         <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle></button>
           <div class="title-bar-title">Menu</div>
         </div>
         <div id="kb-sidebar">
-          <h1><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h1>
+          <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
           <nav id="kb-menu">
             <ul class="vertical menu">
               <li class="menu-text">Toolkit</li>
