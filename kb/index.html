@@ -5,10 +5,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Dilly</title>
+    <title>Knowledge Base for Web Development (Daniel Dilly)</title>
     <link rel="stylesheet" href="../assets/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
     <script type="text/javascript" src="/assets/js/shCore.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
@@ -17,17 +16,19 @@
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/b9883684cd.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
 
 
     <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
       <div class="column medium-3 large-2" id="left" data-equalizer-watch>
-          <header class="top-bar" id="kb-nav-top">
-          	<div class="top-bar-title">
-          		<h1><a href="/">Daniel Dilly</a></h1>
-          	</div>
-          </header>
+        <div>
+        <header class="top-bar" id="kb-nav-top">
+        	<div class="top-bar-title">
+        		<h1><a href="/">Daniel Dilly</a></h1>
+        	</div>
+        </header>
         
         <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle></button>
@@ -37,48 +38,59 @@
           <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
           <nav id="kb-menu">
             <ul class="vertical menu">
-              <li class="menu-text">Toolkit</li>
-              <li><a href="software.html">Software</a></li>
-              <li><a href="sublimetext.html">Sublime Text</a></li>
-              <li><a href="workflows.html">Workflows</a></li>
-              <li><a href="nodejs.html">Node.js</a></li>
-              <li><a href="bower.html">Bower</a></li>
-              <li><a href="grunt.html">Grunt</a></li>
-              <li><a href="gulp.html">Gulp</a></li>
-              <li><a href="yeoman.html">Yeoman</a></li>
-              <li><a href="git.html">Git</a></li>
-              <li><a href="github.html">GitHub</a></li>
-              <li><a href="github_pages.html">GitHub Pages</a></li>
         
               <li class="menu-text">Code</li>
-              <li><a href="html5.html">HTML5</a>
+              <li><a href="html5.html"><i class="icon-html5-plain"></i> HTML5</a>
                 <ul class="nested vertical menu">
                   <li><a href="html5_forms.html">Forms</a></li>
                 </ul>
               </li>
-              <li><a href="css.html">CSS</a></li>
-              <li><a href="sass.html">Sass</a></li>
-              <li><a href="javascript.html">JavaScript</a></li>
-              <li><a href="jquery.html">jQuery</a></li>
-              <li><a href="ajax.html">Ajax (jQuery)</a></li>
+              <li><a href="css.html"><i class="icon-css3-plain"></i> CSS</a></li>
+              <li><a href="sass.html"><i class="icon-sass-original"></i> Sass</a></li>
+              <li><a href="javascript.html"><i class="icon-javascript-plain"></i> JavaScript</a>
+                <ul class="nested vertical menu">
+                  <li><a href="ajax.html">Ajax</a></li>
+                </ul>
+              </li>
+              <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
+              
               <li><a href="handlebars.html">Handlebars.js</a></li>
-              <li><a href="#">PHP</a></li>
+              <li><a href="#"><i class="icon-php-plain"></i> PHP</a></li>
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
+        
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html"><i class="icon-uniE695"></i> Software</a></li>
+              <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js</a></li>
+              <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
+              <li><a href="grunt.html"><i class="icon-grunt-plain"></i> Grunt</a></li>
+              <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
+              <li><a href="yeoman.html"><i class="icon-uniE67A"></i> Yeoman</a></li>
+              <li><a href="git.html"><i class="icon-git-plain"></i> Git</a></li>
+              <li><a href="github.html"><i class="icon-github-plain"></i> GitHub</a></li>
+              <li><a href="github_pages.html"><i class="icon-github-plain"></i> GitHub Pages</a></li>
+        
+        
               
               <li class="menu-text">Database</li>
-              <li><a href="#">SQL</a></li>
+              <li><a href="#"><i class="icon-mysql-plain"></i> MySQL</a></li>
         
               <li class="menu-text">Frameworks</li>
-              <li><a href="foundation.html">Foundation</a></li>
-              <li><a href="bootstrap.html">Bootstrap</a></li>
-              <li><a href="angular.html">AngularJS</a></li>
+              <li><a href="foundation.html"><i class="icon-foundation-plain"></i> Foundation</a></li>
+              <li><a href="bootstrap.html"><i class="icon-bootstrap-plain"></i> Bootstrap</a></li>
+              <li><a href="angular.html"><i class="icon-angularjs-plain"></i> AngularJS</a></li>
         
               <li class="menu-text">Design</li>
               <li><a href="#">Typography</a></li>
               <li><a href="#">Color</a></li>
+        
+              <li class="menu-text">More</li>
+              <li><a href="seo.html">SEO</a></li>
             </ul>
           </nav>
+        </div>
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
@@ -89,6 +101,11 @@
             </div>
           </header>
         <div>
+          <h2>Welcome</h2>
+          <p>This is a knowledge base with a focus on Web development tools and technologies.  It can be used as a reference or a guide.</p>
+          <p>Learn or refresh on <a href="html5.html">HTML</a>, <a href="css.html">CSS</a>, <a href="javascript.html">JavaScript</a>, <a href="jquery">jQuery</a>, <a href="php">PHP</a>, and many others.</p>
+          <p>Understand the different tools available like <a href="bower.html">Bower</a>, <a href="grunt.html">Grunt</a>/<a href="gulp.html">Gulp</a>, <a href="yeoman">Yeoman</a> that can each improve your workflow.</p>
+          <p>Familiarize yourself with the different reponsive CSS frameworks available such as <a href="bootstrap.html">Bootstrap</a> or <a href="foundation.html">Foundation</a>.</p>
           <h2>Toolkit</h2>
           <p>While not exactly necessary, understanding the <a href="software.html">different tools available</a> for development can greatly improve your <a href="workflows.html">workflow</a>.</p>
           <p>For starters, get yourself a good text editor for your code, such as the very popular <a href="sublimetext.html">Sublime Text</a>.  This is all you need to begin developing for the Web.</p>
