@@ -100,50 +100,221 @@
         		  <h1>HTML5</h1>
         	  </div>
         	</header>
-        
-        <div>
-        	<h2>Resources</h2>
-        	<p><a href="https://www.w3.org/TR/html-markup/elements.html">HTML Element Reference</a></p>
-        	<h2>HTML5 &lt;!DOCTYPE&gt;</h2>
-        	<p>
-        		<code>&lt;!DOCTYPE html&gt;</code>
-        	</p>
-        	<h2>New Semantic Elements</h2>
-        	<ul>
-        		<li>&lt;article&gt;</li>
-        		<li>&lt;footer&gt;</li>
-        		<li>&lt;header&gt;</li>
-        		<li>&lt;nav&gt;</li>
-        		<li>&lt;section&gt;</li>
-        	</ul>
-        	<h2>Other Structural Tags</h2>
-        	<ul>
-        		<li>&lt;command&gt;</li>
-        		<li>&lt;details&gt;</li>
-        		<li>&lt;summary&gt;</li>
-        		<li>&lt;meter&gt;</li>
-        		<li>&lt;progress&gt;</li>
-        		<li>&lt;figure&gt;</li>
-        		<li>&lt;figcaption&gt;</li>
-        		<li>&lt;mark&gt;</li>
-        		<li>&lt;time&gt;</li>
-        		<li>&lt;wbr&gt;</li>
-        	</ul>
-        	<h2>Custom Data Attributres</h2>
-        	<p>Used to add metadata about any element within an HTML5 page.</p>
-        	<p>They all start with the <code>data-</code> pattern.</p>
-        	<p>They can be read using JavaScript via the <code>getAttribute()</code> method.</p>
-        	<h2>Audio</h2>
-        	<p><code>&lt;audio&gt;</code> : a standard way to embed an audio file on a web page</p>
-        	<p><code>
-        		&lt;audio controls&gt;<br>
-        		&lt;source src="song.ogg" type="audio/ogg" /&gt;<br>
-        		&lt;source src="song.mp3" type="audio/mpeg" /&gt;<br>
-        		Not Supported<br>
-        		&lt;/audio&gt;
-        	</code></p>
-        	<p>Multiple sources -> the browser will use the first recognized format.</p>
-        </div>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        	  	<p><a href="https://www.w3.org/TR/html-markup/elements.html">HTML Element Reference</a></p>
+        	  	<h2 id="what" data-magellan-target="what">What is HTML?</h2>
+        	  	<p>HTML (Hypertext Markup Language) is a markup language for describing web pages.  It provides the HTML tags that are used to markup a web page.</p>	
+        			<h2 id="doctype" data-magellan-target="doctype">HTML5 &lt;!DOCTYPE&gt;</h2>
+        			<p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type.  The browser uses this to determine which version of HTML/XHTML the document is using to display the page correctly.</p>
+        			<p>This declaration must only appear only once, at the top of the HTML page.  For HTML5, the doctype is <code>&lt;!DOCTYPE html&gt;</code></p>
+        			<h2 id="semantic" data-magellan-target="semantic">New Semantic Elements</h2>
+        			<p>HTML5 introduces new semantic elements.  Semantic elements are elements with a meaning.</p>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Tag</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<tr>
+        						<td><code>&lt;section&gt;</code></td>
+        						<td>Defines a section in a document.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;article&gt;</code></td>
+        						<td>Specifies independent, self-contained content.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;header&gt;</code></td>
+        						<td>Specifies a header for a document or section.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;footer&gt;</code></td>
+        						<td>Specifies a footer for a document or section.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;nav&gt;</code></td>
+        						<td>Defines a set of navigation links.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;aside&gt;</code></td>
+        						<td>Defines some content aside from the content it is placed in.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;main&gt;</code></td>
+        						<td>Specifies the main content of a document.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;mark&gt;</code></td>
+        						<td>Defines marked/highlighted text.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;time&gt;</code></td>
+        						<td>Defines a date/time</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;summary&gt;</code></td>
+        						<td>Defines a visible heading for a <code>&lt;details&gt;</code> element.</td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;details&gt;</code></td>
+        						<td>Defines additional details that the user can view or hide.</td>
+        					</tr>
+        				</tbody>
+        			</table>
+        			<h2 id="outline" data-magellan-target="outline">Example Semantic Outline</h2>
+        			<img src="/assets/img/document-outline-example.jpg" alt="HTML Semantic Outline">
+        			<pre class="brush: xml">
+        &lt;body&gt;
+         
+          &lt;header&gt;
+            &lt;h1&gt;Welcome On Our Website!&lt;/h1&gt;
+            &lt;p&gt;Here is our logo and slogan.&lt;/p&gt;
+          &lt;/header&gt;
+           
+          &lt;nav&gt;
+            &lt;header&gt;
+              &lt;h2&gt;Choose Your Interest&lt;/h2&gt;
+            &lt;/header&gt;
+            &lt;ul&gt;
+              &lt;li&gt;Menu 1&lt;/li&gt;
+              &lt;li&gt;Menu 2&lt;/li&gt;
+              &lt;li&gt;Menu 3&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+           
+          &lt;article&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Title of Article&lt;/h1&gt;
+              &lt;h2&gt;Subtitle of Article&lt;/h2&gt;
+            &lt;/header&gt;
+             
+            &lt;section&gt;
+              &lt;h3&gt;First Logical Part (e.g. "Theory")&lt;/h3&gt;
+              &lt;p&gt;Paragraph 1 in first section&lt;/p&gt;
+               
+              &lt;h4&gt;Some Other Subheading in First Section&lt;/h4&gt;
+              &lt;p&gt;Paragraph 2 in first section&lt;/p&gt;
+            &lt;/section&gt;
+             
+            &lt;section&gt;
+              &lt;h3&gt;Second Logical Part (e.g. "Practice")&lt;/h3&gt;
+              &lt;p&gt;Paragraph 1 in second section&lt;/p&gt;
+              &lt;p&gt;Paragraph 2 in second section&lt;/p&gt;
+            &lt;/section&gt;
+           
+            &lt;footer&gt;
+              &lt;h4&gt;Author Bio&lt;/h4&gt;
+              &lt;p&gt;Paragraph in Article's Footer&lt;/p&gt;
+            &lt;/footer&gt;
+           
+          &lt;/article&gt;
+           
+          &lt;aside&gt;
+             
+            &lt;h2&gt;Get To Know Us Better&lt;/h2&gt;
+             
+            &lt;section&gt;
+              &lt;h3&gt;Popular Posts&lt;/h3&gt;
+              &lt;ul&gt;...&lt;/ul&gt;
+            &lt;/section&gt;
+             
+            &lt;section&gt;
+              &lt;h3&gt;Partners&lt;/h3&gt;
+              &lt;ul&gt;...&lt;/ul&gt;
+            &lt;/section&gt;
+             
+            &lt;section&gt;
+              &lt;h3&gt;Testimonials&lt;/h3&gt;
+              &lt;ul&gt;...&lt;/ul&gt;
+            &lt;/section&gt;
+           
+          &lt;/aside&gt;
+           
+          &lt;footer&gt;
+            &lt;ul&gt;
+              &lt;li&gt;Copyright&lt;/li&gt;
+              &lt;li&gt;Social Media Links&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/footer&gt;
+         
+        &lt;/body&gt;
+        			</pre>
+        			<h2 id="tags" data-magellan-target="tags">Other Structural Tags</h2>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Tag</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<tr>
+        						<td><code>&lt;command&gt;</code></td>
+        						<td></td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;details&gt;</code></td>
+        						<td></td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;summary&gt;</code></td>
+        						<td></td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;meter&gt;</code></td>
+        						<td></td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;progress&gt;</code></td>
+        						<td></td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;mark&gt;</code></td>
+        						<td></td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;time&gt;</code></td>
+        						<td></td>
+        					</tr>
+        					<tr>
+        						<td><code>&lt;wbr&gt;</code></td>
+        						<td></td>
+        					</tr>
+        				</tbody>
+        			</table>
+        			<h2 id="data-attrib" data-magellan-target="data-attrib">Custom Data Attributres</h2>
+        			<p>Used to add metadata about any element within an HTML5 page.</p>
+        			<p>They all start with the <code>data-</code> pattern.</p>
+        			<p>They can be read using JavaScript via the <code>getAttribute()</code> method.</p>
+        			<h2 id="audio" data-magellan-target="audio">Audio</h2>
+        			<p><code>&lt;audio&gt;</code> : a standard way to embed an audio file on a web page</p>
+        			<p><code>
+        				&lt;audio controls&gt;<br>
+        				&lt;source src="song.ogg" type="audio/ogg" /&gt;<br>
+        				&lt;source src="song.mp3" type="audio/mpeg" /&gt;<br>
+        				Not Supported<br>
+        				&lt;/audio&gt;
+        			</code></p>
+        			<p>Multiple sources -> the browser will use the first recognized format.</p>
+        		</div>
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#what">What is HTML?</a></li>
+        		  		<li><a href="#doctype">HTML5 &lt;!DOCTYPE&gt;</a></li>
+        		  		<li><a href="#semantic">Semantic Elements</a></li>
+        		  		<li><a href="#outline">Example Semantic Outline</a></li>
+        		  		<li><a href="#tags">Other Structural Tags</a></li>
+        		  		<li><a href="#data-attrib">Custom Data Attributes</a></li>
+        		  		<li><a href="#audio">Audio</a></li>
+        		  	</ul>
+        		  </nav>
+        		</div>
+        	</div>
         </article>
       </div>
     </div>

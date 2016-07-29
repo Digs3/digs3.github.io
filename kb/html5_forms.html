@@ -100,127 +100,142 @@
         		  <h1>HTML5 Forms</h1>
         	  </div>
         	</header>
-        <div>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form">How to structure HTML forms</a></p>
-        	<h3>The &lt;form&gt; element</h3>
-        	<p>The <code>&lt;form&gt;</code> element represents a document section that contains form input fields to submit information to a web server</p>
-        	<h4>&lt;form&gt; attributes</h4>
-        	<ul>
-        		<li><code>action</code></li>
-        		<li><code>method</code></li>
-        	</ul>
-        	<h3>The &lt;fieldset&gt; and &lt;legend&gt; elements</h3>
-        	<p>The <code>&lt;fieldset&gt;</code> element is used to create groups of controls that share the same purpose.  The <code>&lt;legend&gt;</code> element is used to label a <code>&lt;fieldset&gt;</code></p>
-        	<p>Some screen readers will pronounce the legend's content before the label of each control.</p>
-        	<div class="row">
-        		<div class="column medium-8">
-        			<p>Code</p>
-        		  <pre class="brush: xml">
-        	&lt;form&gt;
-        	&lt;fieldset&gt;
-        	&lt;legend&gt;Personalia:&lt;/legend&gt;
-        	Name: &lt;input type="text"&gt;
-        	Email: &lt;input type="text"&gt;
-        	&lt;/fieldset&gt;
-        	&lt;/form&gt;</pre>
-        	  </div>
-        		<div class="column medium-4">
-        		  <p>Output</p>
-        			<form>
-        			 <fieldset>
-        			  <legend>Personalia:</legend>
-        			  Name: <input type="text">
-        			  Email: <input type="text">
-        			 </fieldset>
-        			</form>
-        		</div>
-        	</div>
-        	<h4>&lt;fieldset&gt; attributes</h4>
-        	<ul>
-        		<li><code>disabled</code></li>
-        	</ul>
-        	<h3>The &lt;label&gt; element</h3>
-        	<p>The <code>&lt;label&gt;</code> element represents a caption for an input field.  It can be associated with a control either by placing the control element inside the <code>&lt;label&gt;</code> element, or by using the <code>for</code> attribute.</p>
-        	<div class="row">
-        		<div class="column medium-8">
-        			<p>Code</p>
-        			<pre class="brush: xml">
-        	&lt;label&gt;
-        	&lt;span&gt;Label&lt;/span&gt;
-        	&lt;input type="text"&gt;
-        	&lt;/label&gt;</pre>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        			<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form">How to structure HTML forms</a></p>
+        			<h2>The &lt;form&gt; element</h2>
+        			<p>The <code>&lt;form&gt;</code> element represents a document section that contains form input fields to submit information to a web server</p>
+        			<h3>&lt;form&gt; attributes</h3>
+        			<ul>
+        				<li><code>action</code></li>
+        				<li><code>method</code></li>
+        			</ul>
+        			<h2>The &lt;fieldset&gt; and &lt;legend&gt; elements</h2>
+        			<p>The <code>&lt;fieldset&gt;</code> element is used to create groups of controls that share the same purpose.  The <code>&lt;legend&gt;</code> element is used to label a <code>&lt;fieldset&gt;</code></p>
+        			<p>Some screen readers will pronounce the legend's content before the label of each control.</p>
+        			<div class="row">
+        				<div class="column medium-8">
+        					<p>Code</p>
+        				  <pre class="brush: xml">
+        			&lt;form&gt;
+        			&lt;fieldset&gt;
+        			&lt;legend&gt;Personalia:&lt;/legend&gt;
+        			Name: &lt;input type="text"&gt;
+        			Email: &lt;input type="text"&gt;
+        			&lt;/fieldset&gt;
+        			&lt;/form&gt;</pre>
+        			  </div>
+        				<div class="column medium-4">
+        				  <p>Output</p>
+        					<form>
+        					 <fieldset>
+        					  <legend>Personalia:</legend>
+        					  Name: <input type="text">
+        					  Email: <input type="text">
+        					 </fieldset>
+        					</form>
+        				</div>
         			</div>
-        		<div class="column medium-4">
-        		  <p>Output</p>
-        			<label>
-        			  <span>Label</span>
-        			  <input type="text">
-        			</label>
-        		</div>
-        	</div>
-        	<h2>HTML Widgets</h2>
-        	<h3>The &lt;input&gt; element</h3>
-        	<p>The <code>&lt;input&gt;</code> element creates the data input controls used for web-based forms.  How an <code>&lt;input&gt;</code> works depends on its <code>type</code>.</p>
-        	<p><code>&lt;input type="type"&gt;</code></p>
-        	<p><b>Types:</b> <code>search</code>, <code>number</code>, <code>range</code>, <code>color</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime</code>, <code>datetime-local</code>, <code>button</code>, <code>checkbox</code>, <code>file</code>, <code>hidden</code>, <code>image</code>, <code>password</code>, <code>radio</code>, <code>reset</code>, <code>submit</code>, <code>text</code></p>
-        	<p><b>Attributes</b></p>
-        	<ul>
-        	  <li><code>list</code> : the ID of a <code>&lt;datalist&gt;</code> element whose <code>&lt;option&gt;</code> elements will be used as hints and displayed as proposals</li>
-        	  <li><code>pattern</code> : a regular expression that the control's value is checked against (used with types: <code>text</code>, <code>tel</code>, <code>search</code>, <code>url</code>, and <code>email</code>.</li>
-        	</ul>
-        	<p>Other attributes: <code>form</code>, <code>formmethod</code>, <code>x-moz-errormessage</code></p>
-        	<h3>The &lt;textarea&gt; element</h3>
-        	<p>&lt;textarea&gt; is a multiline text field.</p>
-        	<h4>&lt;fieldset&gt; attributes</h4>
-        	<table>
-        		<thead>
-        			<tr>
-        				<th>Attribute</th>
-        				<th>Default</th>
-        				<th>Description</th>
-        			</tr>
-        		</thead>
-        	</table>
-        	<h3>The &lt;datalist&gt; element</h3>
-        	<div class="row">
-        		<div class="column medium-8">
-        			<p>Code</p>
-        		  <pre class="brush: xml">
-        	&lt;input list="browsers"&gt;
+        			<h3>&lt;fieldset&gt; attributes</h3>
+        			<ul>
+        				<li><code>disabled</code></li>
+        			</ul>
+        			<h2>The &lt;label&gt; element</h2>
+        			<p>The <code>&lt;label&gt;</code> element represents a caption for an input field.  It can be associated with a control either by placing the control element inside the <code>&lt;label&gt;</code> element, or by using the <code>for</code> attribute.</p>
+        			<div class="row">
+        				<div class="column medium-8">
+        					<p>Code</p>
+        					<pre class="brush: xml">
+        			&lt;label&gt;
+        			&lt;span&gt;Label&lt;/span&gt;
+        			&lt;input type="text"&gt;
+        			&lt;/label&gt;</pre>
+        					</div>
+        				<div class="column medium-4">
+        				  <p>Output</p>
+        					<label>
+        					  <span>Label</span>
+        					  <input type="text">
+        					</label>
+        				</div>
+        			</div>
+        			<h2>The &lt;input&gt; element</h2>
+        			<p>The <code>&lt;input&gt;</code> element creates the data input controls used for web-based forms.  How an <code>&lt;input&gt;</code> works depends on its <code>type</code>.</p>
+        			<p><code>&lt;input type="type"&gt;</code></p>
+        			<p><b>Types:</b> <code>search</code>, <code>number</code>, <code>range</code>, <code>color</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime</code>, <code>datetime-local</code>, <code>button</code>, <code>checkbox</code>, <code>file</code>, <code>hidden</code>, <code>image</code>, <code>password</code>, <code>radio</code>, <code>reset</code>, <code>submit</code>, <code>text</code></p>
+        			<p><b>Attributes</b></p>
+        			<ul>
+        			  <li><code>list</code> : the ID of a <code>&lt;datalist&gt;</code> element whose <code>&lt;option&gt;</code> elements will be used as hints and displayed as proposals</li>
+        			  <li><code>pattern</code> : a regular expression that the control's value is checked against (used with types: <code>text</code>, <code>tel</code>, <code>search</code>, <code>url</code>, and <code>email</code>.</li>
+        			</ul>
+        			<p>Other attributes: <code>form</code>, <code>formmethod</code>, <code>x-moz-errormessage</code></p>
+        			<h2>The &lt;textarea&gt; element</h2>
+        			<p>&lt;textarea&gt; is a multiline text field.</p>
+        			<h3>&lt;fieldset&gt; attributes</h3>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Attribute</th>
+        						<th>Default</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        			</table>
+        			<h2>The &lt;datalist&gt; element</h2>
+        			<div class="row">
+        				<div class="column medium-8">
+        					<p>Code</p>
+        				  <pre class="brush: xml">
+        			&lt;input list="browsers"&gt;
         
-        	&lt;datalist id="browsers"&gt;
-        	&lt;option value="Internet Explorer"&gt;
-        	&lt;option value="Firefox"&gt;
-        	&lt;option value="Chrome"&gt;
-        	&lt;option value="Opera"&gt;
-        	&lt;option value="Safari"&gt;
-        	&lt;/datalist&gt;</pre>
-        	  </div>
-        		<div class="column medium-4">
-        		  <p>Output</p>
-        			<input list="browsers">
-        			<datalist id="browsers">
-        			  <option value="Internet Explorer">
-        			  <option value="Firefox">
-        			  <option value="Chrome">
-        			  <option value="Opera">
-        			  <option value="Safari">
-        			</datalist>
+        			&lt;datalist id="browsers"&gt;
+        			&lt;option value="Internet Explorer"&gt;
+        			&lt;option value="Firefox"&gt;
+        			&lt;option value="Chrome"&gt;
+        			&lt;option value="Opera"&gt;
+        			&lt;option value="Safari"&gt;
+        			&lt;/datalist&gt;</pre>
+        			  </div>
+        				<div class="column medium-4">
+        				  <p>Output</p>
+        					<input list="browsers">
+        					<datalist id="browsers">
+        					  <option value="Internet Explorer">
+        					  <option value="Firefox">
+        					  <option value="Chrome">
+        					  <option value="Opera">
+        					  <option value="Safari">
+        					</datalist>
+        				</div>
+        			</div>
+        			<h2>Autofocus</h2>
+        			<p>Places the focus on a specific form element.</p>
+        			<p><code>&lt;input type="text" <b>autofocus</b>&gt;</code></p>
+        			<h2>Placeholder</h2>
+        			<p>Places placeholder text inside a form field.</p>
+        			<p><code>&lt;input type="text" <b>placeholder="your name"</b>&gt;</code></p>
+        			<h2>Tabindex</h2>
+        			<p>Set the tab order of the element</p>
+        			<p><code>&lt;input type="text" <b>tabindex="1"</b>&gt;</code></p>
+        			<h2>Required</h2>
+        			<p>Specifies an input field is required</p>
+        			<p><code>&lt;input type="text" <b>required</b>&gt;</code></p>
+        		</div>
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#">The &lt;form&gt; element</a></li>
+        		  		<li><a href="#">&lt;fieldset&gt; and &lt;legend&gt;</a></li>
+        		  		<li><a href="#">&lt;label&gt;</a></li>
+        		  		<li><a href="#">&lt;input&gt;</a></li>
+        		  		<li><a href="#">&lt;textarea&gt;</a></li>
+        		  		<li><a href="#">&lt;datalist&gt;</a></li>
+        		  		<li><a href="#">Autofocus</a></li>
+        		  	</ul>
+        		  </nav>
         		</div>
         	</div>
-        	<h3>Autofocus</h3>
-        	<p>Places the focus on a specific form element.</p>
-        	<p><code>&lt;input type="text" <b>autofocus</b>&gt;</code></p>
-        	<h3>Placeholder</h3>
-        	<p>Places placeholder text inside a form field.</p>
-        	<p><code>&lt;input type="text" <b>placeholder="your name"</b>&gt;</code></p>
-        	<h3>Tabindex</h3>
-        	<p>Set the tab order of the element</p>
-        	<p><code>&lt;input type="text" <b>tabindex="1"</b>&gt;</code></p>
-        	<h3>Required</h3>
-        	<p>Specifies an input field is required</p>
-        	<p><code>&lt;input type="text" <b>required</b>&gt;</code></p>
-        </div>
         </article>
       </div>
     </div>
