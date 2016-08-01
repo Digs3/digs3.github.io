@@ -94,35 +94,118 @@
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
-        <article class="kb-article" id="kb-software">
+        <article class="kb-article" id="kb-php">
         	<header>
         		<div class="inner">
-        		  <h1>SEO</h1>
+        		  <h1>PHP</h1>
         	  </div>
         	</header>
         	<div class="row" id="kb-content">
         	  <div class="columns large-9">
-        			<h2 id="tools" data-magellan-target="tools">What is SEO?</h2>
-        			<p><b>SEO (Search Engine Optimization)</b></p>
-        			<h2>How to get Google to Index your Website</h2>
-        			<p><a href="https://blog.crazyegg.com/2016/02/05/get-google-index-website/">How to get Google to index your Website</a></p>
-        			<ol>
-        				<li>
-        				  <b>Index your site</b>
-        				  <p>Create an XML sitemap - the crawler looks at this page in order to learn all about your website--how big it is, what the most important pages are, and where new content is located.  A sitemap will allow your site to be indexed in just a few minutes.</p>
-        				</li>
-        			</ol>
+        	  	<h2 id="what" data-magellan-target="what">What is PHP</h2>
+        	  	<p>
+        	  	  <b>PHP</b> (recursive acronym for <b>PHP: Hypertext Preprocessor</b>) is a widely-used open source scripting language that is especially suited for web development and can be embedded into HTML.  With PHP we can generate dynamic page content, access files on the server, collect form data, send and receive cookies, access a database, control user-access, encrypt data, and much more.  PHP scripts are executed on the server and PHP files have the extenstion ".php".
+        	  	</p>
+        	  	<p>Here is an example of some PHP that outputs some text:</p>
+        	  	<pre class="brush:php">
+        		    &lt;body&gt;
+        		      &lt;?php
+        		        echo "Hi, I'm a PHP script!";
+        		      ?&gt;
+        		    &lt;/body&gt;
+        	  	</pre>
+        	  	<h2 id="how" data-magellan-target="how">How to use PHP</h2>
+        	  	<p>
+        	  		In order to use PHP we need a web host with PHP and MySQL support or we can install a web server on our own PC, and then install PHP and MySQL.
+        	  	</p>
+        	  	<h3>Setting up a local web server</h3>
+        	  	<p>To quickly set up a PHP development environment on our own PC we can install a <em>web server solution stack</em> which is a combination of software rolled into one package to make it extremely easy to get a local web server running with PHP and MySQL support.</p>
+        	  	<p>There are many different solution stacks to choose from but here we'll be looking at <a href="https://www.apachefriends.org/index.html">XAMPP</a>, the most popular PHP development environment.</p>
+        	  	<h4>Using  XAMPP</h4>
+        	  	<p>Download XAMPP from the <a href="https://www.apachefriends.org/index.html">XAMPP website</a> and install it.</p>  Open the XAMPP Control Panel application and click 'Start' for the Apache module.  This will start a local web server which can be viewed in the browser by navigating to <a href="http://localhost">http://localhost</a>.
+        	  	</p>
+        	  	<h2 id="syntax" data-magellan-target="syntax">PHP Syntax</h2>
+        	  	<p>PHP scripts start with <b>&lt;?php</b> and ends with <b>?&gt;</b></p>
+        	  	<p>PHP comments begin with <code>//</code>, <code>#</code>, or between <code>/*</code> and <code>*/</code>.</p>
+        	  	<h2 id="variables" data-magellan-target="variables">Variables</h2>
+        	  	<p>In PHP, variables start with the <code>$</code> sign.  PHP variables are case-sensitive.</p>
+        	  	<p>PHP is a loosely typed language which means it automatically converts variables to the correct data type.</p>
+        	  	<h3>Scope</h3>
+        	  	<p>PHP has three different variable scopes: local, global, and static.</p>
+        	  	<ul>
+        		  	<li>
+        		  		Variables declared outside a function has <em>global scope</em> and can only be accessed outside a function.
+        		  		</li>
+        		  	<li>
+        		  		Variables declared within a function has a <em>local scope</em> and can only be accessed within that function.
+        		  	</li>
+        		  	<li>
+        		  		Variables declared with the <em>static</em> keyword retain their value even after program execution leaves its scope.  Static variables are still local to the function they are contained in.
+        		  	</li>
+        	  	</ul>
+        	  	<p>The <em>global</em> keyword is used to access a global variable from within a function.</p>
+        	  	<p>Global variables are also stored in an array called <code>$GLOBALS[<em>index</em>]</code>.</p>
+        	  	<p>Example code:</p>
+        	  	<pre class="brush: php">
+        				&lt;?php
+        				  $x = 5;  // global variables
+        				  $y = 10;
+        				  function myTest() {
+        				    $z = 20;	// local variable
+        				    static $a = 1;	// static variable
+        				    $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
+        				    echo $a;
+        				    $a++;
+        				  }
+        				?&gt;
+        	  	</pre>
+        	  	<h2 id="echoprint" data-magellan-target="echoprint">echo and print</h2>
+        	  	<p>echo and print are both used to output data.  echo has no return value while print has a return value of 1 so it can be used in expressions.  echo can take multiple parameters while print can only take one argument.</p>
+        			<pre class="brush: php">
+        				&lt;?php
+        				  $txt = "Learn PHP";
+        				  echo "&lt;h2&gt;$txt&lt;/h2&gt;";
+        				  print "&lt;h2&gt;$txt&lt;/h2&gt;";
+        				  }
+        				?&gt;
+        	  	</pre>
+        	  	<h2 id="datatypes" data-magellan-target="datatypes">Data Types</h2>
+        	  	<p>PHP supports the following data types:</p>
+        	  	<div class="row">
+        	  		<ul>
+        		  		<div class="column large-4">
+        		  			<li>String</li>
+        		  			<li>Integer</li>
+        		  			<li>Float</li>
+        		  		</div>
+        		  		<div class="column large-4">
+        		  			<li>Boolean</li>
+        		  			<li>Array</li>
+        		  			<li>Object</li>
+        		  		</div>
+        		  		<div class="column large-4">
+        		  			<li>NULL</li>
+        		  			<li>Resource</li>
+        		  		</div>
+        	  		</ul>
+        	  	</div>
         		</div>
         		<div class="columns large-3" data-sticky-container>
         		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
         		  	<ul class="vertical menu" data-magellan>
         		  		<li class="menu-text">On this page:</li>
-        		  		<li><a href="#">Nothing</a></li>
+        		  		<li><a href="#what">What is PHP?</a></li>
+        		  		<li><a href="#how">How to use PHP</a></li>
+        		  		<li><a href="#syntax">PHP Syntax</a></li>
+        		  		<li><a href="#variables">Variables</a></li>
+        		  		<li><a href="#echoprint">echo and print</a></li>
+        		  		<li><a href="#datatypes">Data Types</a></li>
         		  	</ul>
         		  </nav>
         		</div>
         	</div>
         </article>
+        
       </div>
     </div>
 

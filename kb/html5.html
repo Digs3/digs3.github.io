@@ -13,9 +13,9 @@
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
-    <script src="https://use.fontawesome.com/b9883684cd.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
@@ -55,7 +55,7 @@
               <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
               
               <li><a href="handlebars.html">Handlebars.js</a></li>
-              <li><a href="#"><i class="icon-php-plain"></i> PHP</a></li>
+              <li><a href="php.html"><i class="icon-php-plain"></i> PHP</a></li>
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
         
@@ -103,13 +103,47 @@
         	<div class="row" id="kb-content">
         	  <div class="columns large-9">
         	  	<p><a href="https://www.w3.org/TR/html-markup/elements.html">HTML Element Reference</a></p>
-        	  	<h2 id="what" data-magellan-target="what">What is HTML?</h2>
-        	  	<p>HTML (Hypertext Markup Language) is a markup language for describing web pages.  It provides the HTML tags that are used to markup a web page.</p>	
+        	  	<h2 id="what" data-magellan-target="what">What is HTML5?</h2>
+        	  	<p>
+        	  	  HTML (Hypertext Markup Language) is the markup language for describing web pages.  Writing HTML is as simple as adding <em>tags</em> to a text document.  These tags create the HTML <em>elements</em> in what will become a web page.
+        	  	</p>
+        	  	<p>In the following example, the <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> tags are used to create two HTML elements.</p>
+        	  	<pre class="brush: xml">
+        	  		&lt;h1&gt;This is a level 1 heading element&lt;/h1&gt;
+        	  		&lt;p&gt;This is a paragraph element&lt;/p&gt;
+        	  	</pre>
+        	  	<p>The <code>&lt;p&gt;</code> element is used to create paragraph text and the <code>&lt;h1&gt;</code> element creates a top level heading.  There are also <code>&lt;h2&gt;</code> through <code>&lt;h6&gt;</code> heading elements.  These two types of elements are used throughout this very article to form its structure.</p>
+        	  	<p>
+        	  		HTML5 is the latest version of HTML and with it came many new semantic elements, support for dynamic pages, new form input types, and other new elements like <code>canvas</code>, <code>video</code>, and <code>audio</code>.
+        	  	</p>
+        	  	<h2 id="structure" data-magellan-target="structure">Basic Structure of an HTML page</h2>	
+        	  	<p>The following HTML markup outlines the basic structure of an HTML page:</p>
+        	  	<pre class="brush: xml">
+        	  		&lt;!DOCTYPE html&gt;
+        	  		&lt;html&gt;
+        	  		  &lt;head&gt;
+        	  		    &lt;title&gt;Title of Page&lt;/title&gt;
+        	  		  &lt;/head&gt;
+        	  		  &lt;body&gt;
+        	  		  	&lt;p&gt;content goes here&lt;/p&gt;
+        	  		  &lt;/body&gt;
+        	  		&lt;html&gt;
+        	  	</pre>
+        	  	<p>
+        	  		All HTML5 pages begin with the HTML5 <code>&lt;!DOCTYPE&gt;</code> which you will learn about next.  All HTML pages get wrapped in an <code>&lt;html&gt;</code> element.  Within the <code>&lt;html&gt;</code> element you will find the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements.  The <code>&lt;head&gt;</code> element is where you include metadata about your page and the <code>&lt;body&gt;</code> is where you place your content.
+        	  	</p>
+        	  	<p>
+        	  		If you copy and paste the previous markup into a text editor such as Notepad and save it with an extension of .html, you will have created a simple HTML5 page that can be loaded into a Web browser.
+        	  	</p>
         			<h2 id="doctype" data-magellan-target="doctype">HTML5 &lt;!DOCTYPE&gt;</h2>
-        			<p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type.  The browser uses this to determine which version of HTML/XHTML the document is using to display the page correctly.</p>
-        			<p>This declaration must only appear only once, at the top of the HTML page.  For HTML5, the doctype is <code>&lt;!DOCTYPE html&gt;</code></p>
-        			<h2 id="semantic" data-magellan-target="semantic">New Semantic Elements</h2>
-        			<p>HTML5 introduces new semantic elements.  Semantic elements are elements with a meaning.</p>
+        			<p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type.  The browser uses this to determine which version of HTML/XHTML the document is using to display the page correctly.  This declaration must appear only once, at the top of the HTML page.</p>
+        			<p>  For HTML5, the doctype is <code>
+        			&lt;!DOCTYPE html&gt;</code></p>
+        			<h2 id="semantic" data-magellan-target="semantic">Semantic Elements</h2>
+        			<p>Semantic elements are elements that clearly describe their meaning to both the browser and the developer.  For example, the <code>&lt;p&gt;</code> element tells you and the browser that it contains paragraph text.  The <code>&lt;h1&gt;</code> element tells you and the browser that it contains a heading.  These are <em>semantic elements</em> and most elements in HTML5 are semantic.
+        			<p>Examples of non-semantic elements are <code>div</code> and <code>span</code>.  These elements tell us nothing about their content.  Non-semantic elements should be avoided when possible, but often come in useful for grouping content solely for styling purposes (see <a href="css.html">CSS</a>).</p>
+        			<h3>Layout Elements</h3>
+        			<p>These six elements should be used to create the structure of your page's layout.</p>
         			<table>
         				<thead>
         					<tr>
@@ -142,6 +176,19 @@
         						<td><code>&lt;aside&gt;</code></td>
         						<td>Defines some content aside from the content it is placed in.</td>
         					</tr>
+        				</tbody>
+        			</table>
+        			<p>Here is an example of how you might layout your page using these elements:</p>
+        			<img src="/assets/img/document-outline-example.jpg" alt="HTML Semantic Outline" style="margin-bottom: 1em;">
+        			<h3>More Semantic Elements</h3>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Tag</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        				<tbody>
         					<tr>
         						<td><code>&lt;main&gt;</code></td>
         						<td>Specifies the main content of a document.</td>
@@ -162,105 +209,8 @@
         						<td><code>&lt;details&gt;</code></td>
         						<td>Defines additional details that the user can view or hide.</td>
         					</tr>
-        				</tbody>
-        			</table>
-        			<h2 id="outline" data-magellan-target="outline">Example Semantic Outline</h2>
-        			<img src="/assets/img/document-outline-example.jpg" alt="HTML Semantic Outline">
-        			<pre class="brush: xml">
-        &lt;body&gt;
-         
-          &lt;header&gt;
-            &lt;h1&gt;Welcome On Our Website!&lt;/h1&gt;
-            &lt;p&gt;Here is our logo and slogan.&lt;/p&gt;
-          &lt;/header&gt;
-           
-          &lt;nav&gt;
-            &lt;header&gt;
-              &lt;h2&gt;Choose Your Interest&lt;/h2&gt;
-            &lt;/header&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Menu 1&lt;/li&gt;
-              &lt;li&gt;Menu 2&lt;/li&gt;
-              &lt;li&gt;Menu 3&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/nav&gt;
-           
-          &lt;article&gt;
-            &lt;header&gt;
-              &lt;h1&gt;Title of Article&lt;/h1&gt;
-              &lt;h2&gt;Subtitle of Article&lt;/h2&gt;
-            &lt;/header&gt;
-             
-            &lt;section&gt;
-              &lt;h3&gt;First Logical Part (e.g. "Theory")&lt;/h3&gt;
-              &lt;p&gt;Paragraph 1 in first section&lt;/p&gt;
-               
-              &lt;h4&gt;Some Other Subheading in First Section&lt;/h4&gt;
-              &lt;p&gt;Paragraph 2 in first section&lt;/p&gt;
-            &lt;/section&gt;
-             
-            &lt;section&gt;
-              &lt;h3&gt;Second Logical Part (e.g. "Practice")&lt;/h3&gt;
-              &lt;p&gt;Paragraph 1 in second section&lt;/p&gt;
-              &lt;p&gt;Paragraph 2 in second section&lt;/p&gt;
-            &lt;/section&gt;
-           
-            &lt;footer&gt;
-              &lt;h4&gt;Author Bio&lt;/h4&gt;
-              &lt;p&gt;Paragraph in Article's Footer&lt;/p&gt;
-            &lt;/footer&gt;
-           
-          &lt;/article&gt;
-           
-          &lt;aside&gt;
-             
-            &lt;h2&gt;Get To Know Us Better&lt;/h2&gt;
-             
-            &lt;section&gt;
-              &lt;h3&gt;Popular Posts&lt;/h3&gt;
-              &lt;ul&gt;...&lt;/ul&gt;
-            &lt;/section&gt;
-             
-            &lt;section&gt;
-              &lt;h3&gt;Partners&lt;/h3&gt;
-              &lt;ul&gt;...&lt;/ul&gt;
-            &lt;/section&gt;
-             
-            &lt;section&gt;
-              &lt;h3&gt;Testimonials&lt;/h3&gt;
-              &lt;ul&gt;...&lt;/ul&gt;
-            &lt;/section&gt;
-           
-          &lt;/aside&gt;
-           
-          &lt;footer&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Copyright&lt;/li&gt;
-              &lt;li&gt;Social Media Links&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/footer&gt;
-         
-        &lt;/body&gt;
-        			</pre>
-        			<h2 id="tags" data-magellan-target="tags">Other Structural Tags</h2>
-        			<table>
-        				<thead>
-        					<tr>
-        						<th>Tag</th>
-        						<th>Description</th>
-        					</tr>
-        				</thead>
-        				<tbody>
         					<tr>
         						<td><code>&lt;command&gt;</code></td>
-        						<td></td>
-        					</tr>
-        					<tr>
-        						<td><code>&lt;details&gt;</code></td>
-        						<td></td>
-        					</tr>
-        					<tr>
-        						<td><code>&lt;summary&gt;</code></td>
         						<td></td>
         					</tr>
         					<tr>
@@ -272,32 +222,33 @@
         						<td></td>
         					</tr>
         					<tr>
-        						<td><code>&lt;mark&gt;</code></td>
-        						<td></td>
-        					</tr>
-        					<tr>
-        						<td><code>&lt;time&gt;</code></td>
-        						<td></td>
-        					</tr>
-        					<tr>
         						<td><code>&lt;wbr&gt;</code></td>
         						<td></td>
         					</tr>
         				</tbody>
         			</table>
         			<h2 id="data-attrib" data-magellan-target="data-attrib">Custom Data Attributres</h2>
-        			<p>Used to add metadata about any element within an HTML5 page.</p>
-        			<p>They all start with the <code>data-</code> pattern.</p>
-        			<p>They can be read using JavaScript via the <code>getAttribute()</code> method.</p>
-        			<h2 id="audio" data-magellan-target="audio">Audio</h2>
+        			<p><code>data-</code> attributes allows us to store extra information on standard, semantic HTML elements.</p>
+        			<p>Example:</p>
+        			<pre class="brush:xml">
+        				&lt;ul&gt;
+        				  &lt;li data-animal-type="bird"&gt;Owl&lt;/li&gt;
+        				  &lt;li data-animal-type="fish"&gt;Salmon&lt;/li&gt; 
+        				  &lt;li data-animal-type="spider"&gt;Tarantula&lt;/li&gt; 
+        				&lt;/ul&gt;
+        			</pre>
+        			<p>
+        				The values of these attributes can be accessed in JavaScript using the <code>getAttribute()</code> method or through the <code>dataset</code> property.
+        			</p>
+        			<h2 id="audio" data-magellan-target="audio">Audio &amp; Video</h2>
         			<p><code>&lt;audio&gt;</code> : a standard way to embed an audio file on a web page</p>
-        			<p><code>
-        				&lt;audio controls&gt;<br>
-        				&lt;source src="song.ogg" type="audio/ogg" /&gt;<br>
-        				&lt;source src="song.mp3" type="audio/mpeg" /&gt;<br>
-        				Not Supported<br>
+        			<pre class="brush: xml">
+        				&lt;audio controls&gt;
+        				  &lt;source src="song.ogg" type="audio/ogg" /&gt;
+        				  &lt;source src="song.mp3" type="audio/mpeg" /&gt;
+        				  Not Supported
         				&lt;/audio&gt;
-        			</code></p>
+        			</pre>
         			<p>Multiple sources -> the browser will use the first recognized format.</p>
         		</div>
         		<div class="columns large-3" data-sticky-container>
@@ -305,12 +256,11 @@
         		  	<ul class="vertical menu" data-magellan>
         		  		<li class="menu-text">On this page:</li>
         		  		<li><a href="#what">What is HTML?</a></li>
+        		  		<li><a href="#structure">Basic Structure of an HTML page</a></li>
         		  		<li><a href="#doctype">HTML5 &lt;!DOCTYPE&gt;</a></li>
         		  		<li><a href="#semantic">Semantic Elements</a></li>
-        		  		<li><a href="#outline">Example Semantic Outline</a></li>
-        		  		<li><a href="#tags">Other Structural Tags</a></li>
         		  		<li><a href="#data-attrib">Custom Data Attributes</a></li>
-        		  		<li><a href="#audio">Audio</a></li>
+        		  		<li><a href="#audio">Audio &amp; Video</a></li>
         		  	</ul>
         		  </nav>
         		</div>
@@ -324,7 +274,7 @@
     <script type="text/javascript">
      SyntaxHighlighter.defaults['gutter'] = false;
      SyntaxHighlighter.defaults['toolbar'] = false;
-     SyntaxHighlighter.all()
+     SyntaxHighlighter.all();
 </script>
   </body>
 </html>

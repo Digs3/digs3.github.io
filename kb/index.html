@@ -13,9 +13,9 @@
     <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
-    <script src="https://use.fontawesome.com/b9883684cd.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
@@ -55,7 +55,7 @@
               <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
               
               <li><a href="handlebars.html">Handlebars.js</a></li>
-              <li><a href="#"><i class="icon-php-plain"></i> PHP</a></li>
+              <li><a href="php.html"><i class="icon-php-plain"></i> PHP</a></li>
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
         
@@ -116,7 +116,30 @@
           <p><b>Scaffolding tools</b> like <a href="yeoman.html">Yeoman</a> can create the entire infrastructure for your site with a single command.  This allows you to rapidly get started on new projects.  They will scaffold out a new website, write your build configuration (gruntfile or gulpfile), and pull in relevant build task and package manager dependencies.  Many different <em>generators</em> are available to fit different needs.</p>
         
           <h2>Code</h2>
+        
         	<p>Web sites are built with code.  The three core languages of the Web are:</p>
+          <div id="code-tech">
+          <table>
+            <tr>
+              <td>
+                <p>HTML</p>
+                <span class="icon-html5-plain"></span>
+                <p>Structure</p>        
+              </td>
+              <td>
+                <p>CSS</p>
+                <span class="icon-css3-plain"></span>
+                <p>Presentation</p>       
+              </td>
+              <td>
+                <p>JavaScript</p>
+                <span class="icon-javascript-plain"></span>
+                <p>Behavior</p>       
+              </td>
+            </tr>
+          </table>
+          </div>
+        
         	<p><a href="html5.html">HTML</a> : the markup language used to describe web pages.  This is the fundamental language of the Web.</p>
         	<p><a href="css.html">CSS</a> : a style sheet language used to describe the presentation of your web pages.</p>
         	<p><a href="javascript.html">JavaScript</a> : an object-oriented programming language supported by Web browsers which allows you to add interactivity into your web pages.</p>
@@ -136,7 +159,7 @@
     <script type="text/javascript">
      SyntaxHighlighter.defaults['gutter'] = false;
      SyntaxHighlighter.defaults['toolbar'] = false;
-     SyntaxHighlighter.all()
+     SyntaxHighlighter.all();
 </script>
   </body>
 </html>
