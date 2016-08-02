@@ -101,35 +101,149 @@
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
-        <article class="kb-article" id="kb-software">
+        <article class="kb-article" id="kb-php">
         	<header>
         		<div class="inner">
-        		  <h1>SEO</h1>
+        		  <h1>PHP - MySQL Database</h1>
         	  </div>
         	</header>
         	<div class="row" id="kb-content">
         	  <div class="columns large-9">
-        			<h2 id="tools" data-magellan-target="tools">What is SEO?</h2>
-        			<p><b>SEO (Search Engine Optimization)</b></p>
-        			<h2>How to get Google to Index your Website</h2>
-        			<p><a href="https://blog.crazyegg.com/2016/02/05/get-google-index-website/">How to get Google to index your Website</a></p>
-        			<ol>
-        				<li>
-        				  <b>Index your site</b>
-        				  <p>Create an XML sitemap - the crawler looks at this page in order to learn all about your website--how big it is, what the most important pages are, and where new content is located.  A sitemap will allow your site to be indexed in just a few minutes.</p>
-        				</li>
-        			</ol>
+        	  	<h2 id="intro" data-magellan-target="intro">MySQLi &amp; PDO</h2>
+        	  	<p>There are two options for working with a MySQL database in PHP 5 and later:</p>
+        	  	<ul>
+        	  		<li>MySQLi extension</li>
+        	  		<li>PDO (PHP Data Objects)</li>
+        	  	</ul>
+        	  	<p>This article will focus on using the MySQLi extension with the object-oriented API.</p>
+        	  	<h2 id="connect" data-magellan-target="connect">Connecting to a Server</h2>
+        	  	<pre class="brush: php">
+        				<?php
+        				  $servername = "localhost";
+        				  $username = "username";
+        				  $password = "password";
+        
+        				  // Create connection
+        				  $conn = new mysqli($servername, $username, $password);
+        
+        				  // Check connection
+        				  if ($conn->connect_error) {
+        					die("Connection failed: " . $conn->connect_error);
+        				  } 
+        				  echo "Connected successfully";
+        				?>
+        	  	</pre>
+        	  	<p>The connection will be closed automatically when the script ends, but you can close it before with <code>$conn->close();</code></p>
+        	  	<h2 id="createdb" data-magellan-target="createdb">Creating a MySQL Database</h2>
+        	  	<pre class="brush: php">
+        				// Create database
+        				$sql = "CREATE DATABASE myDB";
+        				if ($conn->query($sql) === TRUE) {
+        				  echo "Database created successfully";
+        				} else {
+        				  echo "Error creating database: " . $conn->error;
+        				}
+        	  	</pre>
+        	  	<h2 id="tables" data-magellan-target="tables">Creating MySQL Tables</h2>
+        	  	<pre class="brush: php">
+        				// sql to create table
+        				$sql = "CREATE TABLE MyGuests (
+        				  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+        				  firstname VARCHAR(30) NOT NULL,
+        				  lastname VARCHAR(30) NOT NULL,
+        				  email VARCHAR(50),
+        				  reg_date TIMESTAMP
+        				)";
+        
+        				if ($conn->query($sql) === TRUE) {
+        				  echo "Table MyGuests created successfully";
+        				} else {
+        				  echo "Error creating table: " . $conn->error;
+        				}
+        	  	</pre>
+        	  	<h2 id="insert" data-magellan-target="insert">Inserting Data</h2>
+        	  	<pre class="brush: php">
+        $sql = "INSERT INTO MyGuests (firstname, lastname, email)
+        VALUES ('John', 'Doe', 'john@example.com')";
+        
+        if ($conn->query($sql) === TRUE) {
+        	$last_id = $conn->insert_id;
+        	echo "New record created successfully. Last inserted ID is: " . $last_id;
+        } else {
+        	echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        	  	</pre>
+        	  	<h2 id="multiple" data-magellan-target="multiple">Inserting Multiple Records</h2>
+        		  <pre class="brush: php">
+        $sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+        VALUES ('Mary', 'Moe', 'mary@example.com');";
+        $sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+        VALUES ('Julie', 'Dooley', 'julie@example.com')";
+        
+        if ($conn->multi_query($sql) === TRUE) {
+            echo "New records created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        	  	</pre>
+        	  	<h2 id="prepared" data-magellan-target="prepared">Prepared Statements</h2>
+        	  	<p>A prepared statements is a feature used to execute the same or similar SQL statements repeatedly with high efficiency.  To do this we prepare a template with certain values left unspecified.</p>
+        	  	<p>Example:</p>
+        	  	<code>INSERT INTO MyGuests VALUES(?,?,?)</code>
+        	  	<pre class="brush: php">
+        // prepare and bind
+        $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $firstname, $lastname, $email);
+        
+        // set parameters and execute
+        $firstname = "John";
+        $lastname = "Doe";
+        $email = "john@example.com";
+        $stmt->execute();
+        
+        $firstname = "Mary";
+        $lastname = "Moe";
+        $email = "mary@example.com";
+        $stmt->execute();
+        
+        echo "New records created successfully";
+        
+        $stmt->close();
+        $conn->close();
+        	  	</pre>
+        	  	<h2 id="select" data-magellan-target="select">Selecting Data</h2>
+        	  	<pre class="brush: php">
+        				$sql = "SELECT id, firstname, lastname FROM MyGuests";
+        				$result = $conn->query($sql);
+        
+        				if ($result->num_rows > 0) {
+        				  // output data of each row
+        				  while($row = $result->fetch_assoc()) {
+        				    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+        				  }
+        				} else {
+        				  echo "0 results";
+        				}
+        	  	</pre>
         		</div>
         		<div class="columns large-3" data-sticky-container>
         		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
         		  	<ul class="vertical menu" data-magellan>
         		  		<li class="menu-text">On this page:</li>
-        		  		<li><a href="#">Nothing</a></li>
+        		  		<li><a href="#intro">MySQL &amp; PDO</a></li>
+        		  		<li><a href="#connect">Connecting to a Server</a></li>
+        		  		<li><a href="#createdb">Creating a MySQL Database</a></li>
+        		  		<li><a href="#tables">Creating MySQL Tables</a></li>
+        		  		<li><a href="#insert">Inserting Data</a></li>
+        		  		<li><a href="#multiple">Inserting Multiple Records</a></li>
+        		  		<li><a href="#prepared">Prepared Statements</a></li>
+        		  		<li><a href="#select">Selecting Data</a></li>
         		  	</ul>
         		  </nav>
         		</div>
         	</div>
         </article>
+        
       </div>
     </div>
 

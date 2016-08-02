@@ -101,63 +101,28 @@
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
-        <article class="kb-article" id="kb-workflows">
-          <header>
-            <div class="inner">
-              <h1>Workflows</h1>
-            </div>
-          </header>
-        <div>
-          <section>
-          <h2>Node/Grunt/Bower Workflow</h2>
-          <ol>
-          	<li>Create the project directory &amp; structure (src, dist, test folders)</li>
-          	<li>Run <kbd>npm init</kbd> to create &amp; configure package.json</li>
-          	<li>Run <kbd>npm install grunt --save-dev</kbd> to install grunt &mp; add it as a devDependency</li>
-          	<li>Create &amp; configure gruntfile.js</li>
-          	<li>Run <kbd>bower init</kbd> to create &amp; configure bower.json</li>
-          	<li>Install bower packages with <kbd>bower install --save &lt;pkg&gt;</kbd></li>
-          </ol>
-          </section>
-        
-          <section>
-          <h2>Yeoman Workflow</h2>
-          <ol>
-          	<li>Install the yeoman generator using <kbd>npm install -g</kbd> &lt;generator&gt;</li>
-          	<li>Create a directory for the site and run the generator with <kbd>yo &lt;generatorName&gt;</kbd></li>
-          	<li>Install dependencies with <kbd>npm install</kbd> and <kbd>bower install</kbd> (is this necessary?)</li>
-          	<li>Test server with <kbd>grunt serve</kbd></li>
-          	<li>Install additional bower components (e.g., foundation-sites)</li>
-          	<li>Add "$(document).foundation();" to app.js to use Foundation's JS abilities</li>
-          </ol>
-          </section>
-        
-          <section>
-          <h2>Foundation CLI Workflow</h2>
-          <p>Install Foundation CLI with <kbd>npm install -g foundation-cli</kbd></p>
-          <ul>
-          	<li><a href="https://github.com/zurb/foundation-sites-template">Basic Template</a></li>
-          	<li><a href="https://github.com/zurb/foundation-zurb-template">ZURB (Advanced) Template</a></li>
-          </ul>
-          <ol>
-          	<li>Run <kbd>foundation new</kbd> to create a new project (this will create the project dir)</li>
-          	<li>Manually set up a template with <kbd>git clone</kbd> and then install dependencies
-          	  <ul>
-          	  <li><kbd>git clone &lt;template-url&gt; projectname</kbd></li>
-          	  <li><kbd>npm install</kbd></li>
-          	  <li><kbd>bower install</kbd></li>
-          	  </ul>
-        	</li>
-          	<li>Run <kbd>npm start</kbd> to run Gulp (just running gulp seems to work too)</li>
-          	<li>Run <kbd>npm run build</kbd> to create compressed, production-ready assets</li>
-          </ol>
-          <p><b>Better Method to avoid the large, nested node_modules folder</b></p>
-          <ul>
-          	<li>Copy the advanced master template to the project directory</li>
-          	<li>run <kbd>npm install</kbd> and <kbd>bower install</kbd></li>
-          	<li>Run <kbd>npm start</kbd> to run it</li>
-          </ul>
-        </div>
+        <article class="kb-article" id="kb-apache">
+        	<header>
+        		<div class="inner">
+        		  <h1>Apache</h1>
+        	  </div>
+        	</header>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        	  	<h2 id="what" data-magellan-target="what">What is Apache?</h2>
+        	  	<p>
+        	  	  Apache is a web server.
+        	  	</p>
+        		</div>
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#what">What is Apache?</a></li>
+        		  	</ul>
+        		  </nav>
+        		</div>
+        	</div>
         </article>
       </div>
     </div>

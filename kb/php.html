@@ -40,7 +40,8 @@
             <ul class="vertical menu">
         
               <li class="menu-text">Code</li>
-              <li><a href="html5.html"><i class="icon-html5-plain"></i> HTML5</a>
+              <li>
+                <a href="html5.html"><i class="icon-html5-plain"></i> HTML5</a>
                 <ul class="nested vertical menu">
                   <li><a href="html5_forms.html">Forms</a></li>
                 </ul>
@@ -55,13 +56,19 @@
               <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
               
               <li><a href="handlebars.html">Handlebars.js</a></li>
-              <li><a href="php.html"><i class="icon-php-plain"></i> PHP</a></li>
+              <li>
+                <a href="php.html"><i class="icon-php-plain"></i> PHP</a>
+                <ul class="nested vertical menu">
+                  <li><a href="php_mysql.html">MySQL Database</a></li>
+                </ul>
+              </li>
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
         
               <li class="menu-text">Toolkit</li>
               <li><a href="software.html"><i class="icon-uniE695"></i> Software</a></li>
               <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
+              <li><a href="apache.html"><i class="icon-apache-plain-wordmark"></i> Apache</a></li>
               <li><a href="workflows.html">Workflows</a></li>
               <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js</a></li>
               <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
@@ -69,8 +76,8 @@
               <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
               <li><a href="yeoman.html"><i class="icon-uniE67A"></i> Yeoman</a></li>
               <li><a href="git.html"><i class="icon-git-plain"></i> Git</a></li>
-              <li><a href="github.html"><i class="icon-github-plain"></i> GitHub</a></li>
-              <li><a href="github_pages.html"><i class="icon-github-plain"></i> GitHub Pages</a></li>
+              <li><a href="github.html"><i class="icon-github-original"></i> GitHub</a></li>
+              <li><a href="github_pages.html"><i class="icon-github-original"></i> GitHub Pages</a></li>
         
         
               
@@ -97,7 +104,8 @@
         <article class="kb-article" id="kb-php">
         	<header>
         		<div class="inner">
-        		  <h1>PHP</h1>
+        		  <h1>PHP <small>(PHP: Hypertext Processor)</small></h1>
+        		  <p>A general-purpose, server-side scripting language suited for web development.</p>
         	  </div>
         	</header>
         	<div class="row" id="kb-content">
@@ -125,7 +133,7 @@
         	  	<p>Download XAMPP from the <a href="https://www.apachefriends.org/index.html">XAMPP website</a> and install it.</p>  Open the XAMPP Control Panel application and click 'Start' for the Apache module.  This will start a local web server which can be viewed in the browser by navigating to <a href="http://localhost">http://localhost</a>.
         	  	</p>
         	  	<h2 id="syntax" data-magellan-target="syntax">PHP Syntax</h2>
-        	  	<p>PHP scripts start with <b>&lt;?php</b> and ends with <b>?&gt;</b></p>
+        	  	<p>PHP scripts begin with <code>&lt;?php</code> and end with <code>?&gt;</code>.</p>
         	  	<p>PHP comments begin with <code>//</code>, <code>#</code>, or between <code>/*</code> and <code>*/</code>.</p>
         	  	<h2 id="variables" data-magellan-target="variables">Variables</h2>
         	  	<p>In PHP, variables start with the <code>$</code> sign.  PHP variables are case-sensitive.</p>
@@ -134,10 +142,10 @@
         	  	<p>PHP has three different variable scopes: local, global, and static.</p>
         	  	<ul>
         		  	<li>
-        		  		Variables declared outside a function has <em>global scope</em> and can only be accessed outside a function.
+        		  		Variables declared outside a function have <em>global scope</em> and can only be accessed outside a function.
         		  		</li>
         		  	<li>
-        		  		Variables declared within a function has a <em>local scope</em> and can only be accessed within that function.
+        		  		Variables declared within a function have a <em>local scope</em> and can only be accessed within that function.
         		  	</li>
         		  	<li>
         		  		Variables declared with the <em>static</em> keyword retain their value even after program execution leaves its scope.  Static variables are still local to the function they are contained in.
@@ -156,16 +164,6 @@
         				    $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
         				    echo $a;
         				    $a++;
-        				  }
-        				?&gt;
-        	  	</pre>
-        	  	<h2 id="echoprint" data-magellan-target="echoprint">echo and print</h2>
-        	  	<p>echo and print are both used to output data.  echo has no return value while print has a return value of 1 so it can be used in expressions.  echo can take multiple parameters while print can only take one argument.</p>
-        			<pre class="brush: php">
-        				&lt;?php
-        				  $txt = "Learn PHP";
-        				  echo "&lt;h2&gt;$txt&lt;/h2&gt;";
-        				  print "&lt;h2&gt;$txt&lt;/h2&gt;";
         				  }
         				?&gt;
         	  	</pre>
@@ -189,6 +187,51 @@
         		  		</div>
         	  		</ul>
         	  	</div>
+        	  	<h2 id="echoprint" data-magellan-target="echoprint">echo and print</h2>
+        	  	<p><code>echo</code> and <code>print</code> are both used to output data.  <code>echo</code> has no return value while <code>print</code> has a return value of 1 so it can be used in expressions.  <code>echo</code> can take multiple parameters while <code>print</code> can only take one argument.</p>
+        			<pre class="brush: php">
+        				&lt;?php
+        				  $txt = "Learn PHP";
+        				  echo "&lt;h2&gt;$txt&lt;/h2&gt;";
+        				  print "&lt;h2&gt;$txt&lt;/h2&gt;";
+        				  }
+        				?&gt;
+        	  	</pre>
+        	  	<h2 id="strings" data-magellan-target="strings">String Functions</h2>
+        	  	<table>
+        	  		<thead>
+        	  			<tr>
+        	  				<th>Function</th>
+        	  				<th>Description</th>
+        	  			</tr>
+        	  		</thead>
+        	  		<tbody>
+        	  			<tr>
+        	  				<td><code>strlen(<i>str</i>)</code></td>
+        	  				<td>Returns the length of a string</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>str_word_count(<i>str</i>)</code></td>
+        	  				<td>Returns the number of words in a string</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>strrev(<i>str</i>)</code></td>
+        	  				<td>Reverses a string</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>strpos(<i>str</i>,<i>substr</i>)</code></td>
+        	  				<td>Returns the position of the first match or FALSE</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>str_replace(<i>replace</i>,<i>with</i>,<i>str</i>)</code></td>
+        	  				<td>Replaces some charactders with other characters in a string</td>
+        	  			</tr>
+        	  		</tbody>
+        	  	</table>
+        	  	<h2 id="constants" data-magellan-target="constants">Constants</h2>
+        	  	<p>Constants are like variables except that once they are defined they cannot be changed or undefined.  Constants are automatically global and can be used across the entire script.</p>
+        	  	<p>To create a constant, use the <code>define()</code> function.</p>
+        	  	<p><code>define(<i>name</i>,<i>value</i>,<i>case-insensitive</i>)</code></p>
         		</div>
         		<div class="columns large-3" data-sticky-container>
         		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
@@ -198,8 +241,10 @@
         		  		<li><a href="#how">How to use PHP</a></li>
         		  		<li><a href="#syntax">PHP Syntax</a></li>
         		  		<li><a href="#variables">Variables</a></li>
-        		  		<li><a href="#echoprint">echo and print</a></li>
         		  		<li><a href="#datatypes">Data Types</a></li>
+        		  		<li><a href="#echoprint">echo and print</a></li>
+        		  		<li><a href="#strings">String Functions</a></li>
+        		  		<li><a href="#constants">Constants</a></li>
         		  	</ul>
         		  </nav>
         		</div>
