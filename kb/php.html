@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushCss.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -38,6 +39,9 @@
           <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
           <nav id="kb-menu">
             <ul class="vertical menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li class="menu-text">Software Development</li>
+              <li><a href="wpfxaml.html">WPF XAML</a></li>
         
               <li class="menu-text">Code</li>
               <li>
@@ -54,7 +58,8 @@
                 </ul>
               </li>
               <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
-              
+              <li><a href="vuejs.html"><i class="icon-vuejs-plain"></i> Vue.JS</a></li>
+        
               <li><a href="handlebars.html">Handlebars.js</a></li>
               <li>
                 <a href="php.html"><i class="icon-php-plain"></i> PHP</a>
@@ -62,6 +67,9 @@
                   <li><a href="php_mysql.html">MySQL Database</a></li>
                 </ul>
               </li>
+              <li><a href="mvc.html">MVC</a></li>
+              <li><a href="laravel.html"><i class="icon-laravel-plain"></i> Laravel</a></li>
+        
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
         
@@ -70,7 +78,7 @@
               <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
               <li><a href="apache.html"><i class="icon-apache-plain-wordmark"></i> Apache</a></li>
               <li><a href="workflows.html">Workflows</a></li>
-              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js</a></li>
+              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js &amp; NPM</a></li>
               <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
               <li><a href="grunt.html"><i class="icon-grunt-plain"></i> Grunt</a></li>
               <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
@@ -80,7 +88,7 @@
               <li><a href="github_pages.html"><i class="icon-github-original"></i> GitHub Pages</a></li>
         
         
-              
+        
               <li class="menu-text">Database</li>
               <li><a href="#"><i class="icon-mysql-plain"></i> MySQL</a></li>
         
@@ -88,6 +96,9 @@
               <li><a href="foundation.html"><i class="icon-foundation-plain"></i> Foundation</a></li>
               <li><a href="bootstrap.html"><i class="icon-bootstrap-plain"></i> Bootstrap</a></li>
               <li><a href="angular.html"><i class="icon-angularjs-plain"></i> AngularJS</a></li>
+        
+              <li class="menu-text">CMS</li>
+              <li><a href="wordpress.html">WordPress</a></li>
         
               <li class="menu-text">Design</li>
               <li><a href="#">Typography</a></li>
@@ -98,6 +109,7 @@
             </ul>
           </nav>
         </div>
+        
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
@@ -226,12 +238,369 @@
         	  				<td><code>str_replace(<i>replace</i>,<i>with</i>,<i>str</i>)</code></td>
         	  				<td>Replaces some charactders with other characters in a string</td>
         	  			</tr>
+        	  			<tr>
+        	  				<td><code>substr(<i>str</i>,<i>startpos</i>,<i>endpos</i>)</code></td>
+        	  				<td>Returns a substring of a string.</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>strtoupper()</code></td>
+        	  				<td>Converts entire string to <em>UPPERCASE</em></td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>strtolower()</code></td>
+        	  				<td>Converts entire string to <em>lowercase</em></td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>strip_tags()</code></td>
+        	  				<td>Removes all tags</td>
+        	  			</tr>
         	  		</tbody>
         	  	</table>
+        	  	<h2 id="math" data-magellan-target="math">Math Functions</h2>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Function</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<tr>
+        						<td><code>round(<i>val</i>,<i>precision</i>)</code></td>
+        						<td>Rounds floating point numbers up or down</td>
+        					</tr>
+        					<tr>
+        						<td><code>rand(<i>min</i>,<i>max</i>)</code></td>
+        						<td>Returns a random number between two numbers</td>
+        					</tr>
+        				</tbody>
+        			</table>
+        			<h2 id="array-func" data-magellan-target="array-func">Array Functions</h2>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Function</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<tr>
+        						<td><code>array_push(<i>array</i>,<i>elem</i>)</code></td>
+        						<td>Adds an element to the end of an array</td>
+        					</tr>
+        					<tr>
+        						<td><code>count(<i>array</i>)</code></td>
+        						<td>Returns the number of elements in an array</td>
+        					</tr>
+        					<tr>
+        						<td><code>sort(<i>array</i>)</code></td>
+        						<td>Sorts an array</td>
+        					</tr>
+        					<tr>
+        						<td><code>rsort(<i>array</i>)</code></td>
+        						<td>Sorts an array in reverse order</td>
+        					</tr>
+        					<tr>
+        						<td><code>join(<i>glue</i>,<i>array</i>)</code></td>
+        						<td>Returns a string from the elements in an array</td>
+        					</tr>
+        				</tbody>
+        			</table>
+        			<h2 id="obj-func"  data-magellan-target="obj-func">Object Functions</h2>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Function</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<tr>
+        						<td><code>is_a(<i>object</i>,<i>class</i>)</code></td>
+        						<td>Checks if the object is of the class</td>
+        					</tr>
+        					<tr>
+        						<td><code>property_exists(<i>class</i>,<i>property</i>)</code></td>
+        						<td>Checks if the object or class has a property</td>
+        					</tr>
+        					<tr>
+        						<td><code>method_exists(<i>object</i>,<i>method_name</i>)</code></td>
+        						<td>Checks if the class method exists</td>
+        					</tr>
+        				</tbody>
+        			</table>
+        			<h2 id="other-func" data-magellan-target="other-func">Other Functions</h2>
+        			<table>
+        				<thead>
+        					<tr>
+        						<th>Function</th>
+        						<th>Description</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<tr>
+        						<td><code>var_dump(<i>$var</i>)</code></td>
+        						<td>Dumps information about a variable</td>
+        					</tr>
+        					<tr>
+        						<td><code>isset(<i>$var</i>)</code></td>
+        						<td>Determine if a variable is set and is not <code>NULL</code></td>
+        					</tr>
+        				</tbody>
+        			</table>
+        	  	<h2 id="operators" data-magellan-target="operators">Operators</h2>
+        	  	<h3>String Operators</h3>
+        	  	<p><code>.</code> is the concatenation operator and is used to concatenate two strings.</p>
+        	  	<p><code>.=</code> is the concatenating assignment operator and is used to append one string to another string</p>
+        	  	<h3>Comparison Operators</h3>
+        	  	<table>
+        	  		<thead>
+        	  			<tr>
+        	  				<th>Operator</th>
+        	  				<th>Description</th>
+        	  			</tr>
+        	  		</thead>
+        	  		<tbody>
+        	  			<tr>
+        	  				<td><code>&gt;</code></td>
+        	  				<td>Greater than</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>&lt;</code></td>
+        	  				<td>Less than</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>&gt;=</code></td>
+        	  				<td>Greater than or equal to</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>&lt;=</code></td>
+        	  				<td>Less than or equal to</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>==</code></td>
+        	  				<td>Equal to</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>!=</code></td>
+        	  				<td>Not equal to</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>===</code></td>
+        	  				<td>Identical to</td>
+        	  			</tr>
+        	  			<tr>
+        	  				<td><code>!==</code></td>
+        	  				<td>Not identical to</td>
+        	  			</tr>
+        	  		</tbody>
+        	  	</table>
+        	  	<h2 id="controlflow" data-magellan-target="controlflow">Control Flow</h2>
+        	  	<h3>If/Else</h3>
+        	  	<pre class="brush: php">
+        	  		if($age > 16) {
+        	  		  echo "You can drive!";
+        	  		}
+        	  		else {
+        	  		  echo "You cannot drive!";
+        	  		}
+        	  	</pre>
+        	  	<h3>Switch</h3>
+        	  	<pre class="brush: php">
+        	  		switch(2) {
+        	  		  case 0:
+        	  		    echo "The value is 0";
+        	  		    break;
+        	  		  case 1:
+        	  		    echo "The value is 1";
+        	  		    break;
+        	  		  case 2:
+        	  		  case 3:
+        	  		    echo "The value is 2 or 3";
+        	  		    break;
+        	  		  default:
+        	  		    echo "The value isn't 0 or 1";
+        	  		}
+        	  	</pre>
+        	  	<h4>Alternative Syntax</h4>
+        	  	<pre class="brush: php">
+        				switch ($i):
+        
+        				endswitch;
+        	  	</pre>
         	  	<h2 id="constants" data-magellan-target="constants">Constants</h2>
-        	  	<p>Constants are like variables except that once they are defined they cannot be changed or undefined.  Constants are automatically global and can be used across the entire script.</p>
+        	  	<p>
+        	  		Constants are like variables except that once they are defined they cannot be changed or undefined.  Constants are automatically global and can be used across the entire script.
+        	  	</p>
         	  	<p>To create a constant, use the <code>define()</code> function.</p>
         	  	<p><code>define(<i>name</i>,<i>value</i>,<i>case-insensitive</i>)</code></p>
+        	  	<h3>Built-In Constants</h3>
+        	  	<table>
+        	  		<thead>
+        	  			<tr>
+        	  				<th>Name</th>
+        	  				<th>Value</th>
+        	  			</tr>
+        	  		</thead>
+        	  		<tbody>
+        	  			<tr>
+        	  				<td><code>M_PI</code></td>
+        	  				<td>Pi</td>
+        	  			</tr>
+        	  		</tbody>
+        	  	</table>
+        	  	<h2 id="arrays" data-magellan-target="arrays">Arrays</h2>
+        	  	<p>An <strong>array</strong> is a list of items.  They allow us to store more than one item in a variable.</p>
+        	  	<pre class="brush: php">
+        				$array = array("Egg", "Tomato", "Beans");
+        				echo $array[0];
+        				echo $array{1};		// alternative braces syntax
+        				unset($array[2]);	// remove an item
+        	  	</pre>
+        	  	<h3>Associative Array</h3>
+        	  	<p>An <strong>associative array</strong> (also called a <strong>map</strong>) uses key value pairs.  Instead of using an integer to refer to the value, you use a defined key.</p>
+        	  	<pre class="brush: php">
+        				$myAssocArray = array('year' => 2012,
+        				                  'colour' => 'blue',
+        				                  'doors' => 5);
+        				echo $myAssocArray['year'];
+        	  	</pre>
+        	  	<h4>Iterating Over Associative Arrays</h4>
+        	  	<pre class="brush: php">
+        				foreach ($salad as $ingredient=>$include) {
+        				  echo $include . ' ' . $ingredient . '&lt;br /&gt;';
+        				}
+        	  	</pre>
+        	  	<h3>Multidimensional Arrays</h3>
+        	  	<p>Arrays within arrays.</p>
+        	  	<h2 id="loops" data-magellan-target="loops">Loops</h2>
+        	  	<h3>For and ForEach</h3>
+        	  	<pre class="brush: php">
+        			for ($i = 10; $i < 101; $i = $i + 10) {
+        			  echo $i;
+        			}
+        	  	</pre>
+        	  	<pre class="brush: php">
+        				$langs = array("JavaScript",
+        				  "HTML/CSS", "PHP",
+        				  "Python", "Ruby");
+        
+        				foreach ($langs as $lang) {
+        				  echo "<li>$lang</li>";
+        				}
+        
+        				unset($lang);
+        	  	</pre>
+        	  	<h3>While Loop</h3>
+        	  	<pre class="brush: php">
+        				while ($loopCond){
+        				  $loopCond = false;
+        				}
+        	  	</pre>
+        	  	<h4>Alternative Syntax</h4>
+        	  	<pre class="brush: php">
+        				while(cond):
+        				  // looped statements go here
+        				endwhile;
+        	  	</pre>
+        			<h3>Do/While Loop</h3>
+        			<pre class="brush: php">
+        				$i = 0;
+        				do {
+        				  echo $i;
+        				} while ($i > 0);
+        			</pre>
+        			<h2 id="functions" data-magellan-target="functions">Functions</h2>
+        			<p><strong>Functions</strong> are reusable pieces of code that you can use throughout an application.</p>
+        			<pre class="brush: php">
+        				function addTwoNumbers($num1, $num2) {
+        					return $num1 + $num2;
+        				}
+        			</pre>
+        			<h2 id="objects" data-magellan-target="objects">Objects</h2>
+        			<pre class="brush: php">
+        				class Person {
+        				  // Properties
+        				  public $isAlive = true;
+        				  public $firstname;
+        				  public $lastname;
+        				  public $age;
+        
+        				  // Constructor
+        				  public function __construct($firstname, $lastname, $age) {
+        				    $this->firstname = $firstname;
+        				    $this->lastname = $lastname;
+        				    $this->age = $age;
+        				  }
+        
+        					// Destructor
+        					public function __destruct()
+        					{
+        					  echo 'The class "', __CLASS__, '" was destroyed.<br />';
+        					}
+        
+        					// ToString override
+        					public function __toString()
+        					{
+        					  echo "Using the toString method: ";
+        					  return $this->getProperty();
+        					}
+        
+        				  // Method
+        				  public function greet() {
+        				    return "Hello, my name is " . $this->firstname . " " . $this->lastname . ". Nice to meet you! :-)";
+        				  }
+        				}
+        
+        				// Creating a new object
+        				$me = new Person('boring', '12345', 12345);
+        
+        				// Using an object method
+        				echo $me->greet(); 
+        			</pre>
+        			<h3>Inheritance</h3>
+        			<pre class="brush: php">
+        				class Shape { public $hasSides = true; }
+        				class Square extends Shape {
+        					public function __construct() {
+        				  	// Call the parent class's constructor
+        				    parent::__construct();
+        				  }
+        				}
+        			</pre>
+        			<h3>The final keyword</h3>
+        			<p>Use <code>final</code> to prevent methods from being overridden.</p>
+        			<pre class="brush: php">
+        				class Bicycle extends Vehicle {
+        				  final public function honk() {
+        				    return "Beep beep!";
+        				  }
+        				}
+        			</pre>
+        			<h3>Constants</h3>
+        			<p>Use the scope resolution operator <code>::</code> to access constants.</p>
+        			<pre class="brush: php">
+        				class Immortal extends Person {
+        				  const alive = true; // Immortals never die!
+        				}
+        				if (Immortal::alive) {
+        				  echo "I live forever!";
+        				}
+        			</pre>
+        			<h3>The static keyword</h3>
+        			<p>The <code>static</code> keyword lets you use a class' property or method without having to create an instance of that class.</p>
+        			<pre class="brush: php">
+        				class Person {
+        				  public static $isAlive = "Yep!"
+        				  public static function greet() {
+        				    echo "Hello there!";
+        				  }
+        				}
+        
+        				echo Person::$isAlive;
+        			</pre>
+        			<h3>Visibility Keywords</h3>
+        			<p>There are three visibility keywords: <code>public</code>, <code>protected</code>, and <code>private</code>.  In addition, a method or property can be declared as <code>static</code>.</p>
         		</div>
         		<div class="columns large-3" data-sticky-container>
         		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
@@ -244,7 +613,17 @@
         		  		<li><a href="#datatypes">Data Types</a></li>
         		  		<li><a href="#echoprint">echo and print</a></li>
         		  		<li><a href="#strings">String Functions</a></li>
+        		  		<li><a href="#math">Math Functions</a></li>
+        		  		<li><a href="#array-func">Array Functions</a></li>
+        		  		<li><a href="#obj-func">Object Functions</a></li>
+        		  		<li><a href="#other-func">Other Functions</a></li>
+        		  		<li><a href="#operators">Operators</a></li>
+        		  		<li><a href="#controlflow">Control Flow</a></li>
         		  		<li><a href="#constants">Constants</a></li>
+        		  		<li><a href="#arrays">Arrays</a></li>
+        		  		<li><a href="#loops">Loops</a></li>
+        		  		<li><a href="#functions">Functions</a></li>
+        		  		<li><a href="#objects">Objects</a></li>
         		  	</ul>
         		  </nav>
         		</div>

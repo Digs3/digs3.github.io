@@ -113,43 +113,104 @@
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
-        <article class="kb-article" id="kb-github">
+        <article class="kb-article" id="kb-php">
         	<header>
         		<div class="inner">
-        		  <h1>GitHub <small>(Web-based Git repository hosting service)</small></h1>
+        		  <h1>MVC <small>(Model View Controller)</small></h1>
+        		  <p>A software architectural pattern for implementing user interfaces.</p>
         	  </div>
         	</header>
-        <div>
-        	<p><a href="https://github.com/">Official Website</a></p>
-        	<p>A platform for hosting and collaborating on projects.</p>
-        	<ul>
-        		<li>
-        		  <b>Repositories</b> - the basic unit of GitHub, most commonly a single project<br>
-        	  - location where all the files for a particular project are stored
-        		</li><br>
-        		<li>
-        		  <b>Branching</b> - the way to work on different parts of a repository at one time<br>
-        	  - when creating a branch, you're making a snapshot copy of the original branch<br>
-        	  - used for keeping bug fixes and feature work separate from the master (production) branch<br>
-        	  - when a feature or fix is ready, it is merged into master
-        		</li><br>
-        		<li>
-        		  <b>Commits</b>- saved changes<br>
-        	  - commit message - a description explaining why a particular change was made
-        		</li><br>
-        		<li>
-        		  <b>Issues</b> - a note on a repository about something that needs attention (e.g. bug, feature request, question)
-        		</li><br>
-        		<li>
-        		  <b>Pull Requests</b> - proposing changes and requesting someone pull in your contribution (merge into branch)<br>
-        	  - pull requests can be issued to share screens or ideas, when stuck and need advice, or when ready for review<br>
-        	  - diffs - the changes, additions and subtractions, shown in green and red<br>
-        	  - in the pull request title, add "fixes #3" or "closes #4" with the issue # to close that issue when merging<br>
-        	  - use @mention in Pull Request message to ask for feedback from specific people or teams<br>
-        		</li>
-        	</ul>
-        </div>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        	  	<h2 id="what" data-magellan-target="what">What is MVC</h2>
+        	  	<p>
+        	  	  <b>MVC</b> defines a way to structure an application.  MVC is used by Laravel, Ruby on Rails, CakePHP, and django frameworks.  These frameworks implement the MVC design pattern.
+        	  	</p>
+        	  	<h5>
+        	  		The three structural elements of MVC are:
+        	  	</h5>
+        	  	<ul>
+        	  		<li><b>Model</b> (database)</li>
+        	  		<li><b>View</b> (client)</li>
+        	  		<li><b>Controller</b> (server)</li>
+        	  	</ul>
+        	  	<h3>Model</h3>
+        	  	<ul>
+        	  		<li>Adding and Retrieving Items from DB</li> 
+        	  		<li>Processing data from or to the database</li>
+        	  		<li>Speaks only with the Controller</li>
+        	  	</ul>
+        	  	<h3>View</h3>
+        	  	<ul>
+        	  		<li>This is the only thing the user ever sees</li>
+        	  		<li>Good old fashioned HTML/CSS</li>
+        	  		<li>Speaks only with the Controller</li>
+        	  	</ul>
+        
+        	  	<h3>Controller</h3>
+        	  	<ul>
+        	  		<li>Processes GET/POST/PUT/DESTROY requests</li>
+        	  		<li>All server-side logic</li>
+        	  		<li>The Middle Man</li>
+        	  		<ul>
+        	  			<li>Takes info from user</li>
+        	  			<li>Processes info and talks to the DB if needed</li>
+        	  			<li>Receives info from the DB</li>
+        	  			<li>Speaks to the View to explain presentation to the viewer</li>
+        	  		</ul>
+        	  	</ul>
+        	  	<h2 id="why" data-magellan-target="why">Why MVC</h2>
+        	  	<ul>
+        	  		<li>Prevents repetition of code</li>
+        	  		<li>Makes code easier to manage</li>
+        	  		<li>Separates business logic from other logic</li>
+        	  	</ul>
+        	  	<h2 id="route" data-magellan-target="route">Route Processing</h2>
+        	  	<p>All frameworks have a route processor.  This routes requests to controllers?</p>
+        	  	<p>Example: Search page has search controller, static page has Pages controller, blog has post controller</p>
+        	  	<h2 id="example" data-magellan-target="example">Example</h2>
+        <pre>http://yourapp.com/users/profile/1
+        /routes
+        	users/profile/:id = Users.getProfile(id)
+        /controllers
+        	class Users{
+        		function getProfile(id){
+        			profile = this.UserModel.getProfile(id)
+        			renderView('users/profile', profile)
+        		}
+        	}
+        /models
+        	Class UserModel{
+        		function getProfile(id){
+        			data = this.db.get('SELECT * FROM users WHERE id = id')
+        			return data;
+        		}
+        	}
+        /views
+        	/users
+        		/profile
+        		&lt;h1&gt;&#0123;&#0123;profile.name&#0125;&#0125;&lt;/h1&gt;
+        		&lt;ul&gt;
+        		&lt;li&gt;Email: &#0123;&#0123;profile.email&#0125;&#0125;&lt;/li&gt;
+        		&lt;li&gt;Phone: &#0123;&#0123;profile.phone&#0125;&#0125;&lt;/li&gt;
+        
+        		&lt;/ul&gt;
+        </pre>
+        	  </div>
+        	  <div class="columns large-3" data-sticky-container>
+        		<nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  <ul class="vertical menu" data-magellan>
+        		  	<li class="menu-text">On this page:</li>
+        		  	<li><a href="#what">What is MVC?</a></li>
+        		  	<li><a href="#why">Why MVC?</a></li>
+        		  	<li><a href="#route">Route Processing</a></li>
+        		  	<li><a href="#example">Example</a></li>
+        		  </ul>
+        		</nav>
+        	  </div>
+        	</div>
         </article>
+        
       </div>
     </div>
 

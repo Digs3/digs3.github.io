@@ -1,0 +1,996 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base for Web Development (Daniel Dilly)</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/shCore.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushCss.js"></script>
+    <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+
+
+    <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
+      <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+        <div>
+        <header class="top-bar" id="kb-nav-top">
+        	<div class="top-bar-title">
+        		<h1><a href="/">Daniel Dilly</a></h1>
+        	</div>
+        </header>
+        
+        <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div id="kb-sidebar">
+          <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
+          <nav id="kb-menu">
+            <ul class="vertical menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li class="menu-text">Software Development</li>
+              <li><a href="wpfxaml.html">WPF XAML</a></li>
+        
+              <li class="menu-text">Code</li>
+              <li>
+                <a href="html5.html"><i class="icon-html5-plain"></i> HTML5</a>
+                <ul class="nested vertical menu">
+                  <li><a href="html5_forms.html">Forms</a></li>
+                </ul>
+              </li>
+              <li><a href="css.html"><i class="icon-css3-plain"></i> CSS</a></li>
+              <li><a href="sass.html"><i class="icon-sass-original"></i> Sass</a></li>
+              <li><a href="javascript.html"><i class="icon-javascript-plain"></i> JavaScript</a>
+                <ul class="nested vertical menu">
+                  <li><a href="ajax.html">Ajax</a></li>
+                </ul>
+              </li>
+              <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
+              <li><a href="vuejs.html"><i class="icon-vuejs-plain"></i> Vue.JS</a></li>
+        
+              <li><a href="handlebars.html">Handlebars.js</a></li>
+              <li>
+                <a href="php.html"><i class="icon-php-plain"></i> PHP</a>
+                <ul class="nested vertical menu">
+                  <li><a href="php_mysql.html">MySQL Database</a></li>
+                </ul>
+              </li>
+              <li><a href="mvc.html">MVC</a></li>
+              <li><a href="laravel.html"><i class="icon-laravel-plain"></i> Laravel</a></li>
+        
+              <li><a href="#">XML</a></li>
+              <li><a href="#">RegExp</a></li>
+        
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html"><i class="icon-uniE695"></i> Software</a></li>
+              <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
+              <li><a href="apache.html"><i class="icon-apache-plain-wordmark"></i> Apache</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js &amp; NPM</a></li>
+              <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
+              <li><a href="grunt.html"><i class="icon-grunt-plain"></i> Grunt</a></li>
+              <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
+              <li><a href="yeoman.html"><i class="icon-uniE67A"></i> Yeoman</a></li>
+              <li><a href="git.html"><i class="icon-git-plain"></i> Git</a></li>
+              <li><a href="github.html"><i class="icon-github-original"></i> GitHub</a></li>
+              <li><a href="github_pages.html"><i class="icon-github-original"></i> GitHub Pages</a></li>
+        
+        
+        
+              <li class="menu-text">Database</li>
+              <li><a href="#"><i class="icon-mysql-plain"></i> MySQL</a></li>
+        
+              <li class="menu-text">Frameworks</li>
+              <li><a href="foundation.html"><i class="icon-foundation-plain"></i> Foundation</a></li>
+              <li><a href="bootstrap.html"><i class="icon-bootstrap-plain"></i> Bootstrap</a></li>
+              <li><a href="angular.html"><i class="icon-angularjs-plain"></i> AngularJS</a></li>
+        
+              <li class="menu-text">CMS</li>
+              <li><a href="wordpress.html">WordPress</a></li>
+        
+              <li class="menu-text">Design</li>
+              <li><a href="#">Typography</a></li>
+              <li><a href="#">Color</a></li>
+        
+              <li class="menu-text">More</li>
+              <li><a href="seo.html">SEO</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        </div>
+      </div>
+      <div class="column medium-9 large-10" id="right" data-equalizer-watch>
+        <article class="kb-article" id="kb-laravel">
+        	<header>
+        		<div class="inner">
+        		  <h1>Laravel</h1>
+        		  <p>The PHP Framework For Web Artisans</p>
+        	  </div>
+        	</header>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        	  	<p><a href="https://laravel.com/">Official Website</a></p>
+        	  	<p><a href="https://laravelcollective.com/">Laravel Collective</a></p>
+        	  	<p><a href="https://laracasts.com/discuss/channels/elixir/zurb-foundation-6-and-laravel-53">Integrating Foundation into Laravel</a></p>
+        
+        		<!--
+        		 *
+        		 *	What Is Laravel
+        		 *
+        		 *-->
+        	  	<h2 id="what" data-magellan-target="what">What is Laravel</h2>
+        	  	<p>
+        	  	  <b>Laravel</b> is a free, open-source MVC PHP web framework.  
+        	  	</p>
+        	  	<h3>Features</h3>
+        	  	<ul>
+        	  		<li>Modular packaging system with a dedicated dependency manager</li>
+        	  		<li>Different ways for accessing relational databases through Routing</li>
+        	  		<li>Utilities that aid in application deployment and maintenance</li>
+        	  		<li>Orientation toward syntactic sugar</li>
+        	  		<li>Easy authentication by providing a simple &amp; easy to use interface</li>
+        	  	</ul>
+        	  	<p>Laravel uses <strong>composer</strong> to manage dependencies.</p>
+        	  	
+        	  	<!--
+        		 *
+        		 *	Setting Up Laravel
+        		 *
+        		 *-->
+        	  	<h2 id="setup" data-magellan-target="how">Setting up Laravel</h2>
+        	  	<p>Laravel requires <a href="https://getcomposer.org/">composer</a> (a PHP dependency manager), so install that first.</p>
+        	  	<p>Install laravel with <code>composer global require "laravel/installer"</code>.</p>	  	
+        
+        		<!--
+        		 *
+        		 *	How To Use Laravel
+        		 *
+        		 *-->
+        	  	<h2 id="how" data-magellan-target="how">How to use Laravel</h2>
+        	  	<p>Create a laravel project with <code>laravel new &lt;projectName&gt;</code></p>
+        	  	<p>The Web server's document root should point to the <kbd>/public</kbd> directory</p>
+        	  	
+        	  	<!--
+        		 *
+        		 *	File Structure
+        		 *
+        		 *-->
+        	  	<h2 id="structure" data-magellan-target="structure">File Structure</h2>
+        	  	<p>The <kbd>project/app</kbd> folder contains the <b>Models</b> and <b>Controllers</b> and most of the logic.</p>
+        	  	<p>The <kbd>project/app/User.php</kbd> file is an example of a <b>Model</b>.</p>
+        	  	<p>The <kbd>project/app/Http</kbd> folder contains the <b>Controllers</b> directory for the controller code.  The <b>Middleware</b> directory contains code that will be processed before the Http request and routes file.  Code that is replicated very often is placed here.</p>
+        	  	<p>The <kbd>project/bootstrap</kbd> folder is where Laravel gets bootstrapped and started up.</p>
+        	  	<p>The <kbd>project/config</kbd> directory contains the files that contain the configuration settings for Laravel and different packages.</p>
+        		<p>The <kbd>project/database</kbd> directory contains migrations and seeds.</p>
+        		<p>The <kbd>project/public</kbd> directory contains assets and is publicly accessible.  All requests go through index.php in this directory.</p>
+        		<p>The <kbd>project/resources</kbd> directory contains assets like Sass code and our <b>Views</b>.  Views are our html pages that the user sees.</p>
+        		<p>The <kbd>project/routes</kbd> directory contains all the route files.</p>
+        		<p>The <kbd>project/storage</kbd> folder contains logs and other storage</p>
+        		<p>The <kbd>project/tests</kbd> folder is used for PHP unit testing.</p>
+        		<p>The <kbd>project/vendor</kbd> folder contains 3rd party vendor libraries.</p>
+        		
+        		<!--
+        		 *
+        		 *	Models
+        		 *
+        		 *-->
+        		<h2 id="models" data-magellan-target="models">Models</h2>
+        		<p>A model relates to a table.  In most cases you'll have one model per table.</p>
+        		<ul>
+        		  <li>Models are stored in the <kbd>/project/app</kbd> directory as .php files.</li>
+        		  <li>Model names should be in singular form and capitalized (e.g., Post.php or User.php).</li>
+        		  <li>Models generally have a timestamp created with columns named 'created_at' and 'updated_at'</li>
+        		</ul>
+        		<h3 id="model_create" data-magellan-target="model_create">Creating Models</h3>
+        		<h4>Generate a Model with Artisan</h4>
+        		<p><code>php artisan make:model Customer</code></p>
+        		<p>Use <code>--migration</code> or <code>-m</code> after the command to generate a database migration.</p>
+        
+        		<h4>Laravel's Eloquent ORM assumes these things:</h4>
+        		<ul>
+        			<li>The table name is the plural form of the model name</li>
+        			<li>The table has a primary key named <code>id</code></li>
+        			<li>The primary key is an incrementing integer value</li>
+        			<li>Foreign key names are the referenced table's name + <code>_id</code></li>
+        			<li>Tables have <code>created_at</code> and <code>updated_at</code> columns</li>
+        		</ul>
+        		<h5>Customize Eloquent's Behavior</h5>
+        		<ul>
+        		<li>Use <code>protected $table = 'table_name';</code> to override the table name</li>
+        		<li>Use the <code>$primarykey</code> property to override the primary key name</li>
+        		<li>Set the <code>$incrementing</code> property to <code>false</code> to use a non-incrementing or non-numeric primary key</li>
+        		<li>Set the <code>$timestamps</code> property to <code>false</code> to stop Eloquent from automatically managing these columns. </li>
+        		<li>Set the <code>CREATED_AT</code> or <code>UPDATED_AT</code> constants to customize the names of the columns used to store timestamps</li>
+        		</ul>
+        		
+        		<h4>Connecting to Database</h4>
+        		<p>First, create your database in MySQL.</p>
+        		<p>Open the <code>.env</code> file in the <code>/project</code> directory and edit the database environment variables.</p>
+        		<ul>
+        			<li><code>DB_HOST</code> - db server IP</li>
+        			<li><code>DB_PORT</code> - db server Port</li>
+        			<li><code>DB_DATABASE</code> - db name</li>
+        			<li><code>DB_USERNAME</code> - db username</li>
+        			<li><code>DB_PASSWORD</code> - db password</li>
+        		</ul>
+        		<p>Open the <code>database.php</code> file in the <code>/project/config</code> directory.  This file lets you change the settings for the database.</p>
+        		
+        
+        		<h3 id="model_use" data-magellan-target="model_use">Using The Model</h3>
+        		<pre class="brush: php">
+        		// Select the first customer
+        		$customer = App\Customer::first();
+        
+        		// Select customer where id=2
+        		$customer = App\Customer::find(2);
+        
+        		// Select the first customer where name=Tony
+        		$customer = App\Customer::where('name', '=', 'Tony')->first;
+         
+        		// Display the customer's name
+        		echo $customer->name;
+        
+        		// Select all orders
+        		$orders = App\Order::all();
+        
+        		// Create a new user
+        		$user = new User();
+        
+        		// Save new user
+        		$user->save();
+        
+        		// Using Order By &amp; Paginate
+        		$posts = Post::orderby('id', 'asc')->paginate(5);
+        		</pre>
+        
+        		<h3 id="model_relate" data-magellan-target="model_relate">Relationships</h3>
+        		<p>Eloquent supports relationships as defined methods on your model classes.</p>
+        		<p>Eloquent assumes names of keys and more.</p>
+        		<p>Examples:</p>
+        		<pre class="brush: php">
+        		// One To One
+        		class User extends Model {
+        			public function phone() {
+        			  return $this->hasOne('App\Phone'); }
+        		}
+        
+        		// One To One (Inverse)
+        		class Phone extends Model {}
+        			public function user() {
+        			  return $this->belongsTo('App\User'); } 
+        		}
+        
+        		// One To Many
+        		class Post extends Model {
+        			public function comments() {
+        			  return $this->hasMany('App\Comment'); }
+        		}
+        
+        		// One To Many (Inverse)
+        		class Comment extends Model {
+        			public function post() {
+        			  return $this->belongsTo('App\Post'); }
+        		}
+        
+        		// Many To Many
+        		class User extends Model {
+        			public function roles() {
+        			  return $this->belongsToMany('App\Role'); }
+        		}
+        
+        		// Many To Many (Inverse)
+        		class Role extends Model {
+        			public function users() {
+        			  return $this->belongsToMany('App\User'); }
+        		}
+        		</pre>
+        		<p>The <code>belongsToMany()</code> function automatically assumes the intermediary table name (table names in alphabetical order separated by a <code>_</code>) unless you explicitly specify it as the 2nd parameter:</p>
+        		<pre class="brush:php">$this->belongsTo('App\Post', 'post_tag');</pre>
+        		<p>The <code>belongsToMany()</code> can also take the column names for the current and joining models as the 3rd and 4th parameters:</p>
+        		<pre class="brush:php">$this->belongsTo('App\Post', 'post_tag', 'post_id', 'tag_id');</pre>
+        		<p>Once the relationship is created, you can access the relating tables as follows:</p>
+        		<pre class="brush:php">$post->category->name</pre>
+        
+        		<!--
+        		 *
+        		 *	Migrations
+        		 *
+        		 *-->
+        		<h2 id="migrations" data-magellan-target="migrations">Migrations</h2>
+        		<p>Migrations are a way of storing your database schema in files in addition to the database. This allows other people working on the project to have the database schema.</p>
+        		<p>Migrations are a way for laravel to create or edit our database tables for us</p>
+        		<p>Migrations are stored in the <code>/project/database/migrations</code> directory.</p>
+        		<p>Run <code>php artisan migrate</code> to create the database tables from the migrations.</p>
+        
+        		<!-- Migrations: Creating Migrations -->
+        		<h3>Creating Migrations</h3>
+        		<p>You can create a migration when you make a model with the <code>-m</code> or <code>--migration</code> modifier.</p>
+        		<p><code>php artisan make:model Post -m</code></p>
+        		<p>You can also create a migration using the <code>make:migration</code> artisan command</p>
+        		<p><code>php artisan make:migration create_users_table --create=users</code></p>
+        		<p>The <code>--create</code> modifier will automatically create the create and drop functions with the chosen name for the table.</p>
+        		<p>To create a migration that adds a column to an existing table use the <code>--table</code> modifier</p>
+        		<p><code>php artisan make:migration add_category_id_to_posts --table=posts</code></p>
+        
+        
+        		<!-- Migrations: Modifying Migrations -->
+        		<h3>Modifying Migrations</h3>
+        		<p>Migrations are stored in the <code>/database/migrations</code> folder of your project.</p>
+        		<h4>Creating a table</h4>
+        		<pre class="brush: php">
+        		Schema::create('posts', function (Blueprint $table) {
+                    $table->increments('id');
+                    $table->string('title');
+                    $table->text('post');
+                    $table->timestamps();
+                });
+        		</pre>
+        		<p>Create a foreign key in the table:</p>
+        		<pre class="brush:php">
+        			$table->integer('tag_id')->unsigned();
+                    $table->foreign('tag_id')->references('id')->on('tags');
+        		</pre>
+        		<h4>Adding a column to a table</h4>
+        		<pre class="brush:php">
+        		class AddSlugToPosts extends Migration
+        		{
+        		    public function up()
+        		    {
+        		        Schema::table('posts', function(Blueprint $table) {
+        		            $table->string('slug')->unique()->after('body'); });
+        		    }
+        		    public function down()
+        		    {
+        		        Schema::table('posts', function(Blueprint $table) {
+        		            $table->dropColumn('slug') })
+        		    }
+        		}
+        		</pre>
+        		<h4>Column Modifiers</h4>
+        		<table>
+        			<tr>
+        			  <td><code>->nullable()</code></td>
+        			  <td>Allow NULL values to make a field optional</td>
+        			</tr>
+        			<tr>
+        			  <td><code>->default(value)</code></td>
+        			  <td>Set a "default" value</td>
+        			</tr>
+        			<tr>
+        			  <td><code>->first()</code></td>
+        			  <td>Place the column "first" in the table</td>
+        			</tr>
+        			<tr>
+        			  <td><code>->after('column')</code></td>
+        			  <td>Place the column "after" another</td>
+        			</tr>
+        			<tr>
+        			  <td><code>->unsigned</code></td>
+        			  <td>Set <code>integer</code> columns to <code>UNSIGNED</code></td>
+        			</tr>
+        			<tr>
+        			  <td><code>->unique</code></td>
+        			  <td>Create an Index on the column</td>
+        			</tr>
+        			<tr>
+        		</table>
+        
+        		<!--
+        		 *
+        		 *	Views
+        		 *
+        		 *-->
+        		<h2 id="views" data-magellan-target="views">Views</h2>
+        		<p>Views contain the HTML served by your application.  Views are stored in the <kbd>resources/views</kbd> directory.</p>
+        		<p>Views are html documents saved as <kbd>.blade.php</kbd> files as they make use of the Blade templating engine.</p>
+        		<p>You can create subdirectories to organize your views.</p>
+        		
+        		<!-- Blade -->
+        		<h3 id="view-blade" data-magellan-target="view-blade">Blade</h3>
+        		<p>Blade is the templating engine provided with Laravel.</p>
+        		<p>Blade lets you output variables using a simple syntax:</p>
+        		<p><code>&#123;&#123; $customer->name &#125;&#125;</code></p>
+        		<p><code>&#123;&#123; $fullname &#125;&#125;</code></p>
+        
+        		<!-- Blade: Control Structures -->
+        		<h4>Control Structures</h4>
+        		<p>Use <code>if</code> statements with Blade:</p>
+        		<pre class="brush: php">
+        		  @if($var1 == 'Hamburger')
+        		  	I love hamburgers&lt;br&gt;
+        		  @endif
+        		</pre>
+        		<p>Use <code>foreach</code> statements with Blade:</p>
+        		<pre class="brush: php">
+        		  @foreach($orders as $order)
+        		  	&lt;li&gt;&#123;&#123; $order->name &#125;&#125;&lt;/li&gt;
+        		  @endforeach
+        		</pre>
+        
+        		<!-- Blade: Layouts -->
+        		<h4>Layouts</h4>
+        		<p>Create a <b>Layout</b> by adding <code>@section</code> and <code>@yield</code> directives to your HTML markup.</p>
+        		<p><code>@section</code> defines a section of content</p>
+        		<pre class="brush: php">
+        		@section('content')
+        		  &lt;div&gt;HTML content&lt;/div&gt;
+        		@endsection
+        		</pre>
+        		<p>Sections should now end with either <code>@stop</code> or <code>@show</code>.  <code>@stop</code> will only show the section and <code>@show</code> will show the section plus any content for the section residing in the template.</p>
+        		<pre class="brush: php">
+        		@section('title', ' | Homepage')
+        		</pre>
+        		<p><code>@yield</code> displays the contents of a given section</p>
+        		<pre class="brush:php">
+        			@yield('content')
+        		</pre>
+        		<p>Place your layout in the <kbd>resources/views/layouts/</kbd> directory</p>
+        		<p>Create a <b>child view</b> using the <code>@extends</code> directive to specify which layout the child view should inherit</p> 
+        		<p>For example, you may create a <code>main.blade.php</code> file that contains the HTML markup that is the similar across all pages.  This will probably include your page title, the nav bar, and any header or footer elements.  Place a <code>@yield('content')</code> directive where the content should go.</p>
+        		<p>All content pages will include an <code>@extends('main')</code> directive at the top followed by a <code>@section('content')</code> directive.  This will load the <code>main.blade.php</code> file with the content of the content page.</p>
+        
+        		<!-- Blade: Partials -->
+        		<h4>Partials</h4>
+        		<p><b>Partials</b> are a way to extract code out into its own file in order for it to be repeated or for organization.</p>
+        		<p>Partials should begin with an underscore.  Example: <kbd>_head.blade.php</kbd>.  This is not required but it can be helpful.</p>
+        		<p>Include a partial with the <code>@include</code> directive</p>
+        		<pre class="brush: php">
+        		  @include('partials._head')
+        		</pre>
+        		<p><a href="https://laravel.com/docs/5.4/blade">Learn More - Official Laravel Blade Documentation</a></p>
+        
+        		<!-- Form Helpers -->
+        		<h3 id="view-forms" data-magellan-target="view-forms">Forms</h3>
+        		<h4>Form Helpers</h4>
+        		<p>Form Helpers are not included in Laravel 5.  To add them, go to <a href="http://laravelcollective.com">laravelcollective.com</a> and browse to HTML &amp; Forms.  </p>
+        		<h4>CSRF Protection</h4>
+        	  	<p>All forms should include a hidden input field named <code>_token</code> that has the value of <code>csrf_token()</code>.  Use the <code>csrf_field()</code> function to automatically generate the entire input field.</p>
+        	  	<h4>Accessing PUT and DELETE</h4>
+        	  	<p>To access <code>PUT</code> and <code>DELETE</code> when using CRUD, set the form method to <code>POST</code> and add the following input field with the value set to <code>PUT</code> or <code>DELETE</code>:</p>
+        	  	<p><code>&lt;input type="hidden" name="_method" value="PUT"&gt;</code></p>
+        
+        		<!--
+        		 *
+        		 *	Controllers
+        		 *
+        		 *-->
+        		<h2 id="controllers" data-magellan-target="controllers">Controllers</h2>
+        		<p>Controllers are stored in the <kbd>project/app/Http/Controllers</kbd> directory.</p>
+        		<p>The Controller.php file is the controller base to be extended upon should you make your own controller.</p>
+        		<p><b>Generate a controller with artisan</b></p>
+        		<p><code>php artisan make:controller CustomerController</code></p>
+        		<p>Use the <code>--resource</code> modifier to create a <a href="#ctrl-res">resource controller</a>.</p>
+        		<h3>How to build a controller</h3>
+        		<p>This sample controller will handle the routing of static pages</p>
+        		<p>Create your PagesController.php file in the Controllers directory.</p>
+        		<pre class="brush: php">
+        			&lt;?php
+        			  // All controllers need to be namespaced
+        			  namespace App\Http\Controllers;
+        
+        			  class PagesController extends Controller {
+        			    public function getIndex() {
+        				  # process variable data
+        				  # talk to the model
+        				  # receive from the model
+        				  # compile or process data
+        				  # pass data to the correct view
+        				  return view('pages.welcome');
+        			    }
+        
+        			    public function getAbout() {
+        			      $first = 'John';
+        			      $last = 'Doe';
+        			      $full = $first . " " . $last;
+        			      $email = 'john.doe@gmail.com';
+        			      $data = [];
+        			      $data['email'] = $email;
+        			      $data['fullname'] = $full;
+        			      return view('pages.about')->with("data", $data);
+        			      // Shortcut: return view('pages.about')->withData($data)
+        			      // You can add multple withs:  ->withEmail($email)->withName($name)->withAge($age);
+        			    }
+        			  }
+        			?&gt;
+        	  	</pre>
+        	  	<h3>Returning a View from a Controller</h3>
+        	  	<p>Use the global <code>view</code> helper to return views from controllers</p>
+        	  	<p>The second argument is an associative array of data that should be made available to the view.</p>
+        	  	<pre class="brush: php">
+        	  	  $customer = Customer::find($id);
+        	  	  return view('customer', ['customer' => $customer]);
+        
+        	  	  // Using the compact function with name of variable
+        	  	  return view('greeting', compact('customer'));
+        	  	</pre>
+        	  	<p>Alternatively, you can use the <code>with</code> method to add individual pieces of data to the view:</p>
+        	  	<pre class="brush: php">
+        	  	  return view('greeting')->with('name', 'Victoria');
+        
+        	  	  return view('pages.about')->with('fullname', $fullname);
+        	  	  // Shorthand and passing multiple values
+        	  	  return view('pages.about')->withFullname($fullname)->withEmail($email);
+        
+        		  // Pass an associative array
+        	  	  return view('pages.about')->withData($data);
+        	  	</pre>
+        	  	<p>The first argument is the name you want to access the variable as in the view.  The second argument is what it should be equal to.</p>
+        
+        	  	<!-- Controllers: CRUD (Resource Controllers) -->
+        	  	<h2 id="ctrl-res" data-magellan-target="ctrl-res">Resource Controllers (CRUD)</h2>
+        	  	<p>Create a resource controller with <code>php artisan make:controller PostController --resource</code></p>
+        	  	<p>The <code>--resource</code> tag creates a resource controller which creates basic CRUD commands. </p>
+        	  	<h3>Resource Controller Functions</h3>
+        	  	<table>
+        	  		<tr>
+        	  			<td><code>index()</code></td>
+        	  			<td>Lists all items (posts, customers, etc)</td>
+        	  		</tr>
+        	  		<tr>
+        	  			<td><code>create()</code></td>
+        	  			<td>Shows a create form</td>
+        	  		</tr>
+        	  		<tr>
+        	  			<td><code>store()</code></td>
+        	  			<td>Stores a new item</td>
+        	  		</tr>
+        	  		<tr>
+        	  			<td><code>show()</code></td>
+        	  			<td>Displays a single item</td>
+        	  		</tr>
+        	  		<tr>
+        	  			<td><code>edit()</code></td>
+        	  			<td>Show an edit form</td>
+        	  		</tr>
+        	  		<tr>
+        	  			<td><code>update()</code></td>
+        	  			<td>Update an existing item</td>
+        	  		</tr>
+        	  		<tr>
+        	  			<td><code>destroy()</code></td>
+        	  			<td>Deletes an item</td>
+        	  		</tr>
+        	  	</table>
+        
+        	  	<!-- create() -->
+        		<h4>create()</h4>
+        		<p>Just return the view for creating (e.g., submit post form)</p>
+        
+        		<!-- store() -->
+        		<h4>store()</h4>
+        		<p>Comes in as a <em>post</em> request</p>
+        		<p>Validate the data, store in the db, redirect to other page</p>
+        
+        		<h5>1. Validate the Data</h5>
+        		<p>Laravel includes validation methods with all controllers</p>
+        		<p>Use the <code>$this->validate()</code> function to validate data.</p>
+        		<p>When validation fails, the <code>create()</code> function is automatically invoked with flash data called errors that will contain the error messages.</p>
+        		<p>The <code>$this->validate()</code> function takes 2 arguments: a request, and an array of validation rules:</p>
+        		<p>Check the <a href="https://laravel.com/docs/5.4/validation">validation documentation</a> for a list of available rules.</p>
+        		<p><code>$this->validate($request, array('title' => 'required|max:255', 'body' => 'required'))</code>.</p>
+        
+        		<p>For client-side javascript validation, check out the <a href="http://parsleyjs.org">Parsley library</a>.</p>
+        		<p>Save parsley.min.js inside your /project/public/js folder and the parsley.css in your /project/public/css folder if you decide to use it.</p>
+        
+        		<pre class="brush: php">
+        			@if (count($errors) > 0)
+        		  	  @foreach ($errors->all() as $error)
+        		  	    &#123;&#123; $error &#125;&#125;
+        		  	  @endforeach
+        		  	@endif
+        		</pre>
+        		<h5>2. Store in DB</h5>
+        		<p>To store in the db, use Eloquent.</p>
+        		<p>Add the post model with a use clause at the top of the controller.  <code>use App\Post;</code></p>
+        		<pre class="brush: php">
+        		    $post = new Post;
+        		    $post->title = $request->title;
+        		    $post->body = $request->body;
+        		    $post->save();
+        		</pre>
+        		<h5>3. Redirect</h5>
+        		<p>To redirect do <code>return redirect()->route('posts.show', $post->id);</code></p>
+        
+        		<!-- show() -->
+        		<h4>show($id)</h4>
+        		<pre class="brush: php">
+        			public function show($id)
+        			{
+        		  		$post = Post::find($id);
+        		  		return view('posts.show')->withPost($post);
+        		  	}
+        		</pre>
+        		<!-- edit() -->
+        		<h4>edit($id)</h4>
+        		<pre class="brush: php">
+        			public function edit($id)
+        			{
+        		    	$post = Post::find($id);
+        		    	return view('posts.edit')->withPost($post);
+        		    }
+        		</pre>
+        		<!-- update() -->
+        		<h4>update(Request $request, $id)</h4>
+        		<p>Like <code>store()</code>, we want to validate the data, save the data to the database, set flash data with success message, and redirect with flash data to posts.show</p>
+        		<pre class="brush:php">
+        			public function update(Request $request, $id)
+        		    {
+        		        // validate the data
+        		        $this->validate($request, [
+        		                'title' =>  'required|max:255',
+        		                'body'  =>  'required'
+        		            ]);
+        
+        		        // store in the database
+        		        $post = Post::find($id);
+        		        $post->title = $request->input('title');
+        		        $post->body = $request->input('body');
+        		        $post->save();
+        
+        		        // Set a session flash message to display on the next request
+        		        Session::flash('success', 'The blog post was edited successfully.');
+        
+        		        // redirect to another page
+        		        return redirect()->route('posts.show', $post->id);
+        		    }
+        		</pre>
+        
+        		<!--
+        		 *
+        		 *	Database
+        		 *
+        		 *-->
+        	  	<h2 id="database" data-magellan-target="database">Database</h2>
+        	  	<h3 id="db-pag" data-magellan-target="db-pag">Pagination</h3>
+        	  	<p>To use laravel's build in pagination, simply call the <code>paginate()</code> function on your object</p>
+        	  	<pre class="brush:php">
+        	  		$posts = Post::paginate(5);
+        	  	</pre>
+        	  	<p>To generate the pagination links simply include <code>&#123;!! $posts->links() !!&#125;</code></p>
+        	  	<h3 id="db-query" data-magellan-target="db-query">Query Builder</h3>
+        	  	<p>Laravel's built in query builder makes it easy to run database queries.</p>
+        	  	<pre class="brush:php">
+        	  		$posts = Post::orderBy('created_at', 'desc')->take(5)->get();
+        	  	</pre>
+        	  	<p><a href="https://laravel.com/docs/master/queries">Official Query Builder Documentation</a></p>
+        
+        		<!--
+        		 *
+        		 *	Middlware
+        		 *
+        		 *-->
+        	  	<h2 id="middleware" data-magellan-target="middleware">Middleware</h2>
+        		<p>Middleware provides a convenient mechanism for filtering HTTP requests entering the application.  It allows you to run code before the application receives requests.</p>
+        		<p>Think of middleware as layers that surround your app.  Requests and responses have to pass through the layers on their way in and out.</p>
+        		<p>Examples of middleware included with Laravel: Session, Authentication</p>
+        		<p>You can create your own middleware.</p>
+        	  	<!--
+        		 *
+        		 *	Sessions
+        		 *
+        		 *-->
+        	  	<h2 id="sessions" data-magellan-target="sessions">Sessions</h2>
+        		<p>Sessions provide a way to store information about the user across multiple requests.  This storage is temporary (2 hours in Laravel) unless you save it to the database.</p>
+        		<p>Configure sessions through the <code>config/session.php</code> file.</p>
+        		<p>Add <code>Use Session;</code> to your using clauses to use the Session facade.</p>
+        		<p>Check if a variable exists with <code>Session::has('variable')</code></p>
+        		<p><code>Session::put('key', 'value')</code> sets a variable in the session.</p>
+        		<p>Use <code>&#123;&#123; Session:get('key') &#125;&#125;</code> to get the value of a session variable.</p>
+        		<h3>Flash Data</h3>
+        		<p><code>Session::flash('key', 'value')</code> creates a variable in the session for a single request.</p>
+        		<p><code>Session::flash('success', 'The blog post was successfully saved.')</code></p>
+        		<p>Data stored in the session using the <code>flash</code> method will only be available during the subsequent HTTP request.</p>
+        		<pre class="brush: php">
+        			$request->session()->flash('key', 'value');
+        		</pre>
+        
+        		<!--
+        		 *
+        		 *	Routings
+        		 *
+        		 *-->
+        		<h2 id="routings" data-magellan-target="routings">Routings</h2>
+        		<p>Routes are located in the <kbd>project/routes</kbd> directory.  The <kbd>routes/web.php</kbd> file defines routes that are for your web interface.</p>
+        		<ul>
+        		  <li>Place more specific routes at the top as laravel will use the first applicable route.</li>
+         		  <li>Don't place functions in your routes.  Instead, route to a controller.</li>
+         		</ul>
+         		<pre class="brush: php">
+        			&lt;?php
+        			  // Basic Route
+        			  Route::get('welcome', function() {
+        			  	echo 'Hello Laravel';
+        			  }
+        			  // Passing in parameters
+        			  Route::get('hello/{name}', function($name) {
+        			  	echo 'Hello ' . $name;
+        			  }
+        			  // Using Controllers
+        			  Route::get('about', 'PagesController@getAbout');
+        			  Route::get('/', 'PagesController@getIndex');
+        			  
+        			  // Resource Controller Routes
+        			  Route::resource('posts', 'PostController'); 
+        			  Route::resource('photo', 'PhotoController', ['only' => ['index', 'show']]);
+        			  Route::resource('photo', 'PhotoController', ['except' => ['create', 'store', 'update', 'destroy']]);
+        
+        			  // Restful (CRUD) Routes
+        			  // Create Item
+        			  Route::post();
+        			  // Read Item
+        			  Route::get();
+        			  // Update Item
+        			  Route::put();
+        			  // Delete Item
+        			  Route::delete();
+        
+        			?&gt;
+        	  	</pre>
+        	  	<p>To list all routes use the command <code>php artisan route:list</code></p>
+        	  	<p>To support <code>PUT</code>, <code>PATCH</code>, or <code>DELETE</code> routes add a hidden <code>_method</code> field to the form with the value set as the HTTP requst method (e.g., <code>PUT</code>).  This is performed automatically if you use the Form Helpers from the Laravel Collective.</p>
+        
+        		<!--
+        		 *
+        		 *	Artisan
+        		 *
+        		 *-->
+        	  	<h2 id="artisan" data-magellan-target="artisan">Artisan</h2>
+        	  	<p><strong>Artisan</strong> is the name of the command-line interface included with Laravel.  It is a tool that provides helpful commands allowing you to generate files, create new tasks, and much more.</p>
+        	  	<h3>Example Artisan Commands</h3>
+        	  	<p><kbd>php artisan</kbd> : list commands</p>
+        	  	<p><kbd>php artisan serve --port=8080</kbd> : serves up a localhost at http://localhost:8080</p>
+        	  	<p><kbd>php artisan make:model &lt;name&gt;</kbd> : creates a model</p>
+        	  	<p><kbd>php artisan make:controller &lt;name&gt;</kbd> : creates a controller</p>
+        		<p><code>php artisan make:model Post --migration</code></p>
+        		<p><code>php artisan make:auth</code> - creates the authentican scaffolding files</p>
+        		<p><code>php artisan migrate</code> - run all outstanding migrations</p>
+        
+        		<!--
+        		 *
+        		 *	Authentication
+        		 *
+        		 *-->
+        		<h2 id="auth" data-magellan-target="auth">Authentication</h2>
+        		<h3>Basic Authentication Information</h3>
+        		<p>Laravel comes with several pre-built authentication controllers located in the <code>App\Http\Controllers\Auth</code> namespace.</p>
+        		<table>
+        		  <tr>
+        			<td><code>RegisterController</code></td>
+        			<td>handles new user registration</td>
+        		  </tr>
+        		  <tr>
+        			<td><code>LoginController</code></td>
+        			<td>handles authentication</td>
+        		  </tr>
+        		  <tr>
+        			<td><code>ForgotPasswordController</code></td>
+        			<td>handles e-mailing links for resetting passwords</td>
+        		  </tr>
+        		  <tr>
+        			<td><code>ResetPasswordController</code></td>
+        			<td>contains the logic to reset passwords</td>
+        		  </tr>
+        		</table>
+        		<h3>How to create authentication</h3>
+        		<p>The following command will create all the authentication scaffolding files in the <code>/project</code> folder.
+        			This includes a layout view, registration and login views, as well as routes for all authentication end-points.  A <code>HomeController</code> will also be generated to handle post-login requests at your application's dashboard.</p>
+        		<pre class="brush: php">php artisan make:auth</pre>
+        		<p>You need to have a database that has the same name as your application.</p>
+        		<p>If the database is created, the following command will create a <code>users</code> and <code>passwords_resets</code> table in your database:</p>
+        		<pre class="brush: php">php artisan migrate</pre>
+        		<p>Laravel will have automatically setup the entire authentication system.  Run <code>php artisan serve</code> when loading the default Welcome view and see it in action</p>
+        		<h3>Retrieving the Authenticated User</h3>
+        		<pre class="brush: php">
+        		  // Get the currently authenticated user
+        		  $user = Auth::user();
+        
+        		  // Get the currently authenticated user's ID
+        		  $id = Auth::id();
+        
+        		  if (Auth::check()) {
+        		    // The user is logged in...
+        		  }
+        
+        		  if (Auth::guest()) {
+        		    // The user is not logged in...
+        		  }
+        		</pre>
+        		<h3>Manually Authenticating Users</h3>
+        		<p>You can manually authenticate users by removing the included authentication controllers.</p>
+        		<p>You can access Laravel's authentication services via the <code>Auth</code> facade.</p>
+        		<p>The following code shows how to use the <code>Auth::attempt()</code> method to manually authenticate a user:</p>
+        		<pre class="brush: php">
+        		use Illuminate\Support\Facades\Auth;
+        
+        		class LoginController extends Controller
+        		{
+        		    public function authenticate()
+        		    {
+        		        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+        		            // Authentication passed...
+        		            return redirect()->intended('dashboard');
+        		        }
+        		    }
+        		}
+        		</pre>
+        		<h4>Logging Out</h4>
+        		<pre class="brush: php">
+        		Auth::logout();
+        		</pre>
+        		<h3>Remembering Users</h3>
+        		<p><b>How:</b> Pass a boolean value as the second argument to the <code>attempt()</code> method.</p>
+        		<p><b>Note:</b> Your <code>users</code> table must include the string <code>remember_token</code> column.</p>
+        		<pre class="brush: php">
+        		$remember = true;
+        		if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
+            		// The user is being remembered...
+        		}
+        		</pre>
+        		<h3>Guards</h3>
+        		<p>Guards allow you to manage the authentication for separate parts of your application using entirely separate authentication models or user tables.</p>
+        		<pre class="brush: php">
+        		if (Auth::guard('admin')->attempt($credentials)) {
+         			//
+        		}
+        		</pre>
+        		<h3>Protecting Routes</h3>
+        		<p>To only allow authenticated users access to a route, use the <code>auth</code> middleware.</p>
+        		<pre class="brush: php">
+        		Route::get('profile', function () {
+        		    // Only authenticated users may enter...
+        		})->middleware('auth');
+        		</pre>
+        		<p>If you're using controllers, you can call the <code>middleware</code> method from the controller's constructor instead.</p>
+        		<pre class="brush: php">
+        		public function __construct()
+        		{
+        		    $this->middleware('auth');
+        		}
+        		</pre>
+        		<p><a href="https://laravel.com/docs/5.4/authentication">Official Authentication Documentation</a></p>
+        
+        		<!--
+        		 *
+        		 *	Elixir
+        		 *
+        		 *-->
+        	  	<h2 id="elixir" data-magellan-target="elixir">Elixir</h2>
+        	  	<p>Laravel <strong>Elixir</strong> provides an API for defining basic Gulp tasks for your Laravel application.</p>
+        
+        	  	<!--
+        		 *
+        		 *	Slugs
+        		 *
+        		 *-->
+        	  	<h2 id="slugs" data-magellan-target="slugs">Slugs</h2>
+        	  	<p>A slug is a simplified version of a string, typically URL-friendly.</p>
+        	  	<p>Use slugs to change your urls from <code>http://example.com/post/1</code> to <code>http://example.com/post/my-dinner-with-alice</code></p>
+        	  	<p>To use slugs, first add a column to your database table named <code>slug</code>.  Index this column with the <code>->unique()</code> method to speed up your database.  You can do all of this using migrations.</p>
+        	  	<p>Create a route for your slug.  The following example includes a regular expression to constrain the route format.</p>
+        	  	<pre class="brush:php">
+        	  		Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
+        	  	</pre>
+        	  	<p>Create the controller function for your slug route.</p>
+        	  	<pre class="brush:php">
+        	  		public function getSingle($slug) {
+        		    	$post = Post::where('slug', '=', $slug)->first();
+        		    	return view('blog.single')->withPost($post);
+        		    }
+        	  	</pre>
+        	  	<p>And finally, create the View for the slug.</p>
+        
+        	  	<!--
+        		 *
+        		 *	Email
+        		 *
+        		 *-->
+        	  	<h2 id="email" data-magellan-target="email">Email</h2>
+        	  	<p>For testing on a local development environment, use <a href="http://mailtrap.io">mailtrap.io</a></p>
+        	  	<p>Simply create a mailtrap account, view your Demo inbox, and copy the username and password smtp settings to your <code>.env</code> file.  Enable encryption by setting <code>MAIL_ENCRYPTION</code> equal to <code>tls</code></p>
+        	  	<p>Next, edit your <code>project/config/mail.php</code> file and change the <code>from</code> variable's <code>address</code> and <code>name</code></p>
+        	  	<h2 id="imageup" data-magellan-target="imageup">Image Upload</h2>
+        	  	<p>Use the <a href="http://image.intervention.io">Image Intervention</a> library for image handling and manipulation.</p>
+        	  	<p>Store images in your <code>project/public</code> folder or in the <code>project/storage</code> folder.  If you use the <code>project/storage</code> folder you will need to use the Laravel API to access the images.</p>
+        	  	<h3>Create the Image Upload Form</h3>
+        		<pre class="brush:php">
+        			&#123;&#123; Form::label('featured_image', 'Upload Featured Image:')&#125;&#125;
+                    &#123;&#123; Form::file('featured_image') &#125;&#125;
+        		</pre>
+        		<h3>Set the Form to accept files</h3>
+        		<p>When using Form Helpers, simply set the files value to true:</p>
+        		<pre class="brush:php">
+        			 &#123!! Form::open(['route' => 'posts.store', 'files' => true]) !!&#125;
+        		</pre>
+        		<p>When not using Form Helpers, add the following to your form tag</p>
+        		<p><code>enctype="multipart/form-data"</code></p>
+        		<h3>Create a Migration to add an Image column to your table</h3>
+        		<pre class="brush:php">
+        			$table->string('image')->nullable()->after('slug');
+        		</pre>
+        		<h3>Save the uploaded image</h3>
+        		<p>Use the <code>time()</code> function to create a timestamp to give the image a unique name.</p>
+        		<pre class="brush:php">
+        	        if($request->hasFile('featured_image')) {
+        	            $image = $request->file('featured_image');
+        	            $filename = time() . '.' . $image->getClientOriginalExtension();
+        	            $location = public_path('images/' . $filename);
+        	            Image::make($image)->resize(800,400)->save($location);
+        	            $post->image = $filename;
+        	        }
+        		</pre>
+        		<h3>Display the image</h3>
+        		<pre class="brush:php">
+        			&lt;img src="&#123;&#123; asset('images/' . $post->image) &#125;&#125;" height="400" width="800"&gt;
+        		</pre>
+        	  </div>
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#what">What is Laravel</a></li>
+        		  		<li><a href="#setup">Setting up Laravel</a></li>
+        		  		<li><a href="#how">How to use Laravel</a></li>
+        		  		<li><a href="#structure">File Structure</a></li>
+        		  		<li><a href="#models">Models</a>
+        				  <ul class="nested vertical menu">
+        				  	<li><a href="#model_create">Creating Models</a></li>
+        				  	<li><a href="#model_use">Using Models</a></li>
+        				  	<li><a href="#model_relate">Relationships</a></li>
+        				  </ul>
+        		  		</li>
+        		  		<li><a href="#migrations">Migrations</a></li>
+        		  		<li><a href="#views">Views</a>
+        				  <ul class="nested vertical menu">
+        				  	<li><a href="#view-blade">Blade</a></li>
+        				  	<li><a href="#view-forms">Forms</a></li>
+        				  </ul>
+        		  		</li>
+        
+        		  		<li><a href="#controllers">Controllers</a></li>
+        		  		<li><a href="#ctrl-res">Resource Controllers</a></li>
+        		  		<li><a href="#database">Database</a>
+        				  <ul class="nested vertical menu">
+        				  	<li><a href="#db-pag">Pagination</a></li>
+        				  	<li><a href="#db-query">Query Builder</a></li>
+        				  </ul>
+        		  		</li>
+        		  		<li><a href="#middleware">Middleware</a></li>
+        		  		<li><a href="#sessions">Sessions</a></li>
+        		  		<li><a href="#routings">Routings</a></li>
+        		  		<li><a href="#artisan">Artisan</a></li>
+        		  		<li><a href="#auth">Authentication</a></li>
+        		  		<li><a href="#elixir">Elixir</a></li>
+        		  		<li><a href="#slugs">Slugs</a></li>
+        		  		<li><a href="#email">Email</a></li>
+        		  		<li><a href="#imageup">Image Upload</a></li>
+        		  	</ul>
+        		  </nav>
+        		</div>
+        	</div>
+        </article>
+         
+      </div>
+    </div>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script type="text/javascript">
+     SyntaxHighlighter.defaults['gutter'] = false;
+     SyntaxHighlighter.defaults['toolbar'] = false;
+     SyntaxHighlighter.all();
+</script>
+  </body>
+</html>

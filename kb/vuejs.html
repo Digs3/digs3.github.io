@@ -1,0 +1,581 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base for Web Development (Daniel Dilly)</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/shCore.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushSass.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushCss.js"></script>
+    <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+
+
+    <div class="row expanded" id="content" data-equalizer data-equalize-on="medium">
+      <div class="column medium-3 large-2" id="left" data-equalizer-watch>
+        <div>
+        <header class="top-bar" id="kb-nav-top">
+        	<div class="top-bar-title">
+        		<h1><a href="/">Daniel Dilly</a></h1>
+        	</div>
+        </header>
+        
+        <div class="title-bar" data-responsive-toggle="kb-sidebar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div id="kb-sidebar">
+          <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
+          <nav id="kb-menu">
+            <ul class="vertical menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li class="menu-text">Software Development</li>
+              <li><a href="wpfxaml.html">WPF XAML</a></li>
+        
+              <li class="menu-text">Code</li>
+              <li>
+                <a href="html5.html"><i class="icon-html5-plain"></i> HTML5</a>
+                <ul class="nested vertical menu">
+                  <li><a href="html5_forms.html">Forms</a></li>
+                </ul>
+              </li>
+              <li><a href="css.html"><i class="icon-css3-plain"></i> CSS</a></li>
+              <li><a href="sass.html"><i class="icon-sass-original"></i> Sass</a></li>
+              <li><a href="javascript.html"><i class="icon-javascript-plain"></i> JavaScript</a>
+                <ul class="nested vertical menu">
+                  <li><a href="ajax.html">Ajax</a></li>
+                </ul>
+              </li>
+              <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
+              <li><a href="vuejs.html"><i class="icon-vuejs-plain"></i> Vue.JS</a></li>
+        
+              <li><a href="handlebars.html">Handlebars.js</a></li>
+              <li>
+                <a href="php.html"><i class="icon-php-plain"></i> PHP</a>
+                <ul class="nested vertical menu">
+                  <li><a href="php_mysql.html">MySQL Database</a></li>
+                </ul>
+              </li>
+              <li><a href="mvc.html">MVC</a></li>
+              <li><a href="laravel.html"><i class="icon-laravel-plain"></i> Laravel</a></li>
+        
+              <li><a href="#">XML</a></li>
+              <li><a href="#">RegExp</a></li>
+        
+              <li class="menu-text">Toolkit</li>
+              <li><a href="software.html"><i class="icon-uniE695"></i> Software</a></li>
+              <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
+              <li><a href="apache.html"><i class="icon-apache-plain-wordmark"></i> Apache</a></li>
+              <li><a href="workflows.html">Workflows</a></li>
+              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js &amp; NPM</a></li>
+              <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
+              <li><a href="grunt.html"><i class="icon-grunt-plain"></i> Grunt</a></li>
+              <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
+              <li><a href="yeoman.html"><i class="icon-uniE67A"></i> Yeoman</a></li>
+              <li><a href="git.html"><i class="icon-git-plain"></i> Git</a></li>
+              <li><a href="github.html"><i class="icon-github-original"></i> GitHub</a></li>
+              <li><a href="github_pages.html"><i class="icon-github-original"></i> GitHub Pages</a></li>
+        
+        
+        
+              <li class="menu-text">Database</li>
+              <li><a href="#"><i class="icon-mysql-plain"></i> MySQL</a></li>
+        
+              <li class="menu-text">Frameworks</li>
+              <li><a href="foundation.html"><i class="icon-foundation-plain"></i> Foundation</a></li>
+              <li><a href="bootstrap.html"><i class="icon-bootstrap-plain"></i> Bootstrap</a></li>
+              <li><a href="angular.html"><i class="icon-angularjs-plain"></i> AngularJS</a></li>
+        
+              <li class="menu-text">CMS</li>
+              <li><a href="wordpress.html">WordPress</a></li>
+        
+              <li class="menu-text">Design</li>
+              <li><a href="#">Typography</a></li>
+              <li><a href="#">Color</a></li>
+        
+              <li class="menu-text">More</li>
+              <li><a href="seo.html">SEO</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        </div>
+      </div>
+      <div class="column medium-9 large-10" id="right" data-equalizer-watch>
+        <article class="kb-article" id="kb-vuejs">
+        	<header>
+        		<div class="inner">
+        		  <h1>Vue.JS</h1>
+        		  <p>The Progressive JavaScript Framework</p>
+        	  </div>
+        	</header>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        
+              <!--
+                What is Vue.JS
+              -->
+              <h2 id="what" data-magellan-target="what">What is Vue.JS?</h2>
+              <p>
+                <strong>Vue.JS</strong> is a JavaScript framework for building reactive
+                user interfaces.
+              </p>
+        
+              <!--
+                How to use Vue.JS
+              -->
+              <h2 id="how" data-magellan-target="how">How to use Vue.JS</h2>
+              <p>
+                To use Vue.JS, simply add the <code>vue.js</code> file to your page
+                with a <code>script</code> tag.
+              </p>
+              <pre class="brush: html">
+                <script src="https://unpkg.com/vue"></script>
+              </pre>
+              <p>Next, initialize Vue:</p>
+              <pre class="brush: html">
+                <script>
+                  var app = new Vue({
+                    el: '#app',
+                    data: {
+                      message: 'Hello Vue'
+                    }
+                  })
+                </script>
+              </pre>
+              <p>Render data to the DOM using the template syntax:</p>
+              <pre class="brush: html">
+                <div id="app">
+                   &#123;&#123; message &#125;&#125;
+                </div>
+              </pre>
+        
+              <!--
+                Vue Instance Options
+              -->
+              <h2 id="inst-opt" data-magellan-target="inst-opt">Vue Instance Options</h2>
+              <p>
+                When you initialize Vue as shown above, you can set a variety of
+                different options.  A description of each option is provided below:
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Option</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>el</td>
+                    <td>Existing DOM element to mount on</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>Data object for Vue instance</td>
+                  </tr>
+                  <tr>
+                    <td>methods</td>
+                    <td>Methods to be mixed into Vue instance</td>
+                  </tr>
+                  <tr>
+                    <td>computed</td>
+                    <td>Computed properties to be mixed into Vue instance</td>
+                  </tr>
+                  <tr>
+                    <td>watch</td>
+                    <td>Watch properties for changes.</td>
+                  </tr>
+                </tbody>
+              </table>
+        
+              <!--
+                Directives
+              -->
+              <h2 id="directives" data-magellan-target="directives">Directives</h2>
+              <p>
+                Directives in Vue all begin with a <code>v-</code> prefix.
+              </p>
+              <h3>Basic Directives</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Directive</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>v-text</td>
+                    <td>Update element's text</td>
+                  </tr>
+                  <tr>
+                    <td>v-html</td>
+                    <td>Update element's text (include html)</td>
+                  </tr>
+                  <tr>
+                    <td>v-show</td>
+                    <td>Show or hide element (toggle display)</td>
+                  </tr>
+                  <tr>
+                    <td>v-if</td>
+                    <td>Include or remove element</td>
+                  </tr>
+                  <tr>
+                    <td>v-else</td>
+                    <td>Include or remove element</td>
+                  </tr>
+                  <tr>
+                    <td>v-else-if</td>
+                    <td>Include or remove element</td>
+                  </tr>
+                  <tr>
+                    <td>v-pre</td>
+                    <td>Preformatted text (skip compilation)</td>
+                  </tr>
+                  <tr>
+                    <td>v-once</td>
+                    <td>Render only once (static/not updated)</td>
+                  </tr>
+                  <tr>
+                    <td>v-cloak</td>
+                    <td>Render only after Vue compiles</td>
+                  </tr>
+                </tbody>
+              </table>
+        
+              <h3>Advanced Directives</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Directive</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>v-bind</td>
+                    <td>Bind attribute to expression</td>
+                  </tr>
+                  <tr>
+                    <td>v-for</td>
+                    <td>For loop</td>
+                  </tr>
+                  <tr>
+                    <td>v-model</td>
+                    <td>Creates two-way binding</td>
+                  </tr>
+                  <tr>
+                    <td>v-on</td>
+                    <td>Attaches event handler</td>
+                  </tr>
+                </tbody>
+              </table>
+        
+              <!-- v-text -->
+              <h3>v-text</h3>
+              <pre class="brush: html">
+                <span v-text="msg"></span>
+              </pre>
+        
+              <!-- v-html -->
+              <h3>v-html</h3>
+              <pre class="brush: html">
+                <div v-html="html"></div>
+              </pre>
+        
+              <!-- v-text -->
+              <h3>v-show</h3>
+              <pre class="brush: html">
+                <span v-show="false"></span>
+              </pre>
+        
+              <!-- v-if -->
+              <h3>v-if, v-else, v-else-if</h3>
+              <pre class="brush: html">
+                <div v-if="type === 'A'">A</div>
+                <div v-else-if="type === 'B'">B</div>
+                <div v-else-if="type === 'C'">C</div>
+                <div v-else>Not A/B/C</div>
+              </pre>
+        
+              <!-- v-pre -->
+              <h3>v-pre</h3>
+              <pre class="brush: html">
+                &lt;span v-pre&gt;&#123;&#123; this will not be compiled &#125;&#125;&lt;/span&gt;
+              </pre>
+        
+              <!-- v-once -->
+              <h3>v-once</h3>
+              <pre class="brush: html">
+                &lt;span v-once&gt;This will never change: &#123;&#123;msg&#125;&#125;&lt;/span&gt;
+              </pre>
+        
+              <!-- v-cloak -->
+              <h3>v-cloak</h3>
+              <p>
+                The <code>v-cloak</code> directive is removed after Vue compiles.  This
+                allows you to style the v-cloak directive to be hidden while un-compiled.
+              </p>
+              <pre class="brush: css">
+                [v-cloak] {
+                  display: none;
+                }
+              </pre>
+              <pre class="brush: html">
+                &lt;div v-cloak&gt;
+                  &#123;&#123; message &#125;&#125;
+                &lt;/div&gt;
+              </pre>
+        
+              <!-- v-bind -->
+              <h3>v-bind</h3>
+              <pre class="brush: html">
+                <img v-bind:src="imageSrc">
+        
+                <img :src="imageSrc">  <!-- shorthand -->
+              </pre>
+        
+              <!-- v-for -->
+              <h3>v-for</h3>
+              <pre class="brush: html">
+                <div v-for="item in items">
+                    &#123;&#123; item.text &#125;&#125;
+                </div>
+              </pre>
+              <p>
+                You can also specify an alias for the index (or the key if used on an Object)
+              </p>
+              <pre class="brush: html">
+                <div v-for="(item, index) in items"></div>
+                <div v-for="(val, key) in object"></div>
+                <div v-for="(val, key, index) in object"></div>
+              </pre>
+        
+              <!-- v-model -->
+              <h3>v-model</h3>
+              <p>
+                <code>v-model</code> is limited to <code>input</code>,
+                <code>select</code>, <code>textarea</code>, and components.
+              </p>
+              <pre class="brush: html">
+                <input v-model="message" placeholder="edit me">
+              </pre>
+        
+              <!-- v-on -->
+              <h3>v-on</h3>
+              <p>
+                The method the event points to should be defined in the Vue's method
+                options.
+              </p>
+              <pre class="brush: html">
+                <button v-on:click="doThis"></button>
+        
+                <button @click="doThis"></button> <!-- shorthand -->
+              </pre>
+        
+              <!--
+                Computed Properties
+              -->
+              <h2 id="computed" data-magellan-target="computed">Computed Properties</h2>
+              <p>
+                <strong>Computed properties</strong> are automatically updated when any variables they
+                rely upon are changed.  You can insert computed properties into your
+                HTML just like you would any data from the Vue instance.
+              </p>
+              <p>
+                Computed properties are different than methods because they are cached.
+                A computed property's method is  only ran when the dependencies of the
+                computed property changes.  Methods are always called.  As such, computed
+                properties are generally preferred to methods, especially when you're
+                doing api calls.
+              </p>
+              <pre class="brush: js">
+                var vm = new Vue({
+                  el: '#example',
+                  data: {
+                    message: 'Hello'
+                  },
+                  computed: {
+                    reversedMessage: function () {
+                      return this.message.split('').reverse().join('')
+                    }
+                  }
+                })
+              </pre>
+              <p>
+                Computed properties can have <strong>getters</strong> and <strong>
+                setters</strong>.  By default you only have a getter method.  You can
+                create a setter method like this:
+              </p>
+              <pre class="brush: js">
+                computed: {
+                  fullName: {
+                    // getter
+                    get: function () {
+                      return this.firstName + ' ' + this.lastName
+                    },
+                    // setter
+                    set: function (newValue) {
+                      var names = newValue.split(' ')
+                      this.firstName = names[0]
+                      this.lastName = names[names.length - 1]
+                    }
+                  }
+                }
+              </pre>
+        
+              <!--
+                Events
+              -->
+              <h2 id="events" data-magellan-target="events">Events</h2>
+              <p>
+                Use the <code>v-on</code> directive to listen to DOM events and react.
+              </p>
+              <pre class="brush: html">
+                <button v-on:click="counter += 1">Add 1</button>
+              </pre>
+              <p>
+                <code>v-on</code> can also accept a method.
+              </p>
+              <pre class="brush: html">
+                <button v-on:click="greet">Greet</button>
+              </pre>
+              <p>
+                You can refer to the native DOM event with the keyword <code>event</code>.
+              </p>
+              <pre class="brush: js">
+                methods: {
+                  greet: function (event) {
+                    alert('Hello ' + this.name + '!')
+                    if (event) {
+                      alert(event.target.tagName)
+                    }
+                  }
+              </pre>
+              <p>
+                When using inline Javascript you can use the special <code>$event</code>
+                variable to access the original DOM event.
+              </p>
+              <pre class="brush: html">
+                <button v-on:click="warn('Form cannot be submitted yet.', $event)">
+                  Submit
+                </button>
+              </pre>
+              <pre class="brush: js">
+                methods: {
+                  warn: function (message, event) {
+                    if (event) event.preventDefault()
+                    alert(message)
+                  }
+                }
+              </pre>
+        
+              <!--
+                Filters
+              -->
+              <h2 id="filter" data-magellan-target="filter">Filters</h2>
+              <p>
+                <strong>Filters</strong> are helpers.  Vue provides the capability of
+                using filters, but you create the filters yourself.  Use computed
+                properties instead of filters unless it makes more sense to use a filter.
+              </p>
+              <h3>How to build a filter</h3>
+              <h4>Creating a global filter</h4>
+              <pre class="brush: js">
+                Vue.filter('uppercase', function(value) {
+                  return value.toUpperCase();
+                });
+              </pre>
+              <h4>Creating a local filter</h4>
+              <pre class="brush: js">
+                new Vue({
+                  filters: {
+                    lowercase: function() {
+                      return value.toLowercase();
+                    }
+                  }
+                })
+              </pre>
+              <h3>How to use a filter</h3>
+              <pre class="brush: html">
+                <p>&#123;&#123; title | uppercase &#125;&#125;</p>
+              </pre>
+              <p>Filters can be chained</p>
+              <pre class="brush: html">
+                <p>&#123;&#123; title | uppercase | lowercase &#125;&#125;</p>
+              </pre>
+        
+              <!--
+              Components
+            -->
+            <h2 id="components" data-magellan-target="components">Components</h2>
+              <p>
+                <strong>Components</strong> allow you to build your app from a pool
+                of reusable components.  Each component holds the template and the
+                business logic for the template.
+              </p>
+              <h3>Create a global component</h3>
+              <p>This component can be used in any Vue instance application-wide</p>
+              <p>The template must have only one root element.</p>
+              <pre class="brush: js">
+                Vue.component('app-user', {
+                  data: function() {
+                    return {
+                      users: [
+                        {username: 'Max'},
+                        {username: 'Neo'},
+                        {username: 'Heinz'},
+                      ]
+                    };
+                  },
+                  template: '<div><div class="user" v-for"user in users"><p>Username: &#123;&#123; user.username &#125;&#125;</p></div></div>'
+                });
+              </pre>
+              <h3>Using the component</h3>
+              <pre class="brush: html">
+                <app-user></app-user>
+              </pre>
+        
+        		</div>
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#what">What is Vue.JS?</a></li>
+                  <li><a href="#how">How to use Vue.JS</a></li>
+                  <li><a href="#inst-opt">Vue Instance Options</a></li>
+                  <li><a href="#directives">Directives</a></li>
+                  <li><a href="#computed">Computed Properties</a></li>
+                  <li><a href="#events">Events</a></li>
+                  <li><a href="#filter">Filters</a></li>
+                  <li><a href="#components">Components</a></li>
+        		  	</ul>
+        		  </nav>
+        		</div>
+        	</div>
+        </article>
+        
+      </div>
+    </div>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script type="text/javascript">
+     SyntaxHighlighter.defaults['gutter'] = false;
+     SyntaxHighlighter.defaults['toolbar'] = false;
+     SyntaxHighlighter.all();
+</script>
+  </body>
+</html>

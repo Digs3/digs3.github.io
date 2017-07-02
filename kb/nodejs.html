@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushCss.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -38,6 +39,9 @@
           <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
           <nav id="kb-menu">
             <ul class="vertical menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li class="menu-text">Software Development</li>
+              <li><a href="wpfxaml.html">WPF XAML</a></li>
         
               <li class="menu-text">Code</li>
               <li>
@@ -54,7 +58,8 @@
                 </ul>
               </li>
               <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
-              
+              <li><a href="vuejs.html"><i class="icon-vuejs-plain"></i> Vue.JS</a></li>
+        
               <li><a href="handlebars.html">Handlebars.js</a></li>
               <li>
                 <a href="php.html"><i class="icon-php-plain"></i> PHP</a>
@@ -62,6 +67,9 @@
                   <li><a href="php_mysql.html">MySQL Database</a></li>
                 </ul>
               </li>
+              <li><a href="mvc.html">MVC</a></li>
+              <li><a href="laravel.html"><i class="icon-laravel-plain"></i> Laravel</a></li>
+        
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
         
@@ -70,7 +78,7 @@
               <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
               <li><a href="apache.html"><i class="icon-apache-plain-wordmark"></i> Apache</a></li>
               <li><a href="workflows.html">Workflows</a></li>
-              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js</a></li>
+              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js &amp; NPM</a></li>
               <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
               <li><a href="grunt.html"><i class="icon-grunt-plain"></i> Grunt</a></li>
               <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
@@ -80,7 +88,7 @@
               <li><a href="github_pages.html"><i class="icon-github-original"></i> GitHub Pages</a></li>
         
         
-              
+        
               <li class="menu-text">Database</li>
               <li><a href="#"><i class="icon-mysql-plain"></i> MySQL</a></li>
         
@@ -88,6 +96,9 @@
               <li><a href="foundation.html"><i class="icon-foundation-plain"></i> Foundation</a></li>
               <li><a href="bootstrap.html"><i class="icon-bootstrap-plain"></i> Bootstrap</a></li>
               <li><a href="angular.html"><i class="icon-angularjs-plain"></i> AngularJS</a></li>
+        
+              <li class="menu-text">CMS</li>
+              <li><a href="wordpress.html">WordPress</a></li>
         
               <li class="menu-text">Design</li>
               <li><a href="#">Typography</a></li>
@@ -98,6 +109,7 @@
             </ul>
           </nav>
         </div>
+        
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
@@ -107,34 +119,110 @@
         		  <h1>Node.js <small>(JavaScript runtime)</small></h1>
         	  </div>
         	</header>
-        <div>
-        	<p><a href="https://nodejs.org">Official Website</a></p>
-        	<p><b>Node.js</b> is a <em>JavaScript runtime environment</em> that runs on your machine instead of in the Web browser.  Development tools such as Gulp, Grunt, and Yeoman are made with Node.js and require it to function.</p>
-        	<p><b>npm</b> is the default <em>package manager</em> for Node.js.  It allows users to install Node.js modules that are available on the npm registry/directory.</p>
-        	<p><b>package.json</b> is the packaging format for node.js applications.  It stores metadata relevant to the project such as name, description, version, dependencies, etc.</p>
-        	<p>Dependencies in package.json can specified as "dependencies" or "devDependencies"</p>
-        	<ul>
-        		<li>"dependencies" : these packages are required by your application in production</li>
-        		<li>"devDependencies" : these packages are only needed for development and testing</li>
-        	</ul>
-        	<ul>
-        	<li><kbd>npm init</kbd> - creates a basic package.json file</li>
-        	<li><kbd>npm install</kbd> - installs all dependencies in package.json to ./node_modules</li>
-        	<li><kbd>npm install &lt;module&gt;</kbd> - installs module to the project</li>
-        	  <ul>
-        		<li><kbd>-save</kbd> : adds the dependency to package.json as a dependency</li>
-        		<li><kbd>--save-dev</kbd> : adds the dependency to package.json as a devDependency</li>
-        		<li><kbd>-g</kbd> or <code>--global</code> : global module (available on your PATH, independent of project)</li>
-        	  </ul>
-        	<li><kbd>npm uninstall --save-dev &lt;module&gt;</kbd> - uninstalls module and removes it from package.json</li>
-        	<li><kbd>npm install -g npm</kbd> - updates npm</li>
-        	</ul>
-        	<p><b>Noteworthy NPM Packages</b></p>
-        	<ul>
-        		<li>Babel - Javascript compiler (turns ES6 code into ES5)</li>
-        	</ul>
-        </div>
+        	<div class="row" id="kb-content">
+        		<div class="columns large-9">
+        			<p><a href="https://nodejs.org">Official Website</a></p>
+        			<h2 id="what" data-magellan-target="what">What is NodeJS?</h2>
+        			<p>
+        				<b>Node.js</b> is a <em>JavaScript runtime environment</em> that runs on
+        				your machine instead of in the Web browser.
+        			</p>
+        			<p>
+        				Development tools such as Gulp, Grunt, and Yeoman are made with Node.js
+        				and require it to function.
+        			</p>
+        			<p>
+        				Use <code>node &lt;.js file&gt;</code> to run javascript locally.  You
+        				can also just run <code>node</code> to start a REPL shell which will
+        				evaluate all javascript you input into it.
+        			</p>
+        
+        			<h2 id="npm" data-magellan-target="npm">What is NPM?</h2>
+        			<p>
+        				<b>npm</b> is the default <em>package manager</em> for Node.js.  It
+        				allows users to install Node.js modules that are available on the npm
+        				registry/directory.
+        			</p>
+        			<p>Modules are installed into the <code>node_modules</code> folder</p>
+        			<p>Modules can be installed globally using the <code>-g</code> modifier.</p>
+        			<p>
+        				Some popular modules include:
+        			</p>
+        			<ul>
+        				<li><strong>Express</strong> (Web development framework)</li>
+        				<li><strong>Connect</strong> (Extensible HTTP server framework)</li>
+        				<li><strong>Socket.io</strong> (Server side component for websockets)</li>
+        				<li><strong>Pug / Jade</strong> (Template engine)</li>
+        				<li><strong>Mongo / Mongoose</strong>, <strong>Coffee-Script</strong>,
+        					and <strong>Redis</strong></li>
+        			</ul>
+        
+        			<h2 id="pkg" data-magellan-target="pkg">package.json</h2>
+        			<p>
+        				<b>package.json</b> is the packaging format for node.js applications.
+        				This file stores metadata relevant to the project such as name, description,
+        				version, dependencies, etc.  It tells npm how to install your application.
+        			</p>
+        			<p>
+        				Dependencies in package.json can specified as "dependencies" or
+        				"devDependencies"
+        			</p>
+        			<ul>
+        				<li>"dependencies" : these packages are required by your application in production</li>
+        				<li>"devDependencies" : these packages are only needed for development and testing</li>
+        			</ul>
+        
+        			<h2 id="npm-use" data-magellan-target="npm-use">Using NPM</h2>
+        			<li><kbd>npm init</kbd> - creates a basic package.json file</li>
+        			<li><kbd>npm install</kbd> - installs all dependencies in package.json to ./node_modules</li>
+        			<li><kbd>npm install &lt;module&gt;</kbd> - installs module to the project</li>
+        			  <ul>
+        				<li><kbd>-save</kbd> : adds the dependency to package.json as a dependency</li>
+        				<li><kbd>--save-dev</kbd> : adds the dependency to package.json as a devDependency</li>
+        				<li><kbd>-g</kbd> or <code>--global</code> : global module (available on your PATH, independent of project)</li>
+        			  </ul>
+        			<li><kbd>npm uninstall --save-dev &lt;module&gt;</kbd> - uninstalls module and removes it from package.json</li>
+        			<li><kbd>npm install -g npm</kbd> - updates npm</li>
+        			</ul>
+        			<p>
+        				<b>Noteworthy NPM Packages</b>
+        			</p>
+        			<ul>
+        				<li>Babel - Javascript compiler (turns ES6 code into ES5)</li>
+        			</ul>
+        
+        			<h2 id="commands" data-magellan-target="commands">Useful Commands</h2>
+        			<table>
+        				<tbody>
+        					<tr>
+        						<td>List installed project dependencies</td>
+        						<td><code>npm list --depth=0</code></td>
+        					</tr>
+        					<tr>
+        						<td>List installed global dependencies</td>
+        						<td><code>npm list -g --depth=0</code></td>
+        					</tr>
+        				</tbody>
+        			</table>
+        
+        		</div>
+        
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#what">What is NodeJS</a></li>
+        		  		<li><a href="#npm">What is NPM</a></li>
+        					<li><a href="#pkg">package.json</a></li>
+        					<li><a href="#commands">Useful Commands</a></li>
+        					<li><a href="#npm-use">Using NPM</a></li>
+        		  	</ul>
+        		  </nav>
+        		</div>
+        
+        	</div>
         </article>
+        
       </div>
     </div>
 

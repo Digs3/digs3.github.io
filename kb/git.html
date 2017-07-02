@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushCss.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -38,6 +39,9 @@
           <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
           <nav id="kb-menu">
             <ul class="vertical menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li class="menu-text">Software Development</li>
+              <li><a href="wpfxaml.html">WPF XAML</a></li>
         
               <li class="menu-text">Code</li>
               <li>
@@ -54,7 +58,8 @@
                 </ul>
               </li>
               <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
-              
+              <li><a href="vuejs.html"><i class="icon-vuejs-plain"></i> Vue.JS</a></li>
+        
               <li><a href="handlebars.html">Handlebars.js</a></li>
               <li>
                 <a href="php.html"><i class="icon-php-plain"></i> PHP</a>
@@ -62,6 +67,9 @@
                   <li><a href="php_mysql.html">MySQL Database</a></li>
                 </ul>
               </li>
+              <li><a href="mvc.html">MVC</a></li>
+              <li><a href="laravel.html"><i class="icon-laravel-plain"></i> Laravel</a></li>
+        
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
         
@@ -70,7 +78,7 @@
               <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
               <li><a href="apache.html"><i class="icon-apache-plain-wordmark"></i> Apache</a></li>
               <li><a href="workflows.html">Workflows</a></li>
-              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js</a></li>
+              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js &amp; NPM</a></li>
               <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
               <li><a href="grunt.html"><i class="icon-grunt-plain"></i> Grunt</a></li>
               <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
@@ -80,7 +88,7 @@
               <li><a href="github_pages.html"><i class="icon-github-original"></i> GitHub Pages</a></li>
         
         
-              
+        
               <li class="menu-text">Database</li>
               <li><a href="#"><i class="icon-mysql-plain"></i> MySQL</a></li>
         
@@ -88,6 +96,9 @@
               <li><a href="foundation.html"><i class="icon-foundation-plain"></i> Foundation</a></li>
               <li><a href="bootstrap.html"><i class="icon-bootstrap-plain"></i> Bootstrap</a></li>
               <li><a href="angular.html"><i class="icon-angularjs-plain"></i> AngularJS</a></li>
+        
+              <li class="menu-text">CMS</li>
+              <li><a href="wordpress.html">WordPress</a></li>
         
               <li class="menu-text">Design</li>
               <li><a href="#">Typography</a></li>
@@ -98,6 +109,7 @@
             </ul>
           </nav>
         </div>
+        
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
@@ -110,34 +122,92 @@
         <div>
           <p><a href="https://git-scm.com/">Official Website</a> / <a href="https://www.atlassian.com/git/tutorials">Tutorial</a></p>
           <p>
-            Git stores data as snapshots.  When you commit you take a picture of the project file system.<br>
-        	Git stores files in its database as hash values.
+          	<b>Git</b> is the most widely used <b>version control system</b>.  Git tracks changes to source code over time.  Changes are stored in a database and can be rolled back if a mistake is made.  It also enables multi-user sharing and makes deployment easier, faster, and more secure.
           </p>
-          <h2>3 Main States your files can reside in</h2>
-          <ul>
-          	<li>Committed - file is safely stored in db</li>
-          	<li>Modified - file is changed but not yet committed to db</li>
-          	<li>Staged - file is marked as modified and ready to go into next commit snapshot</li>
-          </ul>
-          <h2>3 Main Sections of a Git project</h2>
-          <ul>
-          	<li><b>Git directory</b> - where Git stores the metadata and object db for your project</li>
-          	<li><b>Working directory</b> - a single checkout of one version of the project pulled out of db in the Git dir and placed on disk for you to modify</li>
-          	<li><b>Staging area (index)</b> - a file, often in Git dir, that stores info about what will go into next commit</li>
-          </ul>
-          <h2>Git Workflow</h2>
-          <ol>
-          	<li>Modify files in working dir</li>
-          	<li>Stage files, adding snapshots of them to your staging area</li>
-          	<li>Commit, takes files in staging area and stores that snapshot permanently in Git dir</li>
-          </ol>
+          <p>
+          	Git runs on the local development computer and on the server (repository) which can have multiple git repositories on it.  <b>GitHub</b> is an example common repository, but you can install git on your own server as well.
+          </p>
+          <p>
+            Git stores data as snapshots.  When you <code>commit</code> you take a picture of the project file system.<br>
+            Git stores files in its database as hash values.
+          </p>
+          <p>At any point a new <strong>branch</strong> can be created from an individual commit.  This allows you to develop or experiment on this branch without affecting your <strong>master branch</strong>.  Master is always the name of the main branch</p>
+        
+          <!-- Installing Git -->
+          <h2>Installing Git</h2>
+          <p>On Windows, use <a href="http://git-for-windows.github.io">git for windows</a>.</p>
           <h2>Git Setup</h2>
+          <p>Git commits are signed with your name and email address.  We set these in the global config.</p>
           <p>
             <kbd>git config --global user.name "Daniel Dilly"</kbd>: set username<br>
         	<kbd>git config --global user.email daniel.dilly@gmail.com</kbd>: set email<br>
         	<kbd>git config --list</kbd>: list config<br>
         	<kbd>git help &lt;verb&gt;</kbd>: get help
           </p>
+        
+          <!-- Using Git -->
+          <h2>Using Git</h2>
+        	<h3>Initializing a Project</h3>
+          <p>Run <code>git init</code> in your project directory to initialize an empty Git repository.</p>
+          <p>This creates a hidden <code>.git</code> directory in your project that contains all the metadata and the database necessary for tracking the project</p>
+          <p>Use <code>git status</code> to check status of git.  This shows what brach you are on and which files are tracked.</p>
+          <p>Add files to the staging area (tracked) to be commited with the next commit using the <code>git add &lt;file&gt;</code></p>
+          <p><code>git add "*.txt"</code> - add all text files</p>
+          <p><code>git add .</code> - add all files</p>
+          <p>Create a <code>git.ignore</code> file to add files and folders that git will completely ignore</p>
+        
+          <h3>Saving a Project Version (Commit)</h3>
+          <p><code>git commit -m "Initial Commit"</code> will take the files in the staging area and lock them in and save them as a commit.</p>
+          <p>Inlucde the <code>-a</code> modifier to skip the staging step.  Any files tracked that are changed are automatically staged.  New files must still be manually added.</p>
+          <p>Use <code>git log</code> to show all the commits made so far.</p>
+          
+          <h3>Remote Repositories</h3>
+          
+          <p>Use <code>git remote -v</code> to list remote repositories</p>
+          
+          <p>Use <code>git remote add origin &lt;project-url&gt;</code> to add a remote repository with the name 'origin'. You can add multiple remote repositories.</p>
+          
+          <p>Use <code>git clone &lt;git-url&gt;</code> to download a project from a remote repository</p>
+          
+          <p>Use <code>git fetch origin</code> to get any new changes made since the last <code>clone</code> or <code>fetch</code>.  This pulls the data into the local repository but not the working directory.  You will have to merge manually</p>
+        
+          <p>Use <code>git pull origin</code> to fetch and merge changes made on the remote brach into the current branch.</p>
+          
+          <p>Use <code>git push origin master</code> to push it up to the remote repository.  Add the <code>-u</code> modifier to save this as the default so you can just do <code>git push</code> in the future.</p>
+        
+          <h3>Branching</h3>
+          <p>Use <code>git branch &lt;BranchName&gt;</code> to create a new branch</p>
+          <p>Use <code>git checkout &lt;BranchName&gt;</code> to switch to a branch</p>
+          <p>Use <code>git merge &lt;BranchName&gt;</code> on branch master to merge the selected branch with it.</p>
+          <p>Use a merge tool like TorchMerge or WinMerge to help with merge conflicts.</p>
+        
+          <h3>Stashing</h3>
+          <p>Use <code>git stash</code> to stash your working directory and <code>git stash apply</code> to go back to it.  Include the <code>--index</code> modifier to the apply command to reapply the staged changes.</p>
+          <p>Use <code>git stash list</code> to view your stashes.</p>
+          <p>Use <code>git stash drop</code> to remove a stash or <code>git stash pop</code> to apply &amp; drop a stash simultaneously.</p>
+        
+          <!-- Main States -->
+          <h2>3 Main States your files can reside in</h2>
+          <ul>
+          	<li>Committed - file is safely stored in db</li>
+          	<li>Modified - file is changed but not yet committed to db</li>
+          	<li>Staged - file is marked as modified and ready to go into next commit snapshot</li>
+          </ul>
+        
+          <h2>3 Main Sections of a Git project</h2>
+          <ul>
+          	<li><b>Git directory</b> - where Git stores the metadata and object db for your project</li>
+          	<li><b>Working directory</b> - a single checkout of one version of the project pulled out of db in the Git dir and placed on disk for you to modify</li>
+          	<li><b>Staging area (index)</b> - a file, often in Git dir, that stores info about what will go into next commit</li>
+          </ul>
+        
+          <h2>Git Workflow</h2>
+          <ol>
+          	<li>Modify files in working dir</li>
+          	<li>Stage files, adding snapshots of them to your staging area</li>
+          	<li>Commit, takes files in staging area and stores that snapshot permanently in Git dir</li>
+          </ol>
+        
           <h2>Creating a Git Repository</h2>
           <p><u>Import an existing project or directory into Git</u></p>
           <p>
@@ -164,6 +234,7 @@
             <b>Lightweight Tag</b> - like a branch that doesn't change (a pointer to a specific commit)<br>
         	<b>Annotated Tag</b> - stored as full objects in Git db (recommended)
           </p>
+        
           <h2>WORKFLOW</h2>
           <p>
             <kbd>git pull</kbd> : get everyones updates (up to date)<br>

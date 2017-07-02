@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/assets/js/shBrushXml.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushBash.js"></script>
     <script type="text/javascript" src="/assets/js/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/assets/js/shBrushCss.js"></script>
     <link href="/assets/css/shCore.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -38,6 +39,9 @@
           <h2><a href="/kb/"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Knowledge Base</a></h2>
           <nav id="kb-menu">
             <ul class="vertical menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li class="menu-text">Software Development</li>
+              <li><a href="wpfxaml.html">WPF XAML</a></li>
         
               <li class="menu-text">Code</li>
               <li>
@@ -54,7 +58,8 @@
                 </ul>
               </li>
               <li><a href="jquery.html"><i class="icon-jquery-plain"></i> jQuery</a></li>
-              
+              <li><a href="vuejs.html"><i class="icon-vuejs-plain"></i> Vue.JS</a></li>
+        
               <li><a href="handlebars.html">Handlebars.js</a></li>
               <li>
                 <a href="php.html"><i class="icon-php-plain"></i> PHP</a>
@@ -62,6 +67,9 @@
                   <li><a href="php_mysql.html">MySQL Database</a></li>
                 </ul>
               </li>
+              <li><a href="mvc.html">MVC</a></li>
+              <li><a href="laravel.html"><i class="icon-laravel-plain"></i> Laravel</a></li>
+        
               <li><a href="#">XML</a></li>
               <li><a href="#">RegExp</a></li>
         
@@ -70,7 +78,7 @@
               <li><a href="sublimetext.html"><i class="icon-uniE6AA"></i> Sublime Text</a></li>
               <li><a href="apache.html"><i class="icon-apache-plain-wordmark"></i> Apache</a></li>
               <li><a href="workflows.html">Workflows</a></li>
-              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js</a></li>
+              <li><a href="nodejs.html"><i class="icon-nodejs-plain"></i> Node.js &amp; NPM</a></li>
               <li><a href="bower.html"><i class="icon-bower-plain"></i> Bower</a></li>
               <li><a href="grunt.html"><i class="icon-grunt-plain"></i> Grunt</a></li>
               <li><a href="gulp.html"><i class="icon-gulp-plain"></i> Gulp</a></li>
@@ -80,7 +88,7 @@
               <li><a href="github_pages.html"><i class="icon-github-original"></i> GitHub Pages</a></li>
         
         
-              
+        
               <li class="menu-text">Database</li>
               <li><a href="#"><i class="icon-mysql-plain"></i> MySQL</a></li>
         
@@ -88,6 +96,9 @@
               <li><a href="foundation.html"><i class="icon-foundation-plain"></i> Foundation</a></li>
               <li><a href="bootstrap.html"><i class="icon-bootstrap-plain"></i> Bootstrap</a></li>
               <li><a href="angular.html"><i class="icon-angularjs-plain"></i> AngularJS</a></li>
+        
+              <li class="menu-text">CMS</li>
+              <li><a href="wordpress.html">WordPress</a></li>
         
               <li class="menu-text">Design</li>
               <li><a href="#">Typography</a></li>
@@ -98,6 +109,7 @@
             </ul>
           </nav>
         </div>
+        
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
@@ -111,63 +123,91 @@
         	<div class="row" id="kb-content">
         	  <div class="columns large-9">
         			<p><a href="https://www.javascript.com/">Learn JavaScript</a>
+        
+        				<!--
+        					What is JavaScript
+        				-->
+        				<h2 id="what" data-magellan-target="what">What is JavaScript?</h2>
+        				<p>
+        					JavaScript is an object-oriented programming language.  It is most
+        					often used to add client-side behavior to Web pages but in recent years
+        					has expanded to the server side thanks to	<a href="nodejs.html">Node.js.</a>
+        				</p>
+        				<p>
+        					JavaScript remained largely the same for many years until 2015 when
+        					ECMAScrcript 2015	(ES2015) was released.  ES2015 introduced new ways
+        					to declare variables, a syntax for defining classes, modules, promises,
+        					and more.
+        				</p>
+        
+        				<!--
+        					Data Types
+        				-->
         				<h2 id="datatypes" data-magellan-target="datatypes">Data Types</h2>
         				<div class="row">
         					<div class="column medium-4">
         					<ul style="list-style-position: inside;">
         					  <li>
-        						<pre>Number</pre>
+        						<code>Number</code>
         					  </li>
         					  <li>
-        						<pre>String</pre>
+        						<code>String</code>
         					  </li>
         					  <li>
-        						<pre>Boolean</pre>
+        						<code>Boolean</code>
         					  </li>
         					  <li>
-        						<pre>Symbol</pre>
+        						<code>Symbol</code>
         					  </li>
         					</ul>
         					</div>
         					<div class="column medium-4">
         					  <ul style="list-style-position: inside;">
         						<li>
-        						<pre>Object</pre>
+        						<code>Object</code>
         						  <ul style="list-style-position: inside; list-style-type: circle;">
         							<li>
-        								<pre>Function</pre>
+        								<code>Function</code>
         							</li>
         							<li>
-        								<pre>Array</pre>
+        								<code>Array</code>
         							</li>
         							<li>
-        								<pre>Date</pre>
+        								<code>Date</code>
         							</li>
         							<li>
-        								<pre>RegExp</pre>
+        								<code>RegExp</code>
         							</li>
         						  </ul>
-        						</li>	  	
+        						</li>
         					  </ul>
         					</div>
         					<div class="column medium-4">
         					  <ul style="list-style-position: inside;">
         					  	<li>
-        						  <pre>null</pre>
+        						  <code>null</code>
         						</li>
         						<li>
-        						  <pre>undefined</pre>
+        						  <code>undefined</code>
         						</li>
         					  </ul>
         					</div>
         				</div>
         				</ul>
-        				<h3>Number</h3>
+        
+        				<!-- Numbers -->
+        				<h3>Numbers</h3>
         				<p><code>Math</code> is a built-in object that performs mathematical tasks on numbers</p>
         				<p><code>parseInt(<i>string</i>, <i>radix</i>)</code> is a built-in function that parses a string and returns an integer. Radix is the numeral system to use.</p>
         				<p><code>parseFloat(<i>string</i>)</code> parses a string and returns a floating point number.</p>
         				<p><code>NaN</code> is a global property whose value is Not-A-Number.</p>
         				<p><code>isNaN(<i>testValue</i>)</code> determines whether a value is NaN or not.</p>
+        				<p>
+        					<code><i>numObj</i>.toFixed(<i>digits</i>)</code> rounds a number to
+        					the specified decimal point (Default 0)
+        				</p>
+        
+        				<!-- Strings -->
         				<h3>Strings</h3>
         				<p>Find the length of a string with the <code>length</code> property.</p>
         				<p><code><i>str</i>.charAt(<i>index</i>)</code> returns the specified character from a string.</p>
@@ -185,8 +225,36 @@
         				<h3>Ternary Operator</h3>
         				<p><code>var allowed = (age > 18) ? "yes" : "no";</code></p>
         
-        
-        			<h2 id="structures" data-magellan-target="structures">Control Structures</h2>
+        				<!--
+        					Variable Declaration
+        				-->
+        				<h2 id="var" data-magellan-target="var">Variable Declaration</h2>
+        				<p>
+        					Variables can be defined with the <code>var</code>, <code>const</code>,
+        					or <code>let</code> keywords.
+        				</p>
+        				<p>
+        					<code>const</code> and <code>let</code> are scoped to the nearest block
+        					(e.g., <code>for</code>, and <code>if</code> statements.)
+        				</p>
+        				<p>
+        					A variable declared with <code>const</code> cannot be reassigned. A
+        					<code>const</code> represents a constant reference to a value, not as
+        					a 'constant value'.  This means you could set a <code>const</code> to
+        					an array and then add items to the array.
+        				</p>
+        				<p>
+        					A variable declared with <code>let</code> can be reassigned.
+        				</p>
+        				<p>
+        					The <code>var</code> keyword should be avoided in new code as the other
+        					two options provide more detail.  These variables are scoped within
+        					its nearest parent function.
+        				</p>
+        				<!--
+        					Control Structures
+        				-->
+        				<h2 id="structures" data-magellan-target="structures">Control Structures</h2>
         				<h3>If and Else</h3>
         				<pre class="brush: js">
         				var name = "kittens";
@@ -227,16 +295,47 @@
         				    doNothing(); }</pre>
         				</p>
         
+        				<!--
+        					Objects
+        				-->
         				<h2 id="objects" data-magellan-target="objects">Objects</h2>
-        				<p><b>Objects</b> can be thought of as simple collections of name-value pairs.</p>
-        				<p>All objects have a <b>prototype</b> property that is itself an object.  Objects <b>inherit</b> their properties and methods from their prototype.  Attach properties and methods to an objects prototype to make them available to instances of that object (function).<br>
-        				<small>Think of using the prototype property to create a class.</small></p>
         				<p>
-        				  Create an empty object with
+        					<b>Objects</b> can be thought of as simple collections of name-value pairs.
         				</p>
+        				<p>
+        					All objects have a <b>prototype</b> property that is itself an object.
+        					Objects <b>inherit</b> their properties and methods from their prototype.
+        					Attach properties and methods to an objects prototype to make them
+        					available to instances of that object (function).<br>
+        				  <small>Think of using the prototype property to create a class.</small>
+        				</p>
+        				<h3>Creating Objects</h3>
+        				<p>
+        					There are several ways to create objects in JavaScript.  You can create
+        					an object using a constructor function, using object literals, or <body>
+        					using the ES2015 class syntax.
+        					</body>
+        				</p>
+        
+        				<h4>Creating an object using a constructor function</h4>
         				<pre class="brush: js">
-        				var obj = new Object(); // or
-        				var obj = {}; // object literal syntax; preferred
+        				function Person(name, age) {
+        					this.name = name;
+        					this.age = age;
+        				}
+        				Person.prototype.getInfo = function() {
+        					return this.name + ' is ' + this.age + ' years old.';
+        				}
+        				var you = new Person("You", 24);
+        				alert(you.getInfo());
+        				</pre>
+        
+        				<h4>Create an object using an object literal</h4>
+        				<pre class="brush: js">
+        				var Person = {
+        					name = name;
+        					this.age = age;
+        				};
         				</pre>
         				<p>
         				  Create and initialize an object with <b>object literal</b> syntax<br>
@@ -246,33 +345,132 @@
         				  name: "John",
         				  "awesome": true,
         				  aboutMe: function() {
-        				    return this.awesome ? "I'm awesome!" : "I'm lame :("; } 
+        				    return this.awesome ? "I'm awesome!" : "I'm lame :("; }
         				};</pre>
-        				<p>Create an object prototype (Person) and instance of that prototype (You).</p>
+        				<h4>Create an object using ES2015 classes.</h4>
+        				<p>
+        					While JavaScript does conceptually support classes (objects inherit
+        					from other objects), ES2015 provides the class syntax to allow for
+        					cleaner code.  Behind the scenes it is just setting up the prototpye
+        					inheritance between objects.  Any functions defined in the class
+        					definition will exist on the prototype object.
+        				</p>
         				<pre class="brush: js">
-        				function Person(name, age) {
-        				  this.name = name;
-        				  this.age = age;
-        				}
-        				var You = new Person("You", 24); 
+        					class Person {
+        						constructor(name, age) {
+        							this.name = name;
+        							this.age = age;
+        						}
+        						getInfo() {
+        							return this.name + ' is ' + this.age + ' years old.';
+        						}
+        					}
+        					var you = new Person();
         				</pre>
-        				<p>Create an object using ES6 classes.</p>
+        				<h3>Object Inheritance</h3>
+        				<p>
+        					Objects can inherit from other objects in JavaScript by configuring
+        					prototype inheritance or by using the ES2015 extends keyword.  The
+        					following examples produce the exact same object structure.
+        				</p>
+        				<h4>Configuring prototype inheritance</h4>
+        				<p>
+        					The old way of creating object inheritance is done by configuring
+        					the prototype of the inherited object.
+        				</p>
+        				<pre class="brush: js">
+        					function Person(name, age) {
+        						this.name = name;
+        						this.age = age;
+        					}
+        					Person.prototype.getInfo = function() {
+        						return this.name + ' is ' + this.age + ' years old.';
+        					}
+        					function Student(studentId, name, age) {
+        						this._super.call(this, name, age);
+        						this.studentId = studentId
+        					}
+        					Student.prototype = Object.create(Person.prototype);
+        					Student.prototype.constructor = Student;
+        					Student.prototype._super = Person;
+        					Student.prototype.getStudentInfo = function() {
+        						return 'Student ' + this.studentId + ' is ' + this.name + ' and is ' + this.age + ' years old.';
+        					}
+        					var student = new Student(1, "Bob", "Smith");
+        				</pre>
+        				<h4>Inheritance with ES2015 <code>extends</code> and <code>super</code> keywords</h4>
+        				<pre class="brush: js">
+        					class Person {
+        						contructor(name, age) {
+        							this.name = name;
+        							this.age = age;
+        						}
+        						getInfo = function() {
+        							return this.name + ' is ' + this.age + ' years old.';
+        						}
+        					}
+        					class Student extends Person {
+        						constructor(studentId, name, age) {
+        							super(name, age);
+        							this.studentId = studentId
+        						}
+        						getStudentInfo = function() {
+        							return 'Student ' + this.studentId + ' is ' + this.name + ' and is ' + this.age + ' years old.';
+        						}
+        					}
+        					var student = new Student(1, "Bob", "Smith");
+        				</pre>
+        
+        				<h3>Using Objects</h3>
         				<p>Once created, object properties can be accessed in one of two ways</p>
         				<pre class="brush: js">
         				obj.name = "Simon";
-        				var name = obj.name;
-        
         				obj["name"] = "Simon";
-        				var name = obj["name"];
         				</pre>
         				<p>Check if property exists on an object with the <code>in</code> operator</p>
         				<p>
         				  <pre class="brush: js">
-        				if ("schoolName" in school) { 
+        				if ("schoolName" in school) {
         				  console.log("School Name: " + school.schoolName); }</pre>
         				</p>
         				<p>Use the <code>hasOwnProperty()</code> method to determine if an object has a specific property as one of its own.</p>
         				<p><pre class="brush:js">console.log(school.hasOwnProperty("schoolName"));  // true​</pre></p>
+        
+        				<h3>Using Getter/Setter Properties</h3>
+        				<p>Getter and setter properties are not new to JavaScript.</p>
+        				<pre class="brush: js">
+        					class Person {
+        						constructor(firstName, lastName) {
+        							this._firstName = firstName;
+        							this._lastName = lastName;
+        						}
+        						get firstName() {
+        							return this._firstName
+        						}
+        						set firstName(value) {
+        							this._firstname = value;
+        						}
+        					}
+        				</pre>
+        
+        				<h3>ES2015 <code>static</code> keyword</h3>
+        				<p>
+        					Static functions are primarly used as helper functions related to the
+        					class.  These functions are defined on the class itself, not the
+        					prototype; therefore it is not inherited.
+        				</p>
+        				<pre class="brush: js">
+        					class Person {
+        						constructor(firstName, lastName) {
+        							this._firstName = firstName;
+        							this._lastName = lastName;
+        						}
+        						static getFormattedName(person) {
+        							return person.lastName + ", " + person.firstName;
+        						}
+        					}
+        				</pre>
+        
         				<h3>Object Design Patterns</h3>
         				<h4>Singleton Pattern</h4>
         				<p>Use this pattern when you only want one object to be created of a specific type</p>
@@ -280,7 +478,7 @@
         				<pre class="brush: js">
         				function Hero(name) {
         					// If Object has already been created
-        					if(typeof Hero.instance === 'object') { 
+        					if(typeof Hero.instance === 'object') {
         						return Hero.instance; }
         					this.name = name;
         					Hero.instance = this;
@@ -306,11 +504,11 @@
         					var weaponClass = null;
         
         					if (desc.WeaponType === "Sword") {
-        						weaponClass = Sword; 
+        						weaponClass = Sword;
         					} else if (desc.WeaponType === "Bow") {
         						weaponClass = Bow;
         					} else
-        						return false; 
+        						return false;
         					}
         					return new weaponClass(desc);
         				}
@@ -322,7 +520,7 @@
         					style: "Scythe",
         					hasMagic: true
         				})
-        				document.write(bladeFist.weaponType + " of type " + 
+        				document.write(bladeFist.weaponType + " of type " +
         				  bladeFist.style + " crafted from " + bladeFist.metal + "<br>");
         				</pre>
         				<h4>Decorator Pattern</h4>
@@ -330,9 +528,12 @@
         				<p>Uses a single object that notifies many other objects (observers) when a state change occurs.</p>
         				<p>Allows us to alter an object at runtime.</p>
         
+        				<!--
+        					Arrays
+        				-->
         				<h2 id="arrays" data-magellan-target="arrays">Arrays</h2>
         				<p><b>Arrays</b> are objects used to store multiple values.</p>
-        				<p><code>length</code> returns one more than the highest index (not necessarily the # of items)0</p>
+        				<p><code>length</code> returns one more than the highest index (not necessarily the # of items)</p>
         				<pre class="brush: js">
         				// Create an array
         				var a = new Array();
@@ -356,10 +557,19 @@
         				// Add item to array
         				b.push("hamster");
         				</pre>
-        				<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Documentation on array methods</a></p>
+        				<p>
+        					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">
+        						Documentation on array methods</a>
+        				</p>
         
+        				<!--
+        					Functions
+        				-->
         				<h2 id="functions" data-magellan-target="functions">Functions</h2>
-        				<p>Functions have access to the <code>arguments</code> variable--an array-like object holding all values passed to the function.</p>
+        				<p>
+        					Functions have access to the <code>arguments</code> variable--an
+        					array-like object holding all values passed to the function.
+        				</p>
         				<h3>Most basic function</h3>
         				<pre class="brush: js">
         			function add(x, y) {
@@ -373,7 +583,216 @@
         			    sum += arguments[i];
         			  }
         			  return sum / arguments.length; };</pre>
+        				<h3>Arrow Functions (ECMAScript 2015)</h3>
+        				<p>The arrow function syntax is a shorthand for the function syntax</p>
+        				<pre class="brush: js">
+        					let AddTwoNumbers = (x, y) => {return x + y}
+        				</pre>
+        				<p>This is equivalent to</p>
+        				<pre class="brush: js">
+        					let AddTwoNumbers = function(x,y) {return x + y}
+        				</pre>
         
+        
+        				<!--
+        					Modules
+        				-->
+        				<h2 id="modules" data-magellan-target="modules">Modules</h2>
+        				<p>
+        					Modules were introduced in ECMAScript 2015.  Before this, modules were
+        					implemented via libraries, not built into the langugage.  Each module
+        					is defined in its own file.  Functions or variables defined in a module
+        					are not visible outside unless you explicitly <code>export</code> them.
+        				</p>
+        
+        				<!-- Creating Modules -->
+        				<h3>Creating Modules</h3>
+        				<p>
+        					Create a new module by defining a new <code>.js</code> file that
+        					contains the variables and functions for the module.  Use the
+        					<code>export</code> keyword to export the module's functions.  Use the
+        					<code>as</code> keyword to rename the values while exporting.
+        				</p>
+        				<pre class="brush: js">
+        					function generateRandom() {
+        						return Math.random();
+        					}
+        					function sum(a, b) {
+        						return a + b;
+        					}
+        					export {generateRandom as random, sum}
+        				</pre>
+        				<p>
+        					You can also use the <code>export</code> keyword like this:
+        				</p>
+        				<pre class="brush: js">
+        					export function generateRandom() {
+        						return Math.random();
+        					}
+        					export function sum(a, b) {
+        						return a + b;
+        					}
+        				</pre>
+        				<h4>Named exports vs default exports</h4>
+        				<p>
+        					There are two kinds of exports: named exports (several per module) and
+        					default exports (one per module).  It is possible to use both at the
+        					same time, but usually best to keep them separate.  The previous
+        					examples used named exports.
+        				</p>
+        				<p>
+        					Every module can have one, and only one, default export that can be
+        					exported and imported without specifying the variable name.
+        				</p>
+        				<pre class="brush: js">
+        					// hello-world.js
+        					export default function() {}
+        				</pre>
+        				<pre class="brush: js">
+        					// main.js
+        					import helloWorld from './hello-world';
+        				</pre>
+        
+        				<!-- Importing Modules -->
+        				<h3>Importing Modules</h3>
+        				<p>
+        					Modules can be imported into other <code>.js</code> files using the
+        					<code>import</code> keyword.  You can import only the values you want
+        					or the entire module.
+        				</p>
+        				<h4>Importing specific values</h4>
+        				<pre class="brush: js">
+        					import {random, sum} from 'utility';
+        				</pre>
+        				<h4>Importing the entire module</h4>
+        				<p>
+        					The entire module is imported as an object with properties that relate
+        					to the module's values.
+        				</p>
+        				<pre class="brush: js">
+        					import 'utility' as utils;
+        
+        					console.log(utils.sum(1,2));
+        				</pre>
+        				<pre class="brush: js">
+        					import * as utility from './utility';
+        
+        					console.log(utility.sum(1,2));
+        				</pre>
+        
+        				<!--
+        					Promises
+        				-->
+        				<h2 id="promises" data-magellan-target="promises">Promises</h2>
+        				<p>Coming Soon</p>
+        
+        				<!--
+        					DOM
+        				-->
+        				<h2 id="dom" data-magellan-target="dom">DOM</h2>
+        				<h3>Accessing HTML Elements</h3>
+        				<table>
+        					<thead>
+        						<tr>
+        							<th>Function</th>
+        							<th>Description</th>
+        						</tr>
+        					</thead>
+        					<tbody>
+        						<tr>
+        							<td>document.<strong>getElementById(<i>id</i>)</strong></td>
+        							<td>Access HTML element by ID</td>
+        						</tr>
+        						<tr>
+        							<td>document.<strong>getElementsByTagName(<i>name</i>)</strong></td>
+        							<td>Access elements by tag name</td>
+        						</tr>
+        						<tr>
+        							<td>document.<strong>getElementsByClassName(<i>name</i>)</strong></td>
+        							<td>Access elements by class name</td>
+        						</tr>
+        						<tr>
+        							<td>document.<strong>querySelectorAll("p.intro")</strong></td>
+        							<td>Returns all &lt;p&gt; elements with class="intro"</td>
+        						</tr>
+        					</tbody>
+        				</table>
+        				<h3>Modifying HTML Elements</h3>
+        				<table>
+        					<thead>
+        						<tr>
+        							<th>Function</th>
+        							<th>Description</th>
+        						</tr>
+        					</thead>
+        					<tbody>
+        						<tr>
+        							<td><i>element</i>.<strong>innerHTML</strong></td>
+        							<td>Modify element contents</td>
+        						</tr>
+        						<tr>
+        							<td><i>element</i>.<strong>attribute</strong></td>
+        							<td>Modify element attribute value</td>
+        						</tr>
+        						<tr>
+        							<td><i>element</i>.<strong>setAttribute(<i>attribute</i>, <i>value</i>)</strong></td>
+        							<td>Modify element attribute value</td>
+        						</tr>
+        						<tr>
+        							<td><i>element</i>.<strong>style</strong>.<i>property</i></td>
+        							<td>Modify element style</td>
+        						</tr>
+        					</tbody>
+        				</table>
+        				<h3>Adding/Removing Elements</h3>
+        				<table>
+        					<thead>
+        						<tr>
+        							<th>Function</th>
+        							<th>Description</th>
+        						</tr>
+        					</thead>
+        					<tbody>
+        						<tr>
+        							<td>document.<strong>createElement(<i>element</i>)</strong></td>
+        							<td>Create an HTML element</td>
+        						</tr>
+        						<tr>
+        							<td>document.<strong>removeChild(<i>element</i>)</strong></td>
+        							<td>Remove an HTML element</td>
+        						</tr>
+        						<tr>
+        							<td>document.<strong>appendChild(<i>element</i>)</strong></td>
+        							<td>Add an HTML element</td>
+        						</tr>
+        						<tr>
+        							<td>document.<strong>replaceChild(<i>element</i>)</strong></td>
+        							<td>Replace an HTML element</td>
+        						</tr>
+        						<tr>
+        							<td>document.<strong>write(<i>text</i>)</strong></td>
+        							<td>Write into the HTML output stream</td>
+        						</tr>
+        					</tbody>
+        				</table>
+        				<h3>Adding Event Handlers</h3>
+        				<table>
+        					<thead>
+        						<tr>
+        							<th>Function</th>
+        							<th>Description</th>
+        						</tr>
+        					</thead>
+        					<tbody>
+        						<tr>
+        							<td>document.getElementById(<i>id</i>).<strong>onclick</strong> = function() {<i>code</i>}</td>
+        							<td>Add event handler code to onclick event</td>
+        						</tr>
+        					</tbody>
+        				</table>
+        				<!--
+        					Useful Methods
+        				-->
         				<h2 id="methods" data-magellan-target="methods">Useful Methods</h2>
         				<p><code>setInterval()</code></p>
         				<pre class="brush: js">
@@ -386,17 +805,22 @@
         		  	<ul class="vertical menu" data-magellan>
         		  		<li class="menu-text">On this page:</li>
         		  		<li><a href="#datatypes">Data Types</a></li>
+        					<li><a href="#var">Variable Declaration</a></li>
         		  		<li><a href="#operators">Operators</a></li>
         		  		<li><a href="#structures">Control Structures</a></li>
         		  		<li><a href="#objects">Objects</a></li>
         		  		<li><a href="#arrays">Arrays</a></li>
         		  		<li><a href="#functions">Functions</a></li>
+        					<li><a href="#modules">Modules</a></li>
+        					<li><a href="#promises">Promises</a></li>
+        					<li><a href="#dom">DOM</a></li>
         		  		<li><a href="#methods">Useful Methods</a></li>
         		  	</ul>
         		  </nav>
         		</div>
         	</div>
         </article>
+        
       </div>
     </div>
 

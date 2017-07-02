@@ -113,42 +113,85 @@
         </div>
       </div>
       <div class="column medium-9 large-10" id="right" data-equalizer-watch>
-        <article class="kb-article" id="kb-github">
+        <article class="kb-article" id="kb-software">
         	<header>
         		<div class="inner">
-        		  <h1>GitHub <small>(Web-based Git repository hosting service)</small></h1>
+        		  <h1>WPF XAML</h1>
         	  </div>
         	</header>
-        <div>
-        	<p><a href="https://github.com/">Official Website</a></p>
-        	<p>A platform for hosting and collaborating on projects.</p>
-        	<ul>
-        		<li>
-        		  <b>Repositories</b> - the basic unit of GitHub, most commonly a single project<br>
-        	  - location where all the files for a particular project are stored
-        		</li><br>
-        		<li>
-        		  <b>Branching</b> - the way to work on different parts of a repository at one time<br>
-        	  - when creating a branch, you're making a snapshot copy of the original branch<br>
-        	  - used for keeping bug fixes and feature work separate from the master (production) branch<br>
-        	  - when a feature or fix is ready, it is merged into master
-        		</li><br>
-        		<li>
-        		  <b>Commits</b>- saved changes<br>
-        	  - commit message - a description explaining why a particular change was made
-        		</li><br>
-        		<li>
-        		  <b>Issues</b> - a note on a repository about something that needs attention (e.g. bug, feature request, question)
-        		</li><br>
-        		<li>
-        		  <b>Pull Requests</b> - proposing changes and requesting someone pull in your contribution (merge into branch)<br>
-        	  - pull requests can be issued to share screens or ideas, when stuck and need advice, or when ready for review<br>
-        	  - diffs - the changes, additions and subtractions, shown in green and red<br>
-        	  - in the pull request title, add "fixes #3" or "closes #4" with the issue # to close that issue when merging<br>
-        	  - use @mention in Pull Request message to ask for feedback from specific people or teams<br>
-        		</li>
-        	</ul>
-        </div>
+        	<div class="row" id="kb-content">
+        	  <div class="columns large-9">
+        			<h2 id="what" data-magellan-target="what">What is WPF?</h2>
+        			<p><b>WPF</b> stands for Windows Presentation Foundation.  It is Microsoft's next generation GUI framework for Windows-based applications created with the .NET framework 3.0 and higher.</p>
+        			<p>WPF combines application UIs, 2D graphics, 3D graphics, documents and multimedia into one single framework. Its vector based rendering engine uses hardware acceleration of modern graphic cards. This makes the UI faster, scalable and resolution independent.</p>
+        			<p>WPF separates the appearance of an user interface from its behavior. The appearance is generally specified in the Extensible Application Markup Language (XAML), the behavior is implemented in a managed programming language like C# or Visual Basic. The two parts are tied together by databinding, events and commands.</p>
+        			<h2 id="what" data-magellan-target="what">What is XAML?</h2>
+        			<p><b>XAML</b> stands for Extensible Application Markup Language.  It is the markup language used for defining the interface in WPF.</p>
+        			<p>Use property element syntax to put a complex object as content.</p>
+        			<pre class="brush: xml">
+        			&lt;Button&gt;
+        			  &lt;Button.Content&gt;
+        			    &lt;Image Source="Images/OK.png" Width="50" Height="50" /&gt;
+        			  &lt;/Button.Content&gt;
+        			&lt;/Button&gt;
+        			</pre>
+        			<h3>Markup Extensions</h3>
+        			<p>Markup extensions are dynamic placeholders for attribute values in XAML. They resolve the value of a property at runtime. Markup extensions are surrouded by curly braces (Example: Background="{StaticResource NormalBackgroundBrush}").</p>
+        			<pre class="brush:xml">
+        				&lt;TextBox x:Name="textBox"/&gt;
+        				&lt;Label Content="{Binding Text, ElementName=textBox}"/&gt;
+        			</pre>
+        			<h2>WPF Controls</h2>
+        			<p>The <a href="http://wpftoolkit.codeplex.com/">Extended WPF Toolkit</a> adds a collection of controls.</p>
+        			<h2>Controls</h2>
+        			<ul>
+        			<li><code>&lt;!-- Comment --&gt;</code></li>
+        			<p>Container Controls</p>
+        			<li><code>&lt;StackPanel&gt;</code> - stacks elements horizontally or vertically</li>
+        			<ul>
+        				<li><code>Orientation="Horizontal"</code></li>
+        			</ul>
+        			<li><code>&lt;Grid&gt;</code></li>
+        			<ul>
+        				<li><code>&lt;Grid.ColumnDefinitions&gt;</code></li>
+        				<ul>
+        					<li><code>&lt;ColumnDefinition Width="*" /&gt;</code></li>
+        				</ul>
+        				<li><code>&lt;Button Grid.Column="0" Content="OK" /&gt;</code></li>
+        			</ul>
+        			<li><code>&lt;Border&gt;</code> - add some margin/padding to your controls</li>
+        			<br />
+        			<p>Other Controls</p>
+        			<li><code>&lt;TextBlock Text="Text" FontWeight="Bold" /&gt;</code></li>
+        			<li><code>&lt;TextBox /&gt;</code></li>
+        			<li><code>&lt;ComboBox SelectedIndex="0" /&gt;</code></li>
+        				<ul>
+        					<li><code>&lt;ComBoxItem&gt;Item1&lt;/ComboBoxItem&gt;</code></li>
+        				</ul>
+        			<li><code>&lt;CheckBox Content="Weld" Checked="WeldCheckBox_Checked" /&gt;</code></li>
+        			<li><code>&lt;Image Source="speaker.png" Stretch="Uniform" /&gt;</code></li>
+        			<br />
+        			<p>Collection Controls</p>
+        			<li><code>&lt;TreeView x:Name="FolderView /&gt;</code></li>
+        			</ul>
+        
+        			<h2>Accessing Controls in Code</h2>
+        			<p>To access a control it needs a name defined.</p>
+        			<p><code>&lt;Button x:Name="ApplyButton" /&gt;</code></p>
+        			<p>To give a control an event, simply type the event into the control's definition and press Tab to create the event handler</p>
+        			<p><code>&lt;Button x:Name="ApplyButton" Click="ApplyButton_Click" /&gt;</code></p>
+        			<h2>Dependency Properties</h2>
+        			<p>Dependency properties extend upon CLR properties and add specific functionalities.  The purpose of dependency properties is to provide a way to compute the value of a property based on the value of other inputs.</p>
+        		</div>
+        		<div class="columns large-3" data-sticky-container>
+        		  <nav id="kb-submenu" class="sticky show-for-large" data-sticky data-top-anchor="kb-content">
+        		  	<ul class="vertical menu" data-magellan>
+        		  		<li class="menu-text">On this page:</li>
+        		  		<li><a href="#">Nothing</a></li>
+        		  	</ul>
+        		  </nav>
+        		</div>
+        	</div>
         </article>
       </div>
     </div>
